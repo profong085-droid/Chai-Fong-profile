@@ -312,7 +312,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-full max-w-full sm:max-w-[440px] flex justify-center pb-0 sm:pb-10 overflow-hidden">
+    <div className="w-full max-w-full sm:max-w-[440px] mx-auto flex justify-center pb-0 sm:pb-10 overflow-hidden">
       <div className="w-full max-w-full bg-white sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative flex flex-col transition-all duration-300 sm:border sm:border-gray-100">
 
         {/* FLOAT BAR: LANGUAGE TOGGLE & LIKES */}
