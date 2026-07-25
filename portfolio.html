@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ឆៃហ្វុង | វិបសាយស្នាដៃគំនូរ ២០២៥</title>
+  
+  <!-- Google Fonts - Khmer Kantumruy Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,400;0,600;0,700;0,800;1,600;1,800&family=Plus+Jakarta+Sans:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Kantumruy Pro', -apple-system, sans-serif !important;
+      background-color: #dcd6cd;
+      color: #1a1a2e;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .mobile-wrapper {
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      justify-content: center;
+      padding: 0 8px;
+    }
+
+    .app-card {
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 36px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 1. HERO SECTION WITH EXACT ORIGINAL ARTWORK HEADER */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 445px;
+      overflow: hidden;
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      background-color: #e2f0f9;
+    }
+
+    .hero-crop-box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hero-crop-box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    /* 2. ABOUT ME SECTION (KHMER) */
+    .about-section {
+      padding: 32px 26px 20px 26px;
+      background-color: #ffffff;
+    }
+
+    .section-tag-title {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 24px;
+      font-weight: 800;
+      color: #737373;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .about-grid {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .about-left {
+      flex: 1;
+      max-width: 220px;
+    }
+
+    .name-block {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .author-fullname {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 30px !important;
+      font-weight: 800 !important;
+      line-height: 1.1 !important;
+      color: #1d1b4b !important;
+      letter-spacing: -0.5px;
+    }
+
+    .aka-text {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 12px;
+      color: #4a4a60;
+      margin-top: 6px;
+    }
+
+    .aka-text strong {
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .curved-arrow {
+      position: absolute;
+      top: 5px;
+      right: -58px;
+      width: 58px;
+      height: 42px;
+      pointer-events: none;
+    }
+
+    .bio-text-block {
+      margin-top: 16px;
+      font-size: 11.5px;
+      line-height: 1.65;
+      color: #2d2d3f;
+    }
+
+    .hi-handwriting {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 19px;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-right: 4px;
+    }
+
+    .bio-paragraph {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-weight: 400;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 145px;
+    }
+
+    /* Reliable CSS background crop for profile portrait */
+    .profile-circle-container {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      margin-bottom: 18px;
+      background-image: url('Join for faceless income secrets! 🔥.webp');
+      background-size: 260% auto;
+      background-position: 84% 57.5%;
+      background-repeat: no-repeat;
+    }
+
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 11px;
+      font-weight: 600;
+      color: #2b2b40;
+    }
+
+    .social-icon {
+      font-size: 14px;
+      color: #1a1a2e;
+    }
+
+    /* 3. EDUCATION & SKILLS SECTION (KHMER) */
+    .edu-skills-section {
+      padding: 10px 26px 24px 26px;
+      background-color: #ffffff;
+    }
+
+    .edu-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .section-header-with-doodle {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .doodle-pink-curl {
+      position: absolute;
+      top: -24px;
+      left: -14px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .doodle-check-arrow {
+      width: 22px;
+      height: 22px;
+      margin-left: 6px;
+    }
+
+    .block-heading {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 22px !important;
+      font-weight: 800 !important;
+      color: #1d1b4b !important;
+      letter-spacing: -0.3px;
+    }
+
+    .edu-description {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 11.5px;
+      line-height: 1.6;
+      color: #4a4a60;
+    }
+
+    .skills-bullet-list {
+      list-style-type: disc;
+      padding-left: 14px;
+    }
+
+    .skills-bullet-list li {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 11.5px;
+      line-height: 1.6;
+      color: #333348;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* 4. SOFTWARES SECTION (KHMER) */
+    .softwares-section {
+      padding: 10px 26px 40px 26px;
+      background-color: #ffffff;
+    }
+
+    .softwares-heading {
+      margin-bottom: 18px;
+    }
+
+    .softwares-layout {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .software-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sw-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .sw-app {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+      font-weight: 800 !important;
+      font-size: 20px;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .sw-procreate {
+      background-color: #1a1a24;
+      padding: 8px;
+    }
+
+    .procreate-svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .sw-indesign {
+      background-color: #4d001b;
+      color: #ff3366;
+    }
+
+    .sw-illustrator {
+      background-color: #331400;
+      color: #ff9900;
+      font-size: 18px;
+    }
+
+    .sw-premiere {
+      background-color: #000055;
+      color: #9999ff;
+      font-size: 18px;
+    }
+
+    .sw-photoshop {
+      background-color: #001d38;
+      color: #31a8ff;
+      font-size: 18px;
+    }
+
+    .software-bars {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 2px;
+    }
+
+    .bar-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bar-name {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 11px;
+      font-weight: 700;
+      color: #1d1b4b;
+    }
+
+    .bar-track {
+      width: 100%;
+      height: 7px;
+      background-color: #e6e6ee;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    .fill-black { background-color: #222222; }
+    .fill-pink { background-color: #f37b98; }
+    .fill-cyan { background-color: #38b6ff; }
+    .fill-purple { background-color: #9c8dc7; }
+    .fill-yellow { background-color: #f7b731; }
+
+    /* COMPACT SOCIAL CONTACT SECTION */
+    .compact-contact-section {
+      padding: 18px 20px 20px 20px;
+      background-color: #f8fafc;
+      border-top: 1px solid #eef2f6;
+      text-align: center;
+    }
+
+    .compact-contact-title {
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 13px;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 12px;
+    }
+
+    .compact-social-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-mini-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', 'Kantumruy Pro', sans-serif !important;
+      font-size: 12px;
+      font-weight: 700;
+      color: #ffffff;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .social-mini-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-mini-badge i {
+      font-size: 14px;
+    }
+
+    .social-mini-badge.facebook {
+      background: #1877f2;
+    }
+
+    .social-mini-badge.tiktok {
+      background: #000000;
+      border: 1px solid #333333;
+    }
+
+    .social-mini-badge.telegram {
+      background: #2AABEE;
+    }
+
+    .footer-bar {
+      background-color: #1d1b4b;
+      padding: 16px 20px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Kantumruy Pro', sans-serif !important;
+      font-size: 10.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="mobile-wrapper">
+    <div class="app-card">
+      
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="hero-crop-box">
+          <img id="refHeroImg" src="Join for faceless income secrets! 🔥.webp" alt="ឆៃហ្វុង ស្នាដៃគំនូរ">
+        </div>
+      </section>
+
+      <!-- ABOUT ME SECTION (KHMER) -->
+      <section class="about-section">
+        <h2 class="section-tag-title">អំពីខ្ញុំ!</h2>
+
+        <div class="about-grid">
+          <div class="about-left">
+            <div class="name-block">
+              <h1 class="author-fullname">
+                ឆៃហ្វុង
+              </h1>
+              <p class="aka-text">ហៅក្រៅ៖ <strong>ហ្វុង (Fong)</strong></p>
+
+              <svg class="curved-arrow" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 45 Q 50 5 90 25" stroke="#1d1b4b" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                <path d="M80 15 L 92 26 L 78 32" stroke="#1d1b4b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+
+            <div class="bio-text-block">
+              <span class="hi-handwriting">ជម្រាបសួរ!</span>
+              <span class="bio-paragraph">
+                ខ្ញុំគឺជាអ្នកគូររូបបកស្រាយ (Illustrator) ដែលមានបេះដូងស្រឡាញ់ការបង្កើតសាច់រឿង និងគំនិតច្នៃប្រឌិតប្លែកៗ។ ស្នាដៃរបស់ខ្ញុំផ្តោតលើការគូររូបឌីជីថល, គំនូរសៀវភៅកុមារ, ការឌីហ្សាញតួអង្គ, រឿងគំនូរជីវចល (Comics) និងការរៀបចំទំព័រទស្សនាវដ្តី។ ខ្ញុំតែងតែខិតខំរៀនសូត្រ និងអភិវឌ្ឍសមត្ថភាពជានិច្ច ដើម្បីបង្កើតស្នាដៃថ្មីៗដែលមានជីវិត។
+              </span>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <div class="profile-circle-container"></div>
+
+            <div class="social-list">
+              <a href="#" class="social-item">
+                <i class="fa-regular fa-compass social-icon"></i>
+                <span>Fong.art</span>
+              </a>
+              <a href="mailto:Fongartcontact@gmail.com" class="social-item">
+                <i class="fa-regular fa-envelope social-icon"></i>
+                <span>Fongartcontact@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION & SKILLS SECTION (KHMER) -->
+      <section class="edu-skills-section">
+        <div class="edu-skills-grid">
+          
+          <div class="edu-column">
+            <div class="section-header-with-doodle">
+              <svg class="doodle-pink-curl" viewBox="0 0 40 40" fill="none">
+                <path d="M5 25 C 10 5, 25 5, 20 20 C 15 35, 30 35, 35 20" stroke="#e85d75" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <h3 class="block-heading">ការអប់រំ</h3>
+            </div>
+            <p class="edu-description">
+              បច្ចុប្បន្នកំពុងសិក្សានៅវិទ្យាស្ថានបច្ចេកវិទ្យាអាមេរិក (ITLA)។
+            </p>
+          </div>
+
+          <div class="skills-column">
+            <div class="section-header-with-doodle">
+              <h3 class="block-heading">ជំនាញ</h3>
+              <svg class="doodle-check-arrow" viewBox="0 0 30 30" fill="none">
+                <path d="M5 15 L 15 25 L 25 5" stroke="#e85d75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="skills-bullet-list">
+              <li>គំនូរឌីជីថល (Digital)</li>
+              <li>គំនូរសៀវភៅកុមារ</li>
+              <li>ការឌីហ្សាញតួអង្គ</li>
+              <li>រឿងគំនូរជីវចល</li>
+              <li>រៀបចំប្លង់ទស្សនាវដ្តី</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SOFTWARES SECTION (KHMER) -->
+      <section class="softwares-section">
+        <h3 class="block-heading softwares-heading">កម្មវិធីប្រើប្រាស់</h3>
+
+        <div class="softwares-layout">
+          <div class="software-icons">
+            <div class="sw-row">
+              <div class="sw-app sw-procreate" title="Procreate">
+                <svg viewBox="0 0 100 100" class="procreate-svg">
+                  <path d="M 20 70 Q 50 20 80 50 Q 60 90 20 70" fill="url(#grad)" />
+                  <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#ff4e50"/>
+                      <stop offset="50%" stop-color="#f9d423"/>
+                      <stop offset="100%" stop-color="#00c9ff"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="sw-app sw-indesign" title="InDesign">
+                <span>Id</span>
+              </div>
+            </div>
+            <div class="sw-row sw-row-three">
+              <div class="sw-app sw-illustrator" title="Illustrator">
+                <span>Ai</span>
+              </div>
+              <div class="sw-app sw-premiere" title="Premiere">
+                <span>Pr</span>
+              </div>
+              <div class="sw-app sw-photoshop" title="Photoshop">
+                <span>Ps</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="software-bars">
+            <div class="bar-item">
+              <div class="bar-name">Procreate</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-black" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <div class="bar-item">
+              <div class="bar-name">InDesign</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-pink" style="width: 84%;"></div>
+              </div>
+            </div>
+
+            <div class="bar-item">
+              <div class="bar-name">Photoshop</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-cyan" style="width: 65%;"></div>
+              </div>
+            </div>
+
+            <div class="bar-item">
+              <div class="bar-name">Premiere</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-purple" style="width: 48%;"></div>
+              </div>
+            </div>
+
+            <div class="bar-item">
+              <div class="bar-name">Illustrator</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-yellow" style="width: 38%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPACT CONTACT SECTION (KHMER) -->
+      <section class="compact-contact-section">
+        <h4 class="compact-contact-title">ទំនាក់ទំនង (Contact)</h4>
+
+        <div class="compact-social-row">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-mini-badge facebook" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-mini-badge tiktok" title="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+          </a>
+
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-mini-badge telegram" title="Telegram">
+            <i class="fa-brands fa-telegram"></i>
+            <span>Telegram</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer-bar">
+        <p>© 2025 ឆៃហ្វុង • រក្សាសិទ្ធិគ្រប់យ៉ាង</p>
+      </footer>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+/* ==========================================================================
+   LETICIA VALDEZ PORTFOLIO 2025 - EXACT PIXEL REPLICA CSS
+   ========================================================================== */
+
+/* --- RESET & BASIC STYLES --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #dcd6cd;
+  color: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- MOBILE CONTAINER WRAPPER --- */
+.mobile-wrapper {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  justify-content: center;
+}
+
+.app-card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 36px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 24px 28px;
+}
+
+.hero-author {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1b1b4b;
+  margin-bottom: 24px;
+  letter-spacing: -0.2px;
+}
+
+.hero-title-container {
+  display: inline-block;
+}
+
+.hero-title {
+  font-family: 'Plus Jakarta Sans', 'Fredoka', sans-serif;
+  font-weight: 900;
+  font-size: 58px;
+  line-height: 0.88;
+  color: #1d1b4b;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-title-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 180px;
+}
+
+.hero-subtext {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 18px;
+  color: #2b2b5c;
+  font-weight: 700;
+}
+
+.hero-year {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d1b4b;
+}
+
+
+/* ==========================================================================
+   2. ABOUT ME SECTION
+   ========================================================================== */
+.about-section {
+  padding: 32px 28px 24px 28px;
+  background-color: #ffffff;
+}
+
+.section-tag-title {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #666680;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.about-grid {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.about-left {
+  flex: 1;
+  max-width: 210px;
+}
+
+.name-block {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.author-fullname {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 0.92;
+  color: #1d1b4b;
+  letter-spacing: -1px;
+}
+
+.aka-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #4a4a60;
+  margin-top: 8px;
+}
+
+.aka-text strong {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.curved-arrow {
+  position: absolute;
+  top: 10px;
+  right: -55px;
+  width: 55px;
+  height: 40px;
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+
+.bio-text-block {
+  margin-top: 20px;
+  font-size: 11.5px;
+  line-height: 1.55;
+  color: #333348;
+}
+
+.hi-handwriting {
+  font-family: 'Kalam', cursive, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-right: 4px;
+}
+
+.bio-paragraph {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* Right side profile & socials */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 140px;
+}
+
+.profile-circle {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #1a1a2e;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+}
+
+.profile-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #2b2b40;
+  transition: opacity 0.2s;
+}
+
+.social-item:hover {
+  opacity: 0.7;
+}
+
+.social-icon {
+  font-size: 14px;
+  color: #1a1a2e;
+}
+
+
+/* ==========================================================================
+   3. EDUCATION & SKILLS SECTION
+   ========================================================================== */
+.edu-skills-section {
+  padding: 10px 28px 28px 28px;
+  background-color: #ffffff;
+}
+
+.edu-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.section-header-with-doodle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.doodle-pink-curl {
+  position: absolute;
+  top: -24px;
+  left: -12px;
+  width: 32px;
+  height: 32px;
+}
+
+.doodle-check-arrow {
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+}
+
+.block-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1d1b4b;
+  letter-spacing: -0.5px;
+}
+
+.edu-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #4a4a60;
+}
+
+.skills-bullet-list {
+  list-style-type: disc;
+  padding-left: 14px;
+}
+
+.skills-bullet-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #333348;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+
+/* ==========================================================================
+   4. SOFTWARES SECTION
+   ========================================================================== */
+.softwares-section {
+  padding: 10px 28px 40px 28px;
+  background-color: #ffffff;
+}
+
+.softwares-heading {
+  margin-bottom: 20px;
+}
+
+.softwares-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Software Icons 2x3 Grid */
+.software-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sw-row {
+  display: flex;
+  gap: 8px;
+}
+
+.sw-app {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 19px;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.sw-procreate {
+  background-color: #1a1a24;
+  padding: 8px;
+}
+
+.procreate-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sw-indesign {
+  background-color: #500824;
+  color: #ff3366;
+}
+
+.sw-illustrator {
+  background-color: #331500;
+  color: #ff9900;
+  font-size: 18px;
+}
+
+.sw-premiere {
+  background-color: #000055;
+  color: #9999ff;
+  font-size: 18px;
+}
+
+.sw-photoshop {
+  background-color: #001d38;
+  color: #31a8ff;
+  font-size: 18px;
+}
+
+/* Software Progress Bars */
+.software-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 2px;
+}
+
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bar-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #1d1b4b;
+}
+
+.bar-track {
+  width: 100%;
+  height: 7px;
+  background-color: #e6e6ee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+/* Progress Fill Colors */
+.fill-black {
+  background-color: #1a1a24;
+}
+
+.fill-pink {
+  background-color: #f47b97;
+}
+
+.fill-cyan {
+  background-color: #38b6ff;
+}
+
+.fill-purple {
+  background-color: #9d8ec7;
+}
+
+.fill-yellow {
+  background-color: #f7b731;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 48px;
+  }
+  
+  .author-fullname {
+    font-size: 28px;
+  }
+
+  .curved-arrow {
+    right: -40px;
+    width: 40px;
+  }
+
+  .profile-circle {
+    width: 110px;
+    height: 110px;
+  }
+}
