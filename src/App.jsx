@@ -24,7 +24,9 @@ import {
   Briefcase,
   Zap,
   Check,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Download,
+  FileText
 } from 'lucide-react';
 
 export default function App() {
@@ -413,12 +415,240 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
     }, 3000);
   };
 
+  const handleDownloadCV = () => {
+    confetti({ particleCount: 40, spread: 60, origin: { y: 0.3 } });
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) {
+      alert(lang === 'km' ? 'សូមអនុញ្ញាត Popup ក្នុង Browser ដើម្បីទាញយក CV ជា PDF' : 'Please allow popups to download CV PDF');
+      return;
+    }
+    
+    const cvHTML = `
+      <!DOCTYPE html>
+      <html lang="km">
+      <head>
+        <meta charset="UTF-8">
+        <title>Chai_Fong_CV_2025.pdf</title>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap');
+          * { box-sizing: border-box; }
+          body {
+            font-family: 'Kantumruy Pro', 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 35px;
+            color: #1e1b4b;
+            background: #ffffff;
+            line-height: 1.6;
+          }
+          .cv-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #e85d75;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+          }
+          .name {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1e1b4b;
+            margin: 0;
+          }
+          .subtitle {
+            font-size: 14px;
+            font-weight: 700;
+            color: #e85d75;
+            margin-top: 4px;
+          }
+          .contact-list {
+            font-size: 12px;
+            color: #4b5563;
+            margin-top: 8px;
+            line-height: 1.7;
+          }
+          .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e85d75;
+            box-shadow: 0 4px 12px rgba(232, 93, 117, 0.2);
+          }
+          .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background: #fdf2f4;
+            border: 1px solid #fecdd3;
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 22px;
+            text-align: center;
+          }
+          .stat-num { font-size: 18px; font-weight: 900; color: #1e1b4b; }
+          .stat-desc { font-size: 11px; font-weight: 700; color: #e85d75; }
+          .section { margin-bottom: 22px; }
+          .sec-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: #1e1b4b;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+          .bio-text {
+            font-size: 12.5px;
+            color: #374151;
+            white-space: pre-line;
+            background: #fafafa;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border-left: 4px solid #e85d75;
+          }
+          .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+          }
+          .skill-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 10px 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+          }
+          .skill-head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12.5px;
+            font-weight: 800;
+            color: #1e1b4b;
+            margin-bottom: 6px;
+          }
+          .skill-bar-bg {
+            background: #e5e7eb;
+            height: 9px;
+            border-radius: 5px;
+            overflow: hidden;
+          }
+          .skill-bar-fill {
+            background: linear-gradient(90deg, #1e1b4b, #e85d75);
+            height: 100%;
+            border-radius: 5px;
+          }
+          .footer-note {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 11px;
+            color: #9ca3af;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 14px;
+          }
+          @media print {
+            body { padding: 15px; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="cv-header">
+          <div>
+            <h1 class="name">ឆៃហ្វុង (CHAI FONG)</h1>
+            <div class="subtitle">Graphic Designer & Video Editor | Official Resume</div>
+            <div class="contact-list">
+              📞 Phone: <strong>085 241 185</strong> &nbsp;|&nbsp; ✉️ Email: <strong>Profong085@gmail.com</strong><br>
+              💬 Telegram: <strong>@Phochaifong007</strong> &nbsp;|&nbsp; 🌐 Website: <strong>https://chaifong.website</strong>
+            </div>
+          </div>
+          <img src="${window.location.origin}/images/IMG_7733.JPG" class="profile-img" alt="Chai Fong" />
+        </div>
+
+        <div class="stats-grid">
+          <div><div class="stat-num">50+</div><div class="stat-desc">គម្រោងបញ្ចប់</div></div>
+          <div><div class="stat-num">15+</div><div class="stat-desc">វីដេអូកាត់ត</div></div>
+          <div><div class="stat-num">99%</div><div class="stat-desc">ការពេញចិត្ត</div></div>
+          <div><div class="stat-num">5+ ឆ្នាំ</div><div class="stat-desc">បទពិសោធន៍</div></div>
+        </div>
+
+        <div class="section">
+          <div class="sec-title">📌 អំពីខ្ញុំ (About Me)</div>
+          <div class="bio-text">
+            ខ្ញុំគឺជា Graphic Designer និងជា Video Editor ដែលមានបេះដូងស្រឡាញ់ការបង្កើតសាច់រឿង និងគំនិតច្នៃប្រឌិតប្លែកៗ។ ជំនាញចម្បងរបស់ខ្ញុំគឺការឌីហ្សាញ Poster និងរូបភាពផ្សេងៗដោយប្រើប្រាស់ Adobe Photoshop ព្រមទាំងការកាត់តវីដេអូយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut និង DaVinci Resolve។
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="sec-title">🎓 បទពិសោធន៍ការងារ & ការអប់រំ (Work & Education)</div>
+          <div class="bio-text">
+            💼 <strong>Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម):</strong>
+            • ធ្វើជា Graphic Designer & Video Editor ឌីហ្សាញ Poster, Banner ផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិក Social Media។
+            • កាត់តវីដេអូផ្សព្វផ្សាយផលិតផលស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve និង Motion Graphics ជាមួយ After Effects។
+            
+            🎓 <strong>ការសិក្សា:</strong>
+            • សាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (RUA)
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="sec-title">🛠️ កម្មវិធីប្រើប្រាស់ស្ទាត់ជំនាញ (Software Skills)</div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-head"><span>CapCut</span><span>91%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 91%;"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><span>Adobe Photoshop (Ps)</span><span>88%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><span>DaVinci Resolve</span><span>75%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><span>Adobe After Effects (Ae)</span><span>48%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 48%;"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><span>VS Code</span><span>45%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 45%;"></div></div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-head"><span>Adobe Illustrator (Ai)</span><span>38%</span></div>
+              <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 38%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-note">
+          © 2025 Chai Fong Studio | Official Resume generated from https://chaifong.website
+        </div>
+      </body>
+      </html>
+    `;
+    printWindow.document.write(cvHTML);
+    printWindow.document.close();
+    setTimeout(() => {
+      printWindow.print();
+    }, 600);
+  };
+
   return (
     <div className="w-full max-w-full sm:max-w-[440px] mx-auto flex justify-center pb-0 sm:pb-10 overflow-hidden">
       <div className="w-full max-w-full bg-white sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative flex flex-col transition-all duration-300 sm:border sm:border-gray-100">
 
-        {/* FLOAT BAR: LANGUAGE TOGGLE & LIKES */}
+        {/* FLOAT BAR: LANGUAGE TOGGLE & CV DOWNLOAD */}
         <div className="absolute top-4 right-4 z-30 flex items-center gap-2">
+          <button 
+            onClick={handleDownloadCV}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1d1b4b]/90 backdrop-blur-md shadow-md text-xs font-bold text-white hover:scale-105 transition-all duration-200 border border-white/30 cursor-pointer"
+            title="Download CV PDF"
+          >
+            <Download className="w-3.5 h-3.5 text-brand-pink" />
+            <span>CV PDF</span>
+          </button>
           <button 
             onClick={() => setLang(l => l === 'km' ? 'en' : 'km')}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-md text-xs font-bold text-brand-navy hover:scale-105 transition-all duration-200 border border-white/50"
@@ -717,6 +947,18 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 );
               })}
             </div>
+          </div>
+
+          {/* DOWNLOAD CV PDF ACTION BUTTON */}
+          <div className="mt-5 pt-4 border-t border-dashed border-gray-200">
+            <button
+              onClick={handleDownloadCV}
+              className="w-full flex items-center justify-center gap-2.5 py-3 px-4 rounded-2xl bg-gradient-to-r from-brand-navy via-indigo-900 to-purple-950 text-white font-extrabold text-xs sm:text-sm shadow-lg hover:shadow-2xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-white/20 group cursor-pointer"
+            >
+              <FileText className="w-4 h-4 text-brand-pink group-hover:scale-110 transition-transform" />
+              <span>{lang === 'km' ? 'ទាញយក CV (PDF) ត្រឹមជំនាញស្ទាត់' : 'Download CV (PDF)'}</span>
+              <Download className="w-4 h-4 text-white/80 group-hover:translate-y-0.5 transition-transform" />
+            </button>
           </div>
         </section>
 
