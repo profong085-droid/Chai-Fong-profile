@@ -371,7 +371,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
   ];
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("Fongartcontact@gmail.com");
+    navigator.clipboard.writeText("Profong085@gmail.com");
     setCopied(true);
     confetti({ particleCount: 35, spread: 60, origin: { y: 0.8 } });
     setTimeout(() => setCopied(false), 2500);
@@ -524,7 +524,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group"
                 >
                   <Mail className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
-                  <span className="truncate">{copied ? t.copiedEmail : 'Fongartcontact@...'}</span>
+                  <span className="truncate">{copied ? t.copiedEmail : 'Profong085@...'}</span>
                 </button>
               </div>
             </div>
