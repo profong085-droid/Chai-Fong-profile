@@ -652,10 +652,11 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </button>
           <button 
             onClick={() => setLang(l => l === 'km' ? 'en' : 'km')}
-            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-md text-[10px] sm:text-xs font-bold text-brand-navy hover:scale-105 transition-all duration-200 border border-white/50 cursor-pointer"
+            className="flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-white/95 backdrop-blur-md shadow-md text-[10px] sm:text-xs font-black text-brand-navy hover:scale-105 active:scale-95 transition-all duration-200 border border-white/60 cursor-pointer group"
+            title="Switch Language / ប្តូរភាសា"
           >
-            <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-pink shrink-0" />
-            <span>{t.toggleLang}</span>
+            <span className="text-xs group-hover:scale-110 transition-transform">{lang === 'km' ? '🇰🇭' : '🇬🇧'}</span>
+            <span className="font-black tracking-tight">{lang === 'km' ? 'ខ្មែរ' : 'English'}</span>
           </button>
         </div>
 
