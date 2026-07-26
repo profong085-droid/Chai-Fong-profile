@@ -26,7 +26,8 @@ import {
   Check,
   Image as ImageIcon,
   Download,
-  FileText
+  FileText,
+  Phone
 } from 'lucide-react';
 
 export default function App() {
@@ -745,6 +746,10 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
               {/* Social Links */}
               <div className="flex flex-col gap-1.5 w-full text-left">
+                <a href="tel:0717773554" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors">
+                  <Phone className="w-3.5 h-3.5 text-brand-navy shrink-0" />
+                  <span className="truncate">071 777 3554</span>
+                </a>
                 <a href="https://web.facebook.com/Phochaifong007/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors">
                   <Compass className="w-3.5 h-3.5 text-brand-navy shrink-0" />
                   <span className="truncate">Phochaifong007</span>
