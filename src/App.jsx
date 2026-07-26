@@ -641,20 +641,20 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       <div className="w-full max-w-full bg-white sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative flex flex-col transition-all duration-300 sm:border sm:border-gray-100">
 
         {/* FLOAT BAR: LANGUAGE TOGGLE & CV DOWNLOAD */}
-        <div className="absolute top-4 right-4 z-30 flex items-center gap-2">
+        <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 z-30 flex items-center gap-1.5 sm:gap-2">
           <button 
             onClick={handleDownloadCV}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#1d1b4b]/90 backdrop-blur-md shadow-md text-xs font-bold text-white hover:scale-105 transition-all duration-200 border border-white/30 cursor-pointer"
+            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-[#1d1b4b]/90 backdrop-blur-md shadow-md text-[10px] sm:text-xs font-bold text-white hover:scale-105 transition-all duration-200 border border-white/30 cursor-pointer"
             title="Download CV PDF"
           >
-            <Download className="w-3.5 h-3.5 text-brand-pink" />
+            <Download className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-pink shrink-0" />
             <span>CV PDF</span>
           </button>
           <button 
             onClick={() => setLang(l => l === 'km' ? 'en' : 'km')}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-md text-xs font-bold text-brand-navy hover:scale-105 transition-all duration-200 border border-white/50"
+            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-md text-[10px] sm:text-xs font-bold text-brand-navy hover:scale-105 transition-all duration-200 border border-white/50 cursor-pointer"
           >
-            <Globe className="w-3.5 h-3.5 text-brand-pink" />
+            <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-pink shrink-0" />
             <span>{t.toggleLang}</span>
           </button>
         </div>
