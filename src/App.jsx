@@ -497,7 +497,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 title={t.interactiveHint}
               >
                 <img 
-                  src="/images/IMG_7733.JPG" 
+                  src="/images/fongrub1.png" 
                   alt="Chai Fong Profile" 
                   className="w-full h-full object-cover object-center"
                 />
