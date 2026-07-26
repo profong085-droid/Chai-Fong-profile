@@ -1,0 +1,6 @@
+# GitHub Linguist overrides to display JavaScript (React) as 90%+ in repository languages
+*.html linguist-vendored
+*.css linguist-vendored
+index.html linguist-vendored=false
+src/**/*.jsx linguist-detectable=true
+src/**/*.js linguist-detectable=true
