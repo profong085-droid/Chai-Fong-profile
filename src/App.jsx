@@ -667,9 +667,9 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           />
           
           {/* Subtle Floating Glow Effect Badge */}
-          <div className="absolute bottom-3 left-4 sm:bottom-4 sm:left-6 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/70 shadow-lg text-[11px] font-bold text-brand-navy">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
-            <span>{lang === 'km' ? 'ស្នាដៃ Graphic Design & Video Edit ២០២៥' : 'Design & Video Portfolio 2025'}</span>
+          <div className="absolute bottom-2 left-2.5 sm:bottom-4 sm:left-6 z-20 flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-md px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/70 shadow-lg text-[9.5px] sm:text-[11px] font-bold text-brand-navy">
+            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-500 animate-pulse shrink-0" />
+            <span>{lang === 'km' ? 'ស្នាដៃ Graphic Design & Video Edit ២០២៦' : 'Design & Video Portfolio 2026'}</span>
           </div>
         </section>
 
