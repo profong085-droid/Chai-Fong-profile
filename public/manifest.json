@@ -1,0 +1,21 @@
+{
+  "name": "PHO CHAIFONG - Graphic Designer & Video Editor",
+  "short_name": "PHO CHAIFONG",
+  "description": "Graphic Designer & Video Editor Portfolio | ឆៃហ្វុង",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e1b4b",
+  "icons": [
+    {
+      "src": "/images/fongrub1.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/fongrub1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
