@@ -953,18 +953,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               })}
             </div>
           </div>
-
-          {/* DOWNLOAD CV PDF ACTION BUTTON */}
-          <div className="mt-5 pt-4 border-t border-dashed border-gray-200">
-            <button
-              onClick={handleDownloadCV}
-              className="w-full flex items-center justify-center gap-2.5 py-3 px-4 rounded-2xl bg-gradient-to-r from-brand-navy via-indigo-900 to-purple-950 text-white font-extrabold text-xs sm:text-sm shadow-lg hover:shadow-2xl hover:scale-[1.02] active:scale-95 transition-all duration-300 border border-white/20 group cursor-pointer"
-            >
-              <FileText className="w-4 h-4 text-brand-pink group-hover:scale-110 transition-transform" />
-              <span>{lang === 'km' ? 'ទាញយក CV (PDF) ត្រឹមជំនាញស្ទាត់' : 'Download CV (PDF)'}</span>
-              <Download className="w-4 h-4 text-white/80 group-hover:translate-y-0.5 transition-transform" />
-            </button>
-          </div>
         </section>
 
         {/* PORTFOLIO SHOWCASE GALLERY (MOVED TO BOTTOM) */}
