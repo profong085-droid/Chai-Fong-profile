@@ -13,6 +13,7 @@ import {
   Award,
   Layers,
   ChevronRight,
+  ChevronLeft,
   ExternalLink,
   Info,
   X,
@@ -35,6 +36,10 @@ export default function App() {
   const [activeSoftware, setActiveSoftware] = useState(null);
   const [showHearts, setShowHearts] = useState([]);
   
+  // Slideshow states for 3s auto-play
+  const [slideshowIndices, setSlideshowIndices] = useState({});
+  const [modalSlideIndex, setModalSlideIndex] = useState(0);
+
   // Modal states
   const [selectedArtwork, setSelectedArtwork] = useState(null);
   const [showHireModal, setShowHireModal] = useState(false);
@@ -50,37 +55,43 @@ export default function App() {
       aboutTitle: "អំពីខ្ញុំ!",
       aka: "ហៅក្រៅ៖ ហ្វុង (Fong)",
       greeting: "ជម្រាបសួរ!",
-      bio: "ខ្ញុំគឺជាអ្នកគូររូបបកស្រាយ (Illustrator) ដែលមានបេះដូងស្រឡាញ់ការបង្កើតសាច់រឿង និងគំនិតច្នៃប្រឌិតប្លែកៗ។ ស្នាដៃរបស់ខ្ញុំផ្តោតលើការគូររូបឌីជីថល (Digital Drawing), គំនូរសៀវភៅកុមារ, ការឌីហ្សាញតួអង្គ, រឿងគំនូរជីវចល (Comics) និងការរៀបចំទំព័រទស្សនាវដ្តី។ ខ្ញុំតែងតែខិតខំរៀនសូត្រ និងអភិវឌ្ឍសមត្ថភាពជានិច្ច ដើម្បីបង្កើតស្នាដៃថ្មីៗដែលមានជីវិត។",
+      bio: `ខ្ញុំគឺជា Graphic Designer និងជា Video Editor ដែលមានបេះដូងស្រឡាញ់ការបង្កើតសាច់រឿង និងគំនិតច្នៃប្រឌិតប្លែកៗ។ ជំនាញចម្បងរបស់ខ្ញុំគឺការឌីហ្សាញ Poster និងរូបភាពផ្សេងៗដោយប្រើប្រាស់ Adobe Photoshop ព្រមទាំងការកាត់តវីដេអូយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut និង DaVinci Resolve។
+
+ក្រៅពីនេះ ខ្ញុំក៏មានមូលដ្ឋានគ្រឹះក្នុងការធ្វើ Motion Graphics ដោយប្រើ Adobe After Effects និងការសរសេរកូដបង្កើតវេបសាយ (Web Development) នៅក្នុង VS Code ផងដែរ។ ខ្ញុំតែងតែខិតខំរៀនសូត្រ និងអភិវឌ្ឍសមត្ថភាពជានិច្ច ដើម្បីបង្កើតស្នាដៃថ្មីៗដែលមានទាក់ទាញ និងមានគុណភាព។`,
       openForWork: "ទទួលការងារសេរី / Commission Open",
-      hireMe: "ជួលគូររូប / ផ្ញើសារ",
-      eduTitle: "ការអប់រំ",
-      eduDesc: "បច្ចុប្បន្នកំពុងសិក្សានៅវិទ្យាស្ថានបច្ចេកវិទ្យាអាមេរិក (ITLA)។",
+      hireMe: "ជួលឌីហ្សាញ / ផ្ញើសារ",
+      eduTitle: "ការអប់រំ & បទពិសោធន៍ការងារ",
+      eduDesc: `🎓 ការសិក្សា៖
+• បច្ចុប្បន្នកំពុងសិក្សានៅសាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (RUA)
+
+💼 បទពិសោធន៍នៅ Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម)៖
+• ធ្វើការជា Graphic Designer & Video Editor ទទួលបន្ទុកឌីហ្សាញ Poster, Banner ផ្សព្វផ្សាយផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិកលើ Social Media ដោយប្រើ Adobe Photoshop។
+• កាត់ត និងផលិតវីដេអូផ្សព្វផ្សាយផលិតផលកសិកម្មយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve ព្រមទាំងបង្កើត Motion Graphics ជាមួយ After Effects ដើម្បីឱ្យវីដេអូមានភាពរស់រវើក ទាក់ទាញ និងមានគុណភាពខ្ពស់។`,
       skillsTitle: "ជំនាញស្ទាត់ជំនាញ",
       skills: [
-        "គំនូរឌីជីថល (Digital Illustration)",
-        "គំនូរសៀវភៅកុមារ (Children's Books)",
-        "ការឌីហ្សាញតួអង្គ (Character Design)",
-        "រឿងគំនូរជីវចល (Comics)",
-        "រៀបចំប្លង់ទស្សនាវដ្តី (Magazine Layout)"
+        "ការឌីហ្សាញ Poster & Graphics (Adobe Photoshop)",
+        "ការកាត់តវីដេអូស្ទាត់ជំនាញ (CapCut & DaVinci Resolve)",
+        "Motion Graphics (Adobe After Effects)",
+        "ការសរសេរកូដបង្កើតវេបសាយ (Web Development - VS Code)"
       ],
       softwaresTitle: "កម្មវិធីប្រើប្រាស់ស្ទាត់ជំនាញ",
       galleryTitle: "ស្នាដៃ",
       gallerySubtitle: "ចុចលើរូបដើម្បីមើលលម្អិត & ព័ត៌មានគម្រោង",
       categories: {
         all: "ទាំងអស់",
-        digital: "គំនូរឌីជីថល",
-        character: "តួអង្គ",
-        books: "សៀវភៅកុមារ",
-        comics: "គំនូរជីវចល"
+        digital: "Graphic Design",
+        character: "Video Edit",
+        books: "Motion Graphics",
+        comics: "Web Dev"
       },
       stats: {
         projects: "គម្រោងបញ្ចប់",
-        books: "សៀវភៅកុមារ",
+        books: "វីដេអូកាត់ត",
         satisfaction: "ការពេញចិត្ត",
         experience: "ឆ្នាំបទពិសោធន៍"
       },
       reviewsTitle: "មតិសរសើរពីអតិថិជន",
-      contactModalTitle: "ផ្ញើសារ ឬ ជួលគូររូប",
+      contactModalTitle: "ផ្ញើសារ ឬ ជួលធ្វើគម្រោង",
       formName: "ឈ្មោះរបស់អ្នក",
       formEmail: "អាសយដ្ឋានអ៉ីមែល",
       formService: "ប្រភេទសេវាកម្ម",
@@ -100,18 +111,24 @@ export default function App() {
       aboutTitle: "About Me!",
       aka: "A.K.A Fong",
       greeting: "Hi!",
-      bio: "I'm an illustrator with a love for storytelling and playful ideas. My work moves between digital drawing, children's illustration, character design, comics, and magazine layout. I'm always eager to learn, grow, and push my creativity further—because every project is a new chance to bring ideas to life.",
-      openForWork: "Open for Commissions",
+      bio: `I'm a Graphic Designer and Video Editor with a passion for storytelling and creative concepts. My primary skills focus on designing posters and promotional graphics using Adobe Photoshop, as well as professional video editing with CapCut and DaVinci Resolve.
+
+Additionally, I have a solid foundation in Motion Graphics using Adobe After Effects and Web Development in VS Code. I am constantly learning and sharpening my skills to deliver engaging, high-quality visual work.`,
+      openForWork: "Open for Freelance Work",
       hireMe: "Hire Me / Message",
-      eduTitle: "Education",
-      eduDesc: "Currently studying at the Technological Institute of the Americas (ITLA).",
+      eduTitle: "Education & Work Experience",
+      eduDesc: `🎓 Education:
+• Currently studying at Royal University of Agriculture (RUA)
+
+💼 Work Experience at Loctroi Cambodia (Agricultural Chemicals Company):
+• Graphic Designer & Video Editor responsible for designing promotional posters, banners, and social media content for agricultural chemical products using Adobe Photoshop.
+• Editing and producing engaging agricultural product videos using CapCut & DaVinci Resolve, plus creating Motion Graphics in After Effects for lively, high-quality visual content.`,
       skillsTitle: "Skills",
       skills: [
-        "Digital Illustration",
-        "Children's Illustration",
-        "Character Design",
-        "Comics",
-        "Magazine Layout"
+        "Graphic & Poster Design (Adobe Photoshop)",
+        "Video Editing (CapCut & DaVinci Resolve)",
+        "Motion Graphics (Adobe After Effects)",
+        "Web Development (VS Code)"
       ],
       softwaresTitle: "Softwares",
       galleryTitle: "Featured Artworks",
@@ -149,93 +166,148 @@ export default function App() {
   const artworks = [
     {
       id: 1,
-      title: lang === 'km' ? 'អាណាព្យាបាលព្រៃវេទមន្ត' : 'The Mystic Forest Guardian',
-      category: 'character',
-      categoryLabel: lang === 'km' ? 'តួអង្គ' : 'Character',
-      img: '/images/IMG_8039.JPG',
-      gradient: 'from-amber-400 via-rose-400 to-indigo-500',
+      title: lang === 'km' ? 'បង្កើតវេបសាយ Loctroi Cambodia' : 'Loctroi Cambodia Website',
+      category: 'comics',
+      categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
+      img: '/images/screenshot_271.png',
+      images: [
+        '/images/screenshot_271.png',
+        '/images/screenshot_272.png',
+        '/images/screenshot_273.png',
+        '/images/screenshot_274.png',
+        '/images/screenshot_275.png',
+        '/images/screenshot_276.png',
+        '/images/screenshot_277.png',
+        '/images/screenshot_278.png',
+        '/images/screenshot_279.png'
+      ],
+      gradient: 'from-emerald-500 via-teal-600 to-indigo-700',
       description: lang === 'km' 
-        ? 'ការឌីហ្សាញតួអង្គទេពអប្សរាព្រៃឈើ បង្កើតឡើងដោយការប្រើប្រាស់ Procreate សម្រាប់ការគូរលម្អិតពណ៌ និងបន្លឺពន្លឺព្រះអាទិត្យ។' 
-        : 'Digital character concept art created for a fantasy storybook using Procreate with vivid light effects.',
-      client: 'StoryMagic Publishing',
-      year: '2024',
-      tools: ['Procreate', 'Photoshop'],
-      likes: 142
+        ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយផ្លូវការរបស់ក្រុមហ៊ុនថ្នាំកសិកម្ម Loctroi Cambodia សម្រាប់ផ្សព្វផ្សាយផលិតផល និងព័ត៌មានក្រុមហ៊ុន (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
+        : 'Official website design and development project for Loctroi Cambodia agricultural chemical company (Auto 3s image slideshow).',
+      client: 'Loctroi Cambodia',
+      year: '2025',
+      tools: ['VS Code', 'Photoshop', 'CapCut'],
+      demoUrl: 'https://loctroi.online/kh',
+      likes: 320
     },
     {
       id: 2,
-      title: lang === 'km' ? 'អ្នកក្លាហានតូច & នាគហោះ' : 'Little Adventurer & Flying Dragon',
-      category: 'books',
-      categoryLabel: lang === 'km' ? 'សៀវភៅកុមារ' : "Children's Book",
-      img: '/images/IMG_8039.JPG',
-      gradient: 'from-sky-400 via-teal-300 to-emerald-500',
+      title: lang === 'km' ? 'វេបសាយមើលរឿង SabayFlix' : 'SabayFlix Movie Website',
+      category: 'comics',
+      categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
+      img: '/images/screenshot_281.png',
+      images: [
+        '/images/screenshot_281.png',
+        '/images/screenshot_282.png',
+        '/images/screenshot_283.png',
+        '/images/screenshot_284.png',
+        '/images/screenshot_285.png',
+        '/images/screenshot_286.png'
+      ],
+      gradient: 'from-red-600 via-rose-600 to-amber-600',
       description: lang === 'km' 
-        ? 'ស្នាដៃគំនូរសៀវភៅកុមារបែបក្តីស្រមៃ ដែលរំលេចនូវមិត្តភាព និងការផ្សងព្រេងក្នុងពិភពអាកាស។' 
-        : 'Whimsical children’s book illustration showcasing friendship and adventure in the clouds.',
-      client: 'DreamKids Press',
+        ? 'គម្រោងអភិវឌ្ឍន៍វេបសាយកម្សាន្តមើលរឿង SabayFlix ដែលមាន UI/UX ទំនើប ស្រស់ស្អាត អាចទស្សនារឿងភាគ និងភាពយន្តចម្រុះបានយ៉ាងលឿន (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
+        : 'SabayFlix movie streaming platform web application with modern responsive UI/UX and seamless video playback (Auto 3s image slideshow).',
+      client: 'SabayFlix',
       year: '2025',
-      tools: ['Procreate', 'InDesign'],
-      likes: 98
+      tools: ['VS Code', 'React', 'Tailwind'],
+      demoUrl: 'https://sabayflix-4.vercel.app/',
+      likes: 412
     },
     {
       id: 3,
-      title: lang === 'km' ? 'រឿងរ៉ាវទីក្រុងស៊ីប័រ Cyberpunk' : 'Neon Cyberpunk Chronicles',
+      title: lang === 'km' ? 'វេបសាយផ្ទាល់ខ្លួន Fong KH' : 'Fong KH Portfolio Website',
       category: 'comics',
-      categoryLabel: lang === 'km' ? 'គំនូរជីវចល' : 'Comics',
-      img: '/images/IMG_8039.JPG',
-      gradient: 'from-fuchsia-500 via-purple-600 to-cyan-500',
+      categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
+      img: '/images/screenshot_287.png',
+      gradient: 'from-purple-600 via-indigo-600 to-pink-500',
       description: lang === 'km' 
-        ? 'ការគូររឿងគំនូរជីវចលបែប Futurism រៀបចំប្លង់ទំព័រ និងការប្រើប្រាស់ពណ៌ Neon ភ្លឺផ្លេក។' 
-        : 'Futuristic comic book panel layout with neon palette and expressive dynamic characters.',
-      client: 'Indie Comic Studio',
-      year: '2024',
-      tools: ['Photoshop', 'Illustrator'],
-      likes: 185
+        ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយផ្ទាល់ខ្លួន Fong KH សម្រាប់បង្ហាញស្នាដៃកាត់តវីដេអូផ្សព្វផ្សាយថ្នាំកសិកម្ម ឌីហ្សាញ Poster និងព័ត៌មានទំនាក់ទំនង។' 
+        : 'Personal portfolio web application showcasing agricultural promo video editing, graphic designs, and developer contact details.',
+      client: 'Fong KH',
+      year: '2025',
+      tools: ['VS Code', 'React', 'Tailwind'],
+      demoUrl: 'https://fongkh.vercel.app/',
+      likes: 368
     },
     {
       id: 4,
-      title: lang === 'km' ? 'ទស្សនាវដ្តីរុក្ខជាតិមន្តអាគម' : 'Botanical Wonder Journal',
-      category: 'digital',
-      categoryLabel: lang === 'km' ? 'គំនូរឌីជីថល' : 'Digital Art',
-      img: '/images/IMG_8039.JPG',
-      gradient: 'from-emerald-400 via-emerald-600 to-indigo-700',
+      title: lang === 'km' ? 'វេបសាយកាត 3D MeCom' : '3D MeCom Digital Card Website',
+      category: 'comics',
+      categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
+      img: '/images/screenshot_288.png',
+      gradient: 'from-cyan-500 via-blue-600 to-indigo-700',
       description: lang === 'km' 
-        ? 'ស្នាដៃរៀបចំប្លង់ទស្សនាវដ្តី និងការលាយបញ្ចូលគ្នារវាងរូបគំនូរបែបធម្មជាតិ និងអក្សរផ្ចង់។' 
-        : 'Editorial layout artwork combining intricate botanical illustrations and modern typography.',
-      client: 'Flora Magazine',
+        ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយកាត 3D MeCom សម្រាប់ផ្សព្វផ្សាយលើ Facebook & TikTok ដែលមាន Interaction បង្វិលកាត 3D យ៉ាងស្អាតទាក់ទាញ។' 
+        : 'Interactive 3D MeCom Digital Card web application with full 3D card tilt and social media marketing integration.',
+      client: 'MeCom Card',
       year: '2025',
-      tools: ['InDesign', 'Procreate'],
-      likes: 76
+      tools: ['VS Code', 'Three.js', 'Tailwind'],
+      demoUrl: 'https://card-mecom.vercel.app/',
+      likes: 295
     },
     {
       id: 5,
-      title: lang === 'km' ? 'អ្នកយល់សប្តិក្នុងសកលលោក' : 'Cosmic Dreamer',
-      category: 'digital',
-      categoryLabel: lang === 'km' ? 'គំនូរឌីជីថល' : 'Digital Art',
-      img: '/images/IMG_8039.JPG',
-      gradient: 'from-violet-600 via-purple-500 to-pink-500',
+      title: lang === 'km' ? 'វេបសាយហាងលក់អាវ Kimchi Shop' : 'Kimchi Shop E-Commerce Website',
+      category: 'comics',
+      categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
+      img: '/images/screenshot_289.png',
+      images: [
+        '/images/screenshot_289.png',
+        '/images/screenshot_290.png'
+      ],
+      gradient: 'from-pink-500 via-rose-500 to-amber-500',
       description: lang === 'km' 
-        ? 'ការគូររូបភាពស្រមើស្រមៃអាកាស ផ្កាយ និងពពកចម្រុះពណ៌បែបសុបិនដ៏ស្រស់ស្អាត។' 
-        : 'Surreal space-themed artwork depicting dreams and celestial elements in warm pastels.',
-      client: 'Personal Art Project',
-      year: '2024',
-      tools: ['Procreate'],
-      likes: 210
+        ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយហាងលក់អាវសម្លៀកបំពាក់ Kimchi Shop សម្រាប់កម៉្មង់ទិញទំនិញ និងមើលម៉ូដសម្លៀកបំពាក់ទាន់សម័យ (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
+        : 'Kimchi Shop fashion e-commerce web application designed for browsing stylish apparel and online ordering (Auto 3s image slideshow).',
+      client: 'Kimchi Shop',
+      year: '2025',
+      tools: ['VS Code', 'React', 'Tailwind'],
+      demoUrl: 'https://kimchi-shop-new.vercel.app/',
+      likes: 380
     },
     {
       id: 6,
-      title: lang === 'km' ? 'រឿងរ៉ាវប្រាសាទមាសបុរាណ' : 'Legend of Golden Temple',
-      category: 'books',
-      categoryLabel: lang === 'km' ? 'សៀវភៅកុមារ' : "Children's Book",
-      img: '/images/IMG_8039.JPG',
-      gradient: 'from-amber-300 via-orange-400 to-rose-500',
+      title: lang === 'km' ? 'វេបសាយលក់អាវ Kimchi Com' : 'Kimchi Com Store Website',
+      category: 'comics',
+      categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
+      img: '/images/screenshot_291.png',
+      images: [
+        '/images/screenshot_291.png',
+        '/images/screenshot_292.png',
+        '/images/screenshot_293.png'
+      ],
+      gradient: 'from-amber-400 via-orange-500 to-rose-600',
       description: lang === 'km' 
-        ? 'គំនូរគម្របសៀវភៅកុមារបែបប្រវត្តិសាស្ត្រ និងវប្បធម៌ បង្ហាញពីប្រាសាទបុរាណដ៏អស្ចារ្យ។' 
-        : 'Cultural storybook cover illustration rich in tradition, architectural details, and warmth.',
-      client: 'Heritage Publications',
+        ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយហាងលក់អាវសម្លៀកបំពាក់ Kimchi Com សម្រាប់បង្ហាញផលិតផល និងព័ត៌មានលម្អិតពីសម្លៀកបំពាក់ (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
+        : 'Kimchi Com apparel store web application showcasing fashion collections and detailed clothing specifications (Auto 3s image slideshow).',
+      client: 'Kimchi Com',
       year: '2025',
-      tools: ['Procreate', 'Photoshop'],
-      likes: 124
+      tools: ['VS Code', 'React', 'Tailwind'],
+      demoUrl: 'https://kimchicom.vercel.app/',
+      likes: 315
+    },
+    {
+      id: 7,
+      title: lang === 'km' ? 'វេបសាយកាត់តវីដេអូ iFong KH' : 'iFong KH Video Portfolio Website',
+      category: 'comics',
+      categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
+      img: '/images/screenshot_294.png',
+      images: [
+        '/images/screenshot_294.png',
+        '/images/screenshot_295.png',
+        '/images/screenshot_296.png'
+      ],
+      gradient: 'from-sky-500 via-indigo-600 to-purple-700',
+      description: lang === 'km' 
+        ? 'គម្រោងអភិវឌ្ឍន៍វេបសាយសម្រាប់ដាក់ និងចាក់ផ្សាយវីដេអូកាត់ត iFong KH ដែលមាន UI/UX ទំនើប និងអាចទស្សនាវីដេអូបានយ៉ាងលឿនរលូន (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
+        : 'iFong KH Video Showcase web application with responsive media player layout and video stream portfolio (Auto 3s image slideshow).',
+      client: 'iFong KH',
+      year: '2025',
+      tools: ['VS Code', 'CapCut', 'React'],
+      demoUrl: 'https://ifongkhcom.vercel.app/',
+      likes: 425
     }
   ];
 
@@ -243,11 +315,41 @@ export default function App() {
     ? artworks 
     : artworks.filter(a => a.category === activeTab);
 
+  // 3-second auto-play slideshow for artwork grid cards
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSlideshowIndices(prev => {
+        const next = { ...prev };
+        artworks.forEach(art => {
+          if (art.images && art.images.length > 1) {
+            const current = prev[art.id] || 0;
+            next[art.id] = (current + 1) % art.images.length;
+          }
+        });
+        return next;
+      });
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // 3-second auto-play slideshow for Lightbox Modal
+  useEffect(() => {
+    if (!selectedArtwork) return;
+    setModalSlideIndex(0);
+    if (selectedArtwork.images && selectedArtwork.images.length > 1) {
+      const timer = setInterval(() => {
+        setModalSlideIndex(prev => (prev + 1) % selectedArtwork.images.length);
+      }, 3000);
+      return () => clearInterval(timer);
+    }
+  }, [selectedArtwork]);
+
   const softwareList = [
-    { name: "CapCut", percent: 95, color: "bg-[#000000]", text: "text-white", icon: "Cc" },
-    { name: "InDesign", percent: 84, color: "bg-[#4d001b]", text: "text-[#ff3366]", icon: "Id" },
-    { name: "Photoshop", percent: 65, color: "bg-[#001d38]", text: "text-[#31a8ff]", icon: "Ps" },
-    { name: "Premiere", percent: 48, color: "bg-[#000055]", text: "text-[#9999ff]", icon: "Pr" },
+    { name: "CapCut", percent: 91, color: "bg-[#000000]", text: "text-white", icon: "Cc" },
+    { name: "Photoshop", percent: 84, color: "bg-[#001d38]", text: "text-[#31a8ff]", icon: "Ps" },
+    { name: "DaVinci", percent: 50, color: "bg-[#1e1b4b]", text: "text-[#f43f5e]", icon: "Dv" },
+    { name: "After Effects", percent: 48, color: "bg-[#000055]", text: "text-[#9999ff]", icon: "Ae" },
+    { name: "VS Code", percent: 45, color: "bg-[#002244]", text: "text-[#007acc]", icon: "Vs" },
     { name: "Illustrator", percent: 38, color: "bg-[#331400]", text: "text-[#ff9900]", icon: "Ai" }
   ];
 
@@ -337,7 +439,7 @@ export default function App() {
           {/* Subtle Floating Glow Effect Badge */}
           <div className="absolute bottom-3 left-4 sm:bottom-4 sm:left-6 z-20 flex items-center gap-2 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/70 shadow-lg text-[11px] font-bold text-brand-navy">
             <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
-            <span>{lang === 'km' ? 'ស្នាដៃឌីជីថល ២០២៥' : 'Illustration Portfolio 2025'}</span>
+            <span>{lang === 'km' ? 'ស្នាដៃ Graphic Design & Video Edit ២០២៥' : 'Design & Video Portfolio 2025'}</span>
           </div>
         </section>
 
@@ -383,7 +485,7 @@ export default function App() {
 
               <div className="mt-3 sm:mt-4 text-[11px] sm:text-[11.5px] leading-relaxed text-gray-700">
                 <span className="font-bold text-sm sm:text-base mr-1 text-brand-navy">{t.greeting}</span>
-                <span className="font-normal">{t.bio}</span>
+                <span className="font-normal whitespace-pre-line">{t.bio}</span>
               </div>
             </div>
 
@@ -413,9 +515,9 @@ export default function App() {
 
               {/* Social Links */}
               <div className="flex flex-col gap-1.5 w-full text-left">
-                <a href="#" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors">
+                <a href="https://web.facebook.com/Phochaifong007/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors">
                   <Compass className="w-3.5 h-3.5 text-brand-navy shrink-0" />
-                  <span className="truncate">Fong.art</span>
+                  <span className="truncate">Phochaifong007</span>
                 </a>
                 <button 
                   onClick={handleCopyEmail}
@@ -464,7 +566,7 @@ export default function App() {
                   <span>{t.eduTitle}</span>
                 </h3>
               </div>
-              <p className="text-[11.5px] leading-relaxed text-gray-600 font-normal">
+              <p className="text-[11.5px] leading-relaxed text-gray-600 font-normal whitespace-pre-line">
                 {t.eduDesc}
               </p>
             </div>
@@ -500,51 +602,91 @@ export default function App() {
             {/* Icons Grid */}
             <div className="flex flex-col gap-2">
               <div className="flex gap-2">
+                {/* CapCut */}
                 <div 
                   onMouseEnter={() => setActiveSoftware(0)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-black border border-gray-800 p-2.5 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer"
-                  title="CapCut (95%)"
+                  className="w-[50px] h-[50px] rounded-xl bg-black border border-gray-800 p-1 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  title="CapCut (91%)"
                 >
-                  <svg viewBox="0 0 24 24" className="w-full h-full fill-white">
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8.5 13.5l-4.5-3.5 4.5-3.5v7zm6 0l-4.5-3.5 4.5-3.5v7z"/>
-                  </svg>
+                  <img 
+                    src="/images/image.png" 
+                    alt="CapCut"
+                    className="w-full h-full object-contain rounded-lg"
+                  />
                 </div>
                 
+                {/* Photoshop */}
                 <div 
                   onMouseEnter={() => setActiveSoftware(1)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#4d001b] text-[#ff3366] font-display font-extrabold text-xl flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer"
-                  title="InDesign (84%)"
+                  className="w-[50px] h-[50px] rounded-xl bg-[#001e36] border-2 border-[#31a8ff] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  title="Photoshop (84%)"
                 >
-                  Id
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <rect width="100" height="100" rx="18" fill="#001E36" />
+                    <text x="50%" y="54%" dominantBaseline="central" textAnchor="middle" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="54" fill="#31A8FF" letterSpacing="-3">Ps</text>
+                  </svg>
+                </div>
+
+                {/* DaVinci Resolve */}
+                <div 
+                  onMouseEnter={() => setActiveSoftware(2)}
+                  onMouseLeave={() => setActiveSoftware(null)}
+                  className="w-[50px] h-[50px] rounded-xl bg-[#12131A] border border-gray-800 p-1 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden"
+                  title="DaVinci Resolve (50%)"
+                >
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4d/DaVinci_Resolve_Studio.png" 
+                    alt="DaVinci Resolve"
+                    className="w-full h-full object-contain"
+                    onError={(e) => { 
+                      e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/4/4d/DaVinci_Resolve_Studio_18_icon.png"; 
+                    }}
+                  />
                 </div>
               </div>
 
               <div className="flex gap-2">
-                <div 
-                  onMouseEnter={() => setActiveSoftware(4)}
-                  onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#331400] text-[#ff9900] font-display font-extrabold text-lg flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer"
-                  title="Illustrator (38%)"
-                >
-                  Ai
-                </div>
+                {/* After Effects */}
                 <div 
                   onMouseEnter={() => setActiveSoftware(3)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#000055] text-[#9999ff] font-display font-extrabold text-lg flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer"
-                  title="Premiere (48%)"
+                  className="w-[50px] h-[50px] rounded-xl bg-[#1a0033] border-2 border-[#cf9bff] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  title="After Effects (48%)"
                 >
-                  Pr
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <rect width="100" height="100" rx="18" fill="#1A0033" />
+                    <text x="50%" y="54%" dominantBaseline="central" textAnchor="middle" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="54" fill="#CF9BFF" letterSpacing="-3">Ae</text>
+                  </svg>
                 </div>
+
+                {/* VS Code */}
                 <div 
-                  onMouseEnter={() => setActiveSoftware(2)}
+                  onMouseEnter={() => setActiveSoftware(4)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#001d38] text-[#31a8ff] font-display font-extrabold text-lg flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer"
-                  title="Photoshop (65%)"
+                  className="w-[50px] h-[50px] rounded-xl bg-[#001c38] border border-blue-900/60 p-2 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden"
+                  title="VS Code (45%)"
                 >
-                  Ps
+                  <img 
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" 
+                    alt="VS Code"
+                    className="w-full h-full object-contain"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+
+                {/* Illustrator */}
+                <div 
+                  onMouseEnter={() => setActiveSoftware(5)}
+                  onMouseLeave={() => setActiveSoftware(null)}
+                  className="w-[50px] h-[50px] rounded-xl bg-[#261300] border-2 border-[#ff9a00] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  title="Illustrator (38%)"
+                >
+                  <svg viewBox="0 0 100 100" className="w-full h-full">
+                    <rect width="100" height="100" rx="18" fill="#261300" />
+                    <text x="50%" y="54%" dominantBaseline="central" textAnchor="middle" fontFamily="system-ui, -apple-system, sans-serif" fontWeight="900" fontSize="54" fill="#FF9A00" letterSpacing="-3">Ai</text>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -562,10 +704,11 @@ export default function App() {
                     <div className="w-full h-[7px] bg-gray-200 rounded-full overflow-hidden">
                       <div 
                         className={`h-full rounded-full transition-all duration-700 ease-out ${
-                          index === 0 ? 'bg-[#222222]' :
-                          index === 1 ? 'bg-[#f37b98]' :
-                          index === 2 ? 'bg-[#38b6ff]' :
-                          index === 3 ? 'bg-[#9c8dc7]' : 'bg-[#f7b731]'
+                          sw.name === 'CapCut' ? 'bg-[#222222]' :
+                          sw.name === 'Photoshop' ? 'bg-[#31a8ff]' :
+                          sw.name === 'DaVinci' ? 'bg-[#f43f5e]' :
+                          sw.name === 'After Effects' ? 'bg-[#9c8dc7]' :
+                          sw.name === 'VS Code' ? 'bg-[#007acc]' : 'bg-[#f7b731]'
                         } ${isHovered ? 'brightness-110 shadow-sm' : ''}`} 
                         style={{ width: `${sw.percent}%` }}
                       />
@@ -620,9 +763,9 @@ export default function App() {
                 {/* Visual Artwork Box */}
                 <div className={`w-full h-[125px] relative overflow-hidden bg-gradient-to-br ${art.gradient}`}>
                   <img 
-                    src={art.img} 
+                    src={art.images ? art.images[slideshowIndices[art.id] || 0] : art.img} 
                     alt={art.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-700 opacity-95 group-hover:opacity-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
                   
@@ -630,6 +773,14 @@ export default function App() {
                   <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-[9px] font-bold text-white uppercase tracking-wider">
                     {art.categoryLabel}
                   </span>
+
+                  {/* Multi-Image Auto Badge */}
+                  {art.images && (
+                    <span className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-emerald-500/90 backdrop-blur-md text-[9px] font-bold text-white flex items-center gap-1 shadow-md">
+                      <Sparkles className="w-2.5 h-2.5 animate-spin" />
+                      <span>{(slideshowIndices[art.id] || 0) + 1}/{art.images.length} (3s)</span>
+                    </span>
+                  )}
 
                   {/* Quick View Hover Icon */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -667,7 +818,7 @@ export default function App() {
           <div className="flex items-center justify-center gap-2.5 flex-wrap">
             {/* Facebook */}
             <a 
-              href="https://facebook.com" 
+              href="https://web.facebook.com/Phochaifong007/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#1877f2] text-white text-xs font-bold shadow-sm hover:-translate-y-0.5 transition-transform duration-200"
@@ -681,7 +832,7 @@ export default function App() {
 
             {/* TikTok */}
             <a 
-              href="https://tiktok.com" 
+              href="https://www.tiktok.com/@ifong168" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-black text-white border border-gray-800 text-xs font-bold shadow-sm hover:-translate-y-0.5 transition-transform duration-200"
@@ -695,7 +846,7 @@ export default function App() {
 
             {/* Telegram */}
             <a 
-              href="https://t.me/" 
+              href="https://t.me/Phochaifong" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#2AABEE] text-white text-xs font-bold shadow-sm hover:-translate-y-0.5 transition-transform duration-200"
@@ -736,16 +887,65 @@ export default function App() {
               <X className="w-4 h-4" />
             </button>
 
-            {/* Artwork Image Banner */}
-            <div className={`w-full h-[220px] relative overflow-hidden bg-gradient-to-br ${selectedArtwork.gradient}`}>
+            {/* Artwork Image Banner with 3s Slideshow */}
+            <div className={`w-full h-[240px] relative overflow-hidden bg-gradient-to-br ${selectedArtwork.gradient}`}>
               <img 
-                src={selectedArtwork.img} 
+                src={selectedArtwork.images ? selectedArtwork.images[modalSlideIndex] : selectedArtwork.img} 
                 alt={selectedArtwork.title}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-top transition-all duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
               
-              <div className="absolute bottom-3 left-4 right-4 text-white">
+              {/* Prev / Next & Slideshow controls for multi-image artworks */}
+              {selectedArtwork.images && selectedArtwork.images.length > 1 && (
+                <>
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setModalSlideIndex(prev => (prev - 1 + selectedArtwork.images.length) % selectedArtwork.images.length);
+                    }}
+                    className="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center backdrop-blur-sm transition-transform active:scale-95 z-10 shadow-lg"
+                    title="Previous Image"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+
+                  <button 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setModalSlideIndex(prev => (prev + 1) % selectedArtwork.images.length);
+                    }}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center backdrop-blur-sm transition-transform active:scale-95 z-10 shadow-lg"
+                    title="Next Image"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+
+                  {/* Slide dots indicator */}
+                  <div className="absolute bottom-12 left-0 right-0 flex justify-center gap-1.5 z-10 px-4">
+                    {selectedArtwork.images.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setModalSlideIndex(idx);
+                        }}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          idx === modalSlideIndex ? 'w-5 bg-emerald-400' : 'w-1.5 bg-white/50 hover:bg-white'
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Auto Badge */}
+                  <div className="absolute top-3 left-3 bg-emerald-500/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md flex items-center gap-1 shadow-md z-10">
+                    <Sparkles className="w-3 h-3 animate-spin" />
+                    <span>{modalSlideIndex + 1} / {selectedArtwork.images.length} (Auto 3s)</span>
+                  </div>
+                </>
+              )}
+
+              <div className="absolute bottom-3 left-4 right-4 text-white z-10">
                 <span className="px-2.5 py-0.5 rounded-md bg-brand-pink text-[10px] font-bold uppercase tracking-wider">
                   {selectedArtwork.categoryLabel}
                 </span>
@@ -787,7 +987,7 @@ export default function App() {
               {/* Action Buttons */}
               <div className="pt-2 flex items-center justify-between gap-3 border-t border-gray-100">
                 <a
-                  href={selectedArtwork.demoUrl || "http://192.168.1.12:3000"}
+                  href={selectedArtwork.demoUrl || "https://loctroi.online/kh"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 bg-gradient-to-r from-brand-pink to-rose-600 hover:from-rose-600 hover:to-brand-pink text-white font-bold text-xs py-2.5 rounded-xl shadow transition-all flex items-center justify-center gap-1.5"
