@@ -1,5 +1,0 @@
-# GitHub Linguist configuration to highlight Modern React / JavaScript
-*.html linguist-vendored
-index.html linguist-vendored=false
-*.js linguist-detectable=true
-*.jsx linguist-detectable=true
