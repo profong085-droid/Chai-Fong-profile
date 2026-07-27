@@ -696,12 +696,17 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
 
             {/* Author Title & Subtitle */}
-            <h1 className="font-display text-3xl sm:text-4xl font-black tracking-tight text-brand-navy">
-              {lang === 'km' ? 'ឆៃហ្វុង' : 'CHAI FONG'}
-            </h1>
-            <p className="text-xs sm:text-sm font-bold text-brand-pink tracking-wider uppercase mt-1">
-              Graphic Designer & Video Editor
-            </p>
+            <div className="flex flex-col items-center">
+              <h1 className="font-dangrek text-3xl sm:text-4xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-pink to-[#1d1b4b] drop-shadow-sm">
+                {lang === 'km' ? 'ផូ ឆៃហ្វុង' : 'PHO CHAIFONG'}
+              </h1>
+              <div className="mt-1 flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/80 border border-white shadow-sm">
+                <Sparkles className="w-3 h-3 text-amber-500" />
+                <span className="text-[10.5px] font-outfit font-extrabold tracking-[0.18em] text-brand-navy uppercase">
+                  GRAPHIC DESIGNER & VIDEO EDITOR
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Bottom Progress Counter & Seamless Bar */}
@@ -793,11 +798,11 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             {/* Left Info */}
             <div className="flex-1 min-w-0">
               <div className="relative mb-2 sm:mb-3">
-                <h1 className="font-display font-black text-[24px] sm:text-[30px] leading-tight text-brand-navy tracking-tight">
+                <h1 className="font-dangrek font-normal text-[30px] sm:text-[36px] leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#1d1b4b] via-brand-pink to-[#1d1b4b] tracking-wide">
                   {lang === 'km' ? (
-                    <>ឆៃហ្វុង</>
+                    <>ផូ ឆៃហ្វុង</>
                   ) : (
-                    <>CHAI FONG</>
+                    <>PHO CHAIFONG</>
                   )}
                 </h1>
                 <p className="text-[11px] sm:text-xs text-gray-500 mt-1 font-medium">
