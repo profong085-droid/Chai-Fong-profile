@@ -1,16 +1,21 @@
 <div align="center">
-  
-  # Hi 👋 I'm Pho Chaifong
 
-  ### Graphic Designer & Video Editor • Web Developer
+  <!-- Animated Typing SVG Header Banner -->
+  <a href="https://chaifong.website">
+    <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=32&duration=3000&pause=1000&color=E85D75&center=true&vCenter=true&width=650&height=70&lines=Hi+%F0%9F%90%9D+I'm+PHO+CHAIFONG+(%E1%9E%95%E1%9E%BC+%E1%9E%86%E1%9E%BF%E1%9E%AE%E1%9E%BB%E1%9E%84);Graphic+Designer+%26+Video+Editor;Web+Developer+%26+UI%2FUX+Creator;Welcome+to+my+Creative+GitHub!" alt="Typing SVG Animation" />
+  </a>
 
-  <h4 align="center">Graphic Design & Video Editing Specialist</h4>
+  <p align="center">
+    <a href="https://chaifong.website">
+      <img src="https://img.shields.io/badge/🌐_LIVE_PORTFOLIO-chaifong.website-1D1B4B?style=for-the-badge&logoColor=white" alt="Portfolio Website" />
+    </a>
+    <img src="https://komarev.com/ghpvc/?username=profong085-droid&color=e85d75&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views Counter" />
+  </p>
 
   <br />
 
-  <!-- Connect with Me Section -->
-  <h2>🌐 Connect with Me</h2>
-
+  <!-- Connect with Me Section with Animated Glowing Badges -->
+  <h3>📬 Connect & Work with Me</h3>
   <p align="center">
     <a href="https://t.me/phochaifong" target="_blank">
       <img src="https://img.shields.io/badge/TELEGRAM-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
@@ -24,111 +29,82 @@
     <a href="https://chaifong.website" target="_blank">
       <img src="https://img.shields.io/badge/WEBSITE-1D1B4B?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" />
     </a>
-    <a href="https://chaifong.website" target="_blank">
-      <img src="https://img.shields.io/badge/PORTFOLIO-E85D75?style=for-the-badge&logo=react&logoColor=white" alt="Portfolio" />
-    </a>
   </p>
 
-  <br />
+</div>
 
-  <!-- Tech Stack Section -->
-  <h2>💻 Tech Stack</h2>
+---
 
-  <!-- Icons Row 1 -->
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3" width="40" height="40"/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react" width="40" height="40"/>
-    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/>
-    <img src="https://vitejs.dev/logo.svg" alt="vite" width="40" height="40"/>
-    <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
-    <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/premierepro/premierepro-original.svg" alt="premiere" width="40" height="40"/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/aftereffects/aftereffects-original.svg" alt="aftereffects" width="40" height="40"/>
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/illustrator/illustrator-line.svg" alt="illustrator" width="40" height="40"/>
-    <img src="https://www.vectorlogo.zone/logos/canva/canva-icon.svg" alt="canva" width="40" height="40"/>
-  </p>
+### 🎨 Creative Tools & Tech Stack
 
-  <!-- Badges Row 2 -->
-  <p align="center">
-    <img src="https://img.shields.io/badge/ADOBE_PHOTOSHOP-31A8FF?style=flat-square&logo=adobephotoshop&logoColor=black" />
-    <img src="https://img.shields.io/badge/ADOBE_PREMIERE_PRO-9999FF?style=flat-square&logo=adobepremierepro&logoColor=black" />
-    <img src="https://img.shields.io/badge/ADOBE_AFTER_EFFECTS-9999FF?style=flat-square&logo=adobeaftereffects&logoColor=black" />
-    <img src="https://img.shields.io/badge/ADOBE_ILLUSTRATOR-FF9A00?style=flat-square&logo=adobeillustrator&logoColor=white" />
-    <img src="https://img.shields.io/badge/CANVA-00C4CC?style=flat-square&logo=canva&logoColor=white" />
-    <img src="https://img.shields.io/badge/REACT_JS-61DAFB?style=flat-square&logo=react&logoColor=black" />
-    <img src="https://img.shields.io/badge/TAILWIND_CSS-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white" />
-    <img src="https://img.shields.io/badge/WINDOWS_TERMINAL-4D4D4D?style=flat-square&logo=windows-terminal&logoColor=white" />
-    <img src="https://img.shields.io/badge/VERCEL-000000?style=flat-square&logo=vercel&logoColor=white" />
-  </p>
+#### 🎬 Design & Video Editing
+<p>
+  <img src="https://img.shields.io/badge/Adobe_Photoshop-31A8FF?style=for-the-badge&logo=adobephotoshop&logoColor=black" />
+  <img src="https://img.shields.io/badge/Adobe_Premiere_Pro-9999FF?style=for-the-badge&logo=adobepremierepro&logoColor=black" />
+  <img src="https://img.shields.io/badge/Adobe_After_Effects-9999FF?style=for-the-badge&logo=adobeaftereffects&logoColor=black" />
+  <img src="https://img.shields.io/badge/Adobe_Illustrator-FF9A00?style=for-the-badge&logo=adobeillustrator&logoColor=white" />
+  <img src="https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white" />
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+</p>
 
-  <br />
+#### 💻 Web Development Technologies
+<p>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/React_JS-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+</p>
 
-  <!-- GitHub Analytics Section -->
-  <h2>📊 GitHub Analytics</h2>
+---
 
-  <p align="center">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=profong085-droid&theme=tokyonight&border_radius=10" alt="GitHub Streak" width="80%" />
-  </p>
+### 🏆 GitHub Trophies & Achievements
 
-  <br />
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=profong085-droid&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15" alt="GitHub Trophies" />
+</div>
 
-  <!-- Contribution Graph Section -->
-  <h2>📈 Contribution Graph</h2>
+---
 
-  <p align="center">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=profong085-droid&theme=react-dark&border_radius=10" alt="Contribution Graph" width="85%" />
-  </p>
+### 📊 GitHub Real-time Analytics
 
-  <br />
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=profong085-droid&show_icons=true&theme=tokyonight&border_radius=10&locale=en" alt="GitHub Stats" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=profong085-droid&theme=tokyonight&border_radius=10" alt="GitHub Streak" width="48%" />
+</div>
 
-  <!-- Creative Dev Quote Section -->
-  <h2>✍️ Creative Quote</h2>
+<br />
 
-  <p align="center">
-    <i>"Design is not just what it looks like and feels like. Design is how it works."</i> — <b>Steve Jobs</b>
-  </p>
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=profong085-droid&layout=compact&theme=tokyonight&border_radius=10" alt="Top Languages" width="48%" />
+</div>
 
-  <br />
+---
 
-  <!-- Featured Live Projects Section -->
-  <h2>🚀 Featured Projects</h2>
+### 📈 Dynamic Contribution Activity Graph
 
-  <table align="center">
-    <tr>
-      <th>Project</th>
-      <th>Live Website</th>
-      <th>Category</th>
-    </tr>
-    <tr>
-      <td>🌐 <b>Chai Fong Portfolio</b></td>
-      <td><a href="https://chaifong.website">chaifong.website</a></td>
-      <td>Official Portfolio</td>
-    </tr>
-    <tr>
-      <td>🎬 <b>SabayFlix</b></td>
-      <td><a href="https://sabayflix-4.vercel.app">sabayflix-4.vercel.app</a></td>
-      <td>Movie & Video Web App</td>
-    </tr>
-    <tr>
-      <td>🌾 <b>Loctroi Cambodia</b></td>
-      <td><a href="https://loctroi.online/kh">loctroi.online/kh</a></td>
-      <td>Agriculture Web App</td>
-    </tr>
-    <tr>
-      <td>🛍️ <b>Kimchi Shop</b></td>
-      <td><a href="https://kimchi-shop-new.vercel.app">kimchi-shop-new.vercel.app</a></td>
-      <td>Fashion E-Commerce</td>
-    </tr>
-    <tr>
-      <td>💳 <b>3D MeCom Card</b></td>
-      <td><a href="https://card-mecom.vercel.app">card-mecom.vercel.app</a></td>
-      <td>Interactive 3D Card</td>
-    </tr>
-  </table>
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=profong085-droid&theme=react-dark&border_radius=10" alt="Activity Graph" width="95%" />
+</div>
 
-  <br />
+---
 
+### 🚀 Featured Live Showcase Projects
+
+| Showcase Project | Live Link | Description |
+| :--- | :--- | :--- |
+| 🌐 **Chai Fong Portfolio** | [chaifong.website](https://chaifong.website) | វេបសាយផ្លូវការបង្ហាញស្នាដៃ Graphic & Video Editing |
+| 🎬 **SabayFlix** | [sabayflix-4.vercel.app](https://sabayflix-4.vercel.app) | Movie & Video Streaming Platform Web App |
+| 🌾 **Loctroi Cambodia** | [loctroi.online/kh](https://loctroi.online/kh) | Agriculture & Products Web App |
+| 🛍️ **Kimchi Shop** | [kimchi-shop-new.vercel.app](https://kimchi-shop-new.vercel.app) | E-Commerce Fashion Store |
+| 💳 **3D MeCom Card** | [card-mecom.vercel.app](https://card-mecom.vercel.app) | Interactive 3D Digital Card |
+
+---
+
+<div align="center">
+  <p>⚡ <i>"Design is thinking made visual." — Pho Chaifong</i></p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=1d1b4b&height=100&section=footer" width="100%" />
 </div>
