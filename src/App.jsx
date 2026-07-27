@@ -663,69 +663,84 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
   return (
     <>
-      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - MODERN LIGHT MINIMALIST STYLE */}
+      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - ULTRA-PREMIUM CINEMATIC DARK NEON */}
       {!isLoaded && (
         <div 
-          className={`fixed inset-0 z-[100] bg-gradient-to-br from-[#eff6ff] via-[#fafbff] to-[#fff1f5] flex flex-col items-center justify-center p-4 select-none overflow-hidden transition-all duration-500 ${
+          className={`fixed inset-0 z-[100] bg-[#090a12] text-white flex flex-col justify-between items-center py-10 px-6 select-none overflow-hidden transition-all duration-700 ease-out ${
             fadeOutLoader ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
           }`}
         >
-          {/* Ambient Lighting Blobs */}
-          <div className="w-[350px] h-[350px] bg-rose-200/40 rounded-full blur-[90px] absolute -top-20 -left-20 pointer-events-none animate-pulse" />
-          <div className="w-[350px] h-[350px] bg-sky-200/40 rounded-full blur-[90px] absolute -bottom-20 -right-20 pointer-events-none animate-pulse" />
+          {/* Ambient Motion Mesh Lighting */}
+          <div className="w-[500px] h-[500px] bg-rose-600/20 rounded-full blur-[140px] absolute -top-40 -left-40 pointer-events-none animate-pulse" />
+          <div className="w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[140px] absolute -bottom-40 -right-40 pointer-events-none animate-pulse" style={{ animationDuration: '6s' }} />
 
-          {/* Central Glass Card */}
-          <div className="w-full max-w-[360px] sm:max-w-[400px] bg-white/75 backdrop-blur-3xl border border-white/90 rounded-[36px] shadow-[0_25px_60px_-15px_rgba(29,27,75,0.12)] p-7 sm:p-9 flex flex-col items-center text-center relative z-10">
-            
-            {/* Avatar Section */}
-            <div className="relative mb-5">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-[0_12px_28px_rgba(0,0,0,0.08)] ring-4 ring-rose-100/80 p-0.5 bg-white">
+          {/* Top Brand Header Bar */}
+          <div className="w-full flex items-center justify-between max-w-xl z-10">
+            <div className="flex items-center gap-2 text-xs font-bold text-gray-400 tracking-widest uppercase">
+              <Sparkles className="w-4 h-4 text-amber-400 animate-spin" style={{ animationDuration: '5s' }} />
+              <span>CHAI FONG STUDIO</span>
+            </div>
+            <span className="px-3 py-1 rounded-full bg-white/10 text-[10px] font-bold tracking-wider text-rose-300 border border-white/10 uppercase">
+              PORTFOLIO 2026
+            </span>
+          </div>
+
+          {/* Main Center Content */}
+          <div className="flex flex-col items-center text-center z-10 my-auto">
+            {/* Glowing Avatar */}
+            <div className="relative mb-6">
+              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-white/30 shadow-[0_0_50px_rgba(232,93,117,0.4)] p-1 bg-white/10 backdrop-blur-md">
                 <img 
                   src="/images/fongrub1.png" 
-                  alt="Chai Fong Logo" 
+                  alt="Chai Fong" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              {/* Rotating Accent Spinner */}
-              <div className="absolute -inset-3 rounded-full border-2 border-rose-300/40 border-t-brand-pink animate-spin" style={{ animationDuration: '4s' }} />
-              <div className="absolute top-0 right-0 bg-white p-1.5 rounded-full shadow-md border border-rose-100">
-                <Sparkles className="w-4 h-4 text-amber-500 animate-pulse" />
-              </div>
+              {/* Outer Dual Spinning Rings */}
+              <div className="absolute -inset-4 rounded-full border border-rose-500/40 border-t-rose-400 animate-spin" style={{ animationDuration: '3s' }} />
+              <div className="absolute -inset-8 rounded-full border border-indigo-500/20 border-b-cyan-400 animate-spin" style={{ animationDuration: '6s' }} />
             </div>
 
-            {/* Title & Badge */}
-            <div className="mb-6">
-              <h2 className="font-display text-2xl sm:text-3xl font-black tracking-tight text-brand-navy">
-                {lang === 'km' ? 'ឆៃហ្វុង' : 'CHAI FONG'}
-              </h2>
-              <div className="mt-1.5 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-rose-50 border border-rose-100/80 text-brand-pink font-bold text-[11px] uppercase tracking-wider">
-                <span>Graphic Designer & Video Editor</span>
-              </div>
+            {/* Author Title & Role */}
+            <h1 className="font-display text-4xl sm:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-100 to-pink-300">
+              {lang === 'km' ? 'ឆៃហ្វុង' : 'CHAI FONG'}
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-400 font-bold tracking-[0.25em] uppercase mt-2">
+              Graphic Designer & Video Editor
+            </p>
+          </div>
+
+          {/* Bottom Progress Counter & Timeline Bar */}
+          <div className="w-full max-w-xl flex flex-col items-center z-10">
+            {/* Massive Percentage Counter */}
+            <div className="flex items-baseline gap-1 mb-2">
+              <span className="text-5xl sm:text-6xl font-black font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-400 to-indigo-300">
+                {loadingProgress}
+              </span>
+              <span className="text-2xl font-black text-rose-400 font-mono">%</span>
             </div>
 
-            {/* Giant % Counter */}
-            <div className="text-4xl sm:text-5xl font-black font-display tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-pink to-brand-cyan mb-3">
-              {loadingProgress}%
-            </div>
-
-            {/* Progress Bar Container */}
-            <div className="w-full h-3 bg-gray-100/90 rounded-full p-0.5 overflow-hidden border border-gray-200/70 shadow-inner">
+            {/* Timeline Progress Bar */}
+            <div className="w-full h-3 bg-white/10 rounded-full p-0.5 backdrop-blur-md border border-white/15 overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
               <div 
-                className="h-full bg-gradient-to-r from-brand-navy via-brand-pink to-brand-cyan rounded-full transition-all duration-75 ease-out shadow-[0_0_12px_rgba(232,93,117,0.4)]"
+                className="h-full bg-gradient-to-r from-rose-500 via-pink-500 to-indigo-500 rounded-full transition-all duration-75 ease-out shadow-[0_0_20px_rgba(244,63,94,0.8)]"
                 style={{ width: `${loadingProgress}%` }}
               />
             </div>
 
-            {/* Status Subtitle */}
-            <p className="mt-3 text-xs font-semibold text-gray-500 tracking-wide italic">
-              {loadingProgress < 40 
-                ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
-                : loadingProgress < 85 
-                ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
-                : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
-            </p>
-
+            {/* Status Line */}
+            <div className="w-full flex items-center justify-between text-[11px] text-gray-400 font-mono mt-3">
+              <span className="italic">
+                {loadingProgress < 40 
+                  ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
+                  : loadingProgress < 85 
+                  ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
+                  : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
+              </span>
+              <span className="text-white/60">00:00:00 / 00:01:00</span>
+            </div>
           </div>
+
         </div>
       )}
 
