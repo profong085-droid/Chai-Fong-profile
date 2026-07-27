@@ -663,67 +663,67 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
   return (
     <>
-      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) */}
+      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - MODERN LIGHT MINIMALIST STYLE */}
       {!isLoaded && (
         <div 
-          className={`fixed inset-0 z-[100] bg-gradient-to-br from-[#eaf4fb] via-[#fcfdff] to-[#fdf2f5] flex flex-col items-center justify-center px-4 select-none transition-all duration-500 ${
+          className={`fixed inset-0 z-[100] bg-gradient-to-br from-[#eff6ff] via-[#fafbff] to-[#fff1f5] flex flex-col items-center justify-center p-4 select-none overflow-hidden transition-all duration-500 ${
             fadeOutLoader ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
           }`}
         >
-          {/* Central Glass Card matching App Container aesthetic */}
-          <div className="w-full max-w-[340px] sm:max-w-[380px] bg-white/85 backdrop-blur-2xl border border-white/90 rounded-[32px] shadow-2xl shadow-rose-950/5 p-6 sm:p-7 flex flex-col items-center text-center relative overflow-hidden">
-            
-            {/* Background Decorative Gradient Glows */}
-            <div className="absolute -top-16 -left-16 w-36 h-36 bg-rose-200/50 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute -bottom-16 -right-16 w-36 h-36 bg-sky-200/50 rounded-full blur-2xl pointer-events-none" />
+          {/* Ambient Lighting Blobs */}
+          <div className="w-[350px] h-[350px] bg-rose-200/40 rounded-full blur-[90px] absolute -top-20 -left-20 pointer-events-none animate-pulse" />
+          <div className="w-[350px] h-[350px] bg-sky-200/40 rounded-full blur-[90px] absolute -bottom-20 -right-20 pointer-events-none animate-pulse" />
 
-            {/* Profile Avatar with Brand Ring & Sparkle */}
-            <div className="relative mb-4 sm:mb-5 z-10">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-xl ring-4 ring-rose-100/80 p-0.5 bg-white">
+          {/* Central Glass Card */}
+          <div className="w-full max-w-[360px] sm:max-w-[400px] bg-white/75 backdrop-blur-3xl border border-white/90 rounded-[36px] shadow-[0_25px_60px_-15px_rgba(29,27,75,0.12)] p-7 sm:p-9 flex flex-col items-center text-center relative z-10">
+            
+            {/* Avatar Section */}
+            <div className="relative mb-5">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-[0_12px_28px_rgba(0,0,0,0.08)] ring-4 ring-rose-100/80 p-0.5 bg-white">
                 <img 
                   src="/images/fongrub1.png" 
                   alt="Chai Fong Logo" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              {/* Rotating Dashed Accent Ring */}
-              <div className="absolute -inset-2.5 rounded-full border-2 border-dashed border-brand-pink/40 animate-spin" style={{ animationDuration: '8s' }} />
-              <div className="absolute -top-1 -right-1 bg-white p-1.5 rounded-full shadow-md border border-rose-100">
-                <Sparkles className="w-4 h-4 text-amber-500 animate-bounce" />
+              {/* Rotating Accent Spinner */}
+              <div className="absolute -inset-3 rounded-full border-2 border-rose-300/40 border-t-brand-pink animate-spin" style={{ animationDuration: '4s' }} />
+              <div className="absolute top-0 right-0 bg-white p-1.5 rounded-full shadow-md border border-rose-100">
+                <Sparkles className="w-4 h-4 text-amber-500 animate-pulse" />
               </div>
             </div>
 
-            {/* Brand Title & Subtitle */}
-            <div className="z-10 mb-5">
-              <h2 className="font-display text-2xl sm:text-[26px] font-black tracking-tight text-brand-navy">
-                {lang === 'km' ? 'ឆៃហ្វុង' : 'CHAI FONG'} <span className="text-brand-pink font-semibold text-lg">• Portfolio</span>
+            {/* Title & Badge */}
+            <div className="mb-6">
+              <h2 className="font-display text-2xl sm:text-3xl font-black tracking-tight text-brand-navy">
+                {lang === 'km' ? 'ឆៃហ្វុង' : 'CHAI FONG'}
               </h2>
-              <p className="text-[11px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mt-1">
-                Graphic Designer & Video Editor
-              </p>
+              <div className="mt-1.5 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-rose-50 border border-rose-100/80 text-brand-pink font-bold text-[11px] uppercase tracking-wider">
+                <span>Graphic Designer & Video Editor</span>
+              </div>
+            </div>
+
+            {/* Giant % Counter */}
+            <div className="text-4xl sm:text-5xl font-black font-display tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-pink to-brand-cyan mb-3">
+              {loadingProgress}%
             </div>
 
             {/* Progress Bar Container */}
-            <div className="w-full h-3 bg-gray-100/90 rounded-full p-0.5 overflow-hidden border border-gray-200/80 shadow-inner z-10">
+            <div className="w-full h-3 bg-gray-100/90 rounded-full p-0.5 overflow-hidden border border-gray-200/70 shadow-inner">
               <div 
-                className="h-full bg-gradient-to-r from-brand-navy via-brand-pink to-rose-500 rounded-full transition-all duration-150 ease-out shadow-[0_0_12px_rgba(232,93,117,0.5)]"
+                className="h-full bg-gradient-to-r from-brand-navy via-brand-pink to-brand-cyan rounded-full transition-all duration-75 ease-out shadow-[0_0_12px_rgba(232,93,117,0.4)]"
                 style={{ width: `${loadingProgress}%` }}
               />
             </div>
 
-            {/* Status & Counter Row */}
-            <div className="mt-3.5 flex items-center justify-between w-full text-xs font-bold z-10">
-              <span className="text-gray-500 font-medium text-[11.5px] italic">
-                {loadingProgress < 40 
-                  ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
-                  : loadingProgress < 85 
-                  ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
-                  : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
-              </span>
-              <span className="text-lg font-black text-brand-navy font-display">
-                {loadingProgress}%
-              </span>
-            </div>
+            {/* Status Subtitle */}
+            <p className="mt-3 text-xs font-semibold text-gray-500 tracking-wide italic">
+              {loadingProgress < 40 
+                ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
+                : loadingProgress < 85 
+                ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
+                : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
+            </p>
 
           </div>
         </div>
