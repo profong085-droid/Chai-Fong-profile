@@ -663,81 +663,69 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
   return (
     <>
-      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - ULTRA-PREMIUM CINEMATIC DARK NEON */}
+      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - 100% SEAMLESS HERO MATCHED STYLE */}
       {!isLoaded && (
         <div 
-          className={`fixed inset-0 z-[100] bg-[#090a12] text-white flex flex-col justify-between items-center py-10 px-6 select-none overflow-hidden transition-all duration-700 ease-out ${
-            fadeOutLoader ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
+          className={`fixed inset-0 z-[100] bg-[#e2f0f9] flex flex-col justify-between items-center py-10 px-6 select-none transition-all duration-500 ease-out ${
+            fadeOutLoader ? 'opacity-0 scale-100 pointer-events-none' : 'opacity-100 scale-100'
           }`}
         >
-          {/* Ambient Motion Mesh Lighting */}
-          <div className="w-[500px] h-[500px] bg-rose-600/20 rounded-full blur-[140px] absolute -top-40 -left-40 pointer-events-none animate-pulse" />
-          <div className="w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[140px] absolute -bottom-40 -right-40 pointer-events-none animate-pulse" style={{ animationDuration: '6s' }} />
-
-          {/* Top Brand Header Bar */}
-          <div className="w-full flex items-center justify-between max-w-xl z-10">
-            <div className="flex items-center gap-2 text-xs font-bold text-gray-400 tracking-widest uppercase">
-              <Sparkles className="w-4 h-4 text-amber-400 animate-spin" style={{ animationDuration: '5s' }} />
-              <span>CHAI FONG STUDIO</span>
+          {/* Top Brand Header Bar matching site hero badge */}
+          <div className="w-full flex items-center justify-between max-w-sm z-10">
+            <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-white/70 shadow-sm text-[11px] font-bold text-brand-navy">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
+              <span>{lang === 'km' ? 'ស្នាដៃ ឆៃហ្វុង ២០២៦' : 'Chai Fong Portfolio 2026'}</span>
             </div>
-            <span className="px-3 py-1 rounded-full bg-white/10 text-[10px] font-bold tracking-wider text-rose-300 border border-white/10 uppercase">
-              PORTFOLIO 2026
-            </span>
+            <div className="bg-brand-navy text-white text-[10.5px] font-extrabold px-3 py-1 rounded-full shadow-sm">
+              PHO CHAIFONG
+            </div>
           </div>
 
           {/* Main Center Content */}
           <div className="flex flex-col items-center text-center z-10 my-auto">
-            {/* Glowing Avatar */}
-            <div className="relative mb-6">
-              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-white/30 shadow-[0_0_50px_rgba(232,93,117,0.4)] p-1 bg-white/10 backdrop-blur-md">
+            {/* Profile Avatar matching main portfolio */}
+            <div className="relative mb-5">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-white shadow-xl ring-4 ring-rose-100/80 p-0.5 bg-white">
                 <img 
-                  src="/images/fongrub1.png" 
-                  alt="Chai Fong" 
+                  src="/images/IMG_7733.webp" 
+                  alt="Chai Fong Profile" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>
-              {/* Outer Dual Spinning Rings */}
-              <div className="absolute -inset-4 rounded-full border border-rose-500/40 border-t-rose-400 animate-spin" style={{ animationDuration: '3s' }} />
-              <div className="absolute -inset-8 rounded-full border border-indigo-500/20 border-b-cyan-400 animate-spin" style={{ animationDuration: '6s' }} />
+              <div className="absolute -inset-2.5 rounded-full border-2 border-dashed border-brand-pink/50 animate-spin" style={{ animationDuration: '8s' }} />
             </div>
 
-            {/* Author Title & Role */}
-            <h1 className="font-display text-4xl sm:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-100 to-pink-300">
+            {/* Author Title & Subtitle */}
+            <h1 className="font-display text-3xl sm:text-4xl font-black tracking-tight text-brand-navy">
               {lang === 'km' ? 'ឆៃហ្វុង' : 'CHAI FONG'}
             </h1>
-            <p className="text-xs sm:text-sm text-gray-400 font-bold tracking-[0.25em] uppercase mt-2">
+            <p className="text-xs sm:text-sm font-bold text-brand-pink tracking-wider uppercase mt-1">
               Graphic Designer & Video Editor
             </p>
           </div>
 
-          {/* Bottom Progress Counter & Timeline Bar */}
-          <div className="w-full max-w-xl flex flex-col items-center z-10">
-            {/* Massive Percentage Counter */}
-            <div className="flex items-baseline gap-1 mb-2">
-              <span className="text-5xl sm:text-6xl font-black font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-400 to-indigo-300">
-                {loadingProgress}
-              </span>
-              <span className="text-2xl font-black text-rose-400 font-mono">%</span>
-            </div>
-
-            {/* Timeline Progress Bar */}
-            <div className="w-full h-3 bg-white/10 rounded-full p-0.5 backdrop-blur-md border border-white/15 overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-              <div 
-                className="h-full bg-gradient-to-r from-rose-500 via-pink-500 to-indigo-500 rounded-full transition-all duration-75 ease-out shadow-[0_0_20px_rgba(244,63,94,0.8)]"
-                style={{ width: `${loadingProgress}%` }}
-              />
-            </div>
-
-            {/* Status Line */}
-            <div className="w-full flex items-center justify-between text-[11px] text-gray-400 font-mono mt-3">
-              <span className="italic">
+          {/* Bottom Progress Counter & Seamless Bar */}
+          <div className="w-full max-w-sm flex flex-col items-center z-10">
+            {/* Status & Counter Row */}
+            <div className="w-full flex items-center justify-between mb-2 px-1">
+              <span className="text-xs font-bold text-gray-600 italic">
                 {loadingProgress < 40 
                   ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
                   : loadingProgress < 85 
                   ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
                   : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
               </span>
-              <span className="text-white/60">00:00:00 / 00:01:00</span>
+              <span className="text-2xl font-black text-brand-navy font-display">
+                {loadingProgress}%
+              </span>
+            </div>
+
+            {/* Seamless Progress Bar */}
+            <div className="w-full h-3 bg-white/80 rounded-full p-0.5 border border-white shadow-inner overflow-hidden">
+              <div 
+                className="h-full bg-gradient-to-r from-brand-navy to-brand-pink rounded-full transition-all duration-75 ease-out shadow-sm"
+                style={{ width: `${loadingProgress}%` }}
+              />
             </div>
           </div>
 
