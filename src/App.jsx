@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { 
   Globe, 
   Mail, 
@@ -662,6 +664,8 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
   return (
     <>
+      <Analytics />
+      <SpeedInsights />
       {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - ULTRA-PREMIUM CIRCULAR GLASS STYLE */}
       {!isLoaded && (
         <div 
