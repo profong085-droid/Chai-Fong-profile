@@ -57,8 +57,7 @@ export default function App() {
   useEffect(() => {
     let progress = 1;
     const interval = setInterval(() => {
-      const increment = Math.floor(Math.random() * 8) + 4;
-      progress = Math.min(100, progress + increment);
+      progress += 1;
       setLoadingProgress(progress);
 
       if (progress >= 100) {
@@ -68,9 +67,9 @@ export default function App() {
           setTimeout(() => {
             setIsLoaded(true);
           }, 500);
-        }, 300);
+        }, 400);
       }
-    }, 45);
+    }, 28);
 
     return () => clearInterval(interval);
   }, []);
