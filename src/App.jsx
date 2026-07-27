@@ -667,51 +667,65 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) */}
       {!isLoaded && (
         <div 
-          className={`fixed inset-0 z-[100] bg-[#0c0d14] flex flex-col items-center justify-center text-white px-4 select-none transition-all duration-500 ${
+          className={`fixed inset-0 z-[100] bg-gradient-to-br from-[#eaf4fb] via-[#fcfdff] to-[#fdf2f5] flex flex-col items-center justify-center px-4 select-none transition-all duration-500 ${
             fadeOutLoader ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
           }`}
         >
-          {/* Animated Profile / Avatar Glow */}
-          <div className="relative mb-6">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-rose-500/60 shadow-[0_0_35px_rgba(244,63,94,0.45)] p-1 bg-white/5 backdrop-blur-md">
-              <img 
-                src="/images/fongrub1.png" 
-                alt="Chai Fong Logo" 
-                className="w-full h-full object-cover rounded-full"
+          {/* Central Glass Card matching App Container aesthetic */}
+          <div className="w-full max-w-[340px] sm:max-w-[380px] bg-white/85 backdrop-blur-2xl border border-white/90 rounded-[32px] shadow-2xl shadow-rose-950/5 p-6 sm:p-7 flex flex-col items-center text-center relative overflow-hidden">
+            
+            {/* Background Decorative Gradient Glows */}
+            <div className="absolute -top-16 -left-16 w-36 h-36 bg-rose-200/50 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute -bottom-16 -right-16 w-36 h-36 bg-sky-200/50 rounded-full blur-2xl pointer-events-none" />
+
+            {/* Profile Avatar with Brand Ring & Sparkle */}
+            <div className="relative mb-4 sm:mb-5 z-10">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-xl ring-4 ring-rose-100/80 p-0.5 bg-white">
+                <img 
+                  src="/images/fongrub1.png" 
+                  alt="Chai Fong Logo" 
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+              {/* Rotating Dashed Accent Ring */}
+              <div className="absolute -inset-2.5 rounded-full border-2 border-dashed border-brand-pink/40 animate-spin" style={{ animationDuration: '8s' }} />
+              <div className="absolute -top-1 -right-1 bg-white p-1.5 rounded-full shadow-md border border-rose-100">
+                <Sparkles className="w-4 h-4 text-amber-500 animate-bounce" />
+              </div>
+            </div>
+
+            {/* Brand Title & Subtitle */}
+            <div className="z-10 mb-5">
+              <h2 className="font-display text-2xl sm:text-[26px] font-black tracking-tight text-brand-navy">
+                {lang === 'km' ? 'ឆៃហ្វុង' : 'CHAI FONG'} <span className="text-brand-pink font-semibold text-lg">• Portfolio</span>
+              </h2>
+              <p className="text-[11px] sm:text-xs text-gray-500 font-bold tracking-wider uppercase mt-1">
+                Graphic Designer & Video Editor
+              </p>
+            </div>
+
+            {/* Progress Bar Container */}
+            <div className="w-full h-3 bg-gray-100/90 rounded-full p-0.5 overflow-hidden border border-gray-200/80 shadow-inner z-10">
+              <div 
+                className="h-full bg-gradient-to-r from-brand-navy via-brand-pink to-rose-500 rounded-full transition-all duration-150 ease-out shadow-[0_0_12px_rgba(232,93,117,0.5)]"
+                style={{ width: `${loadingProgress}%` }}
               />
             </div>
-            <div className="absolute -inset-3 rounded-full border border-rose-500/40 border-t-rose-400 animate-spin" style={{ animationDuration: '3s' }} />
-            <div className="absolute -inset-6 rounded-full border border-indigo-500/25 border-b-indigo-400 animate-spin" style={{ animationDuration: '5s' }} />
-          </div>
 
-          {/* Branding Name */}
-          <h2 className="font-display text-2xl sm:text-3xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-300 to-indigo-300 mb-1 text-center">
-            ឆៃហ្វុង • PHO CHAIFONG
-          </h2>
-          <p className="text-[11px] sm:text-xs text-gray-400 font-medium tracking-widest uppercase mb-8 text-center">
-            Graphic Designer & Video Editor
-          </p>
+            {/* Status & Counter Row */}
+            <div className="mt-3.5 flex items-center justify-between w-full text-xs font-bold z-10">
+              <span className="text-gray-500 font-medium text-[11.5px] italic">
+                {loadingProgress < 40 
+                  ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
+                  : loadingProgress < 85 
+                  ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
+                  : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
+              </span>
+              <span className="text-lg font-black text-brand-navy font-display">
+                {loadingProgress}%
+              </span>
+            </div>
 
-          {/* Progress Bar Container */}
-          <div className="w-64 sm:w-80 h-3 bg-white/10 rounded-full p-0.5 overflow-hidden backdrop-blur-md border border-white/15 shadow-inner">
-            <div 
-              className="h-full bg-gradient-to-r from-rose-500 via-pink-500 to-indigo-500 rounded-full transition-all duration-150 ease-out shadow-[0_0_15px_rgba(244,63,94,0.9)]"
-              style={{ width: `${loadingProgress}%` }}
-            />
-          </div>
-
-          {/* Percentage Counter & Status */}
-          <div className="mt-4 flex items-center justify-between w-64 sm:w-80 text-xs font-bold">
-            <span className="text-gray-400 font-normal italic">
-              {loadingProgress < 40 
-                ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
-                : loadingProgress < 85 
-                ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
-                : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
-            </span>
-            <span className="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-300 font-mono">
-              {loadingProgress}%
-            </span>
           </div>
         </div>
       )}
