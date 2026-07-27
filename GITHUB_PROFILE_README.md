@@ -1,11 +1,19 @@
 <div align="center">
 
   <!-- Full-width Waving Header Banner with Gradient Brand Colors -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=1d1b4b&height=220&section=header&text=PHO%20CHAIFONG&fontSize=52&fontColor=e85d75&fontAlignY=36&desc=%E1%9E%95%E1%9E%BC%20%E1%9E%86%E1%9E%BF%E1%9E%AE%E1%9E%BB%E1%9E%84%20%E2%80%A2%20Graphic%20Designer%20%26%20Video%20Editor&descAlignY=62&descAlign=50&descScale=true" width="100%" alt="Pho Chaifong Header Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=1d1b4b&height=180&section=header&text=PHO%20CHAIFONG&fontSize=48&fontColor=e85d75&fontAlignY=45" width="100%" alt="Pho Chaifong Header Banner" />
+
+  <!-- Crisp Khmer Name Header -->
+  <h1 align="center">
+    <span style="color: #e85d75; font-weight: 900;">ផូ ឆៃហ្វុង</span>
+  </h1>
+  <h3>
+    <span style="color: #38b6ff;">Graphic Designer & Video Editor • Web Developer</span>
+  </h3>
 
   <!-- Animated Typing SVG Subtitle -->
   <a href="https://chaifong.website">
-    <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=26&duration=2500&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&height=50&lines=Graphic+Design+%26+Video+Editing+Specialist;React+%26+Web+Application+Developer;Welcome+to+my+Official+GitHub+Profile!" alt="Typing SVG Animation" />
+    <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=24&duration=2500&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&height=45&lines=Graphic+Design+%26+Video+Editing+Specialist;React+%26+Web+Application+Developer;Welcome+to+my+Official+GitHub+Profile!" alt="Typing SVG Animation" />
   </a>
 
   <br />
