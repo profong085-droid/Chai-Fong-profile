@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { 
-  Sparkles, 
   Globe, 
   Mail, 
   Compass, 
@@ -673,7 +672,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           {/* Top Brand Header Bar matching site hero badge */}
           <div className="w-full flex items-center justify-between max-w-sm z-10">
             <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-white/70 shadow-sm text-[11px] font-bold text-brand-navy">
-              <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
               <span>{lang === 'km' ? 'ស្នាដៃ ឆៃហ្វុង ២០២៦' : 'Chai Fong Portfolio 2026'}</span>
             </div>
             <div className="bg-brand-navy text-white text-[10.5px] font-extrabold px-3 py-1 rounded-full shadow-sm">
@@ -701,7 +699,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 {lang === 'km' ? 'ផូ ឆៃហ្វុង' : 'PHO CHAIFONG'}
               </h1>
               <div className="mt-1 flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/90 border border-white shadow-sm">
-                <Sparkles className="w-3 h-3 text-amber-500 animate-pulse" />
                 <span className="text-[10.5px] font-outfit font-extrabold tracking-[0.2em] text-brand-pink uppercase">
                   GRAPHIC DESIGNER & VIDEO EDITOR
                 </span>
@@ -771,7 +768,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           
           {/* Subtle Floating Glow Effect Badge */}
           <div className="absolute bottom-2 left-2.5 sm:bottom-4 sm:left-6 z-20 flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-md px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/70 shadow-lg text-[9.5px] sm:text-[11px] font-bold text-brand-navy">
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-500 animate-pulse shrink-0" />
             <span>{lang === 'km' ? 'ស្នាដៃ Graphic Design & Video Edit ២០២៦' : 'Design & Video Portfolio 2026'}</span>
           </div>
         </section>
@@ -1116,7 +1112,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   {/* Multi-Image Auto Badge */}
                   {art.images && (
                     <span className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-emerald-500/90 backdrop-blur-md text-[9px] font-bold text-white flex items-center gap-1 shadow-md">
-                      <Sparkles className="w-2.5 h-2.5 animate-spin" />
                       <span>{(slideshowIndices[art.id] || 0) + 1}/{art.images.length} (3s)</span>
                     </span>
                   )}
@@ -1278,7 +1273,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
                   {/* Auto Badge */}
                   <div className="absolute top-3 left-3 bg-emerald-500/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md flex items-center gap-1 shadow-md z-10">
-                    <Sparkles className="w-3 h-3 animate-spin" />
                     <span>{modalSlideIndex + 1} / {selectedArtwork.images.length} (Auto 3s)</span>
                   </div>
                 </>
