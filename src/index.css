@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Moul&family=Outfit:wght@800;900&family=Kantumruy+Pro:ital,wght@0,400;0,600;0,700;0,800;1,600;1,800&family=Plus+Jakarta+Sans:wght@800;900&family=Kalam:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Dangrek&family=Moul&family=Outfit:wght@800;900&family=Kantumruy+Pro:ital,wght@0,400;0,600;0,700;0,800;1,600;1,800&family=Plus+Jakarta+Sans:wght@800;900&family=Kalam:wght@700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-koulen {
+  font-family: 'Koulen', 'Kantumruy Pro', cursive;
+}
 
 .font-dangrek {
   font-family: 'Dangrek', 'Kantumruy Pro', cursive;

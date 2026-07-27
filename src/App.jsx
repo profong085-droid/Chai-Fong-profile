@@ -697,12 +697,12 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
             {/* Author Title & Subtitle */}
             <div className="flex flex-col items-center">
-              <h1 className="font-dangrek text-3xl sm:text-4xl tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-pink to-[#1d1b4b] drop-shadow-sm">
+              <h1 className="font-koulen text-4xl sm:text-5xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-pink to-[#1d1b4b] drop-shadow-sm leading-none mb-1">
                 {lang === 'km' ? 'ផូ ឆៃហ្វុង' : 'PHO CHAIFONG'}
               </h1>
-              <div className="mt-1 flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/80 border border-white shadow-sm">
-                <Sparkles className="w-3 h-3 text-amber-500" />
-                <span className="text-[10.5px] font-outfit font-extrabold tracking-[0.18em] text-brand-navy uppercase">
+              <div className="mt-1 flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/90 border border-white shadow-sm">
+                <Sparkles className="w-3 h-3 text-amber-500 animate-pulse" />
+                <span className="text-[10.5px] font-outfit font-extrabold tracking-[0.2em] text-brand-navy uppercase">
                   GRAPHIC DESIGNER & VIDEO EDITOR
                 </span>
               </div>
@@ -798,7 +798,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             {/* Left Info */}
             <div className="flex-1 min-w-0">
               <div className="relative mb-2 sm:mb-3">
-                <h1 className="font-dangrek font-normal text-[30px] sm:text-[36px] leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#1d1b4b] via-brand-pink to-[#1d1b4b] tracking-wide">
+                <h1 className="font-koulen text-[32px] sm:text-[38px] leading-none text-transparent bg-clip-text bg-gradient-to-r from-[#1d1b4b] via-brand-pink to-[#1d1b4b] tracking-wider mb-1">
                   {lang === 'km' ? (
                     <>ផូ ឆៃហ្វុង</>
                   ) : (
