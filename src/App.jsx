@@ -172,17 +172,17 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       title: lang === 'km' ? 'បង្កើតវេបសាយ Loctroi Cambodia' : 'Loctroi Cambodia Website',
       category: 'comics',
       categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
-      img: '/images/screenshot_271.png',
+      img: '/images/screenshot_271.webp',
       images: [
-        '/images/screenshot_271.png',
-        '/images/screenshot_272.png',
-        '/images/screenshot_273.png',
-        '/images/screenshot_274.png',
-        '/images/screenshot_275.png',
-        '/images/screenshot_276.png',
-        '/images/screenshot_277.png',
-        '/images/screenshot_278.png',
-        '/images/screenshot_279.png'
+        '/images/screenshot_271.webp',
+        '/images/screenshot_272.webp',
+        '/images/screenshot_273.webp',
+        '/images/screenshot_274.webp',
+        '/images/screenshot_275.webp',
+        '/images/screenshot_276.webp',
+        '/images/screenshot_277.webp',
+        '/images/screenshot_278.webp',
+        '/images/screenshot_279.webp'
       ],
       gradient: 'from-emerald-500 via-teal-600 to-indigo-700',
       description: lang === 'km' 
@@ -199,14 +199,14 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       title: lang === 'km' ? 'វេបសាយមើលរឿង SabayFlix' : 'SabayFlix Movie Website',
       category: 'comics',
       categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
-      img: '/images/screenshot_281.png',
+      img: '/images/screenshot_281.webp',
       images: [
-        '/images/screenshot_281.png',
-        '/images/screenshot_282.png',
-        '/images/screenshot_283.png',
-        '/images/screenshot_284.png',
-        '/images/screenshot_285.png',
-        '/images/screenshot_286.png'
+        '/images/screenshot_281.webp',
+        '/images/screenshot_282.webp',
+        '/images/screenshot_283.webp',
+        '/images/screenshot_284.webp',
+        '/images/screenshot_285.webp',
+        '/images/screenshot_286.webp'
       ],
       gradient: 'from-red-600 via-rose-600 to-amber-600',
       description: lang === 'km' 
@@ -223,7 +223,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       title: lang === 'km' ? 'វេបសាយផ្ទាល់ខ្លួន Fong KH' : 'Fong KH Portfolio Website',
       category: 'comics',
       categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
-      img: '/images/screenshot_287.png',
+      img: '/images/screenshot_287.webp',
       gradient: 'from-purple-600 via-indigo-600 to-pink-500',
       description: lang === 'km' 
         ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយផ្ទាល់ខ្លួន Fong KH សម្រាប់បង្ហាញស្នាដៃកាត់តវីដេអូផ្សព្វផ្សាយថ្នាំកសិកម្ម ឌីហ្សាញ Poster និងព័ត៌មានទំនាក់ទំនង។' 
@@ -239,7 +239,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       title: lang === 'km' ? 'វេបសាយកាត 3D MeCom' : '3D MeCom Digital Card Website',
       category: 'comics',
       categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
-      img: '/images/screenshot_288.png',
+      img: '/images/screenshot_288.webp',
       gradient: 'from-cyan-500 via-blue-600 to-indigo-700',
       description: lang === 'km' 
         ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយកាត 3D MeCom សម្រាប់ផ្សព្វផ្សាយលើ Facebook & TikTok ដែលមាន Interaction បង្វិលកាត 3D យ៉ាងស្អាតទាក់ទាញ។' 
@@ -255,10 +255,10 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       title: lang === 'km' ? 'វេបសាយហាងលក់អាវ Kimchi Shop' : 'Kimchi Shop E-Commerce Website',
       category: 'comics',
       categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
-      img: '/images/screenshot_289.png',
+      img: '/images/screenshot_289.webp',
       images: [
-        '/images/screenshot_289.png',
-        '/images/screenshot_290.png'
+        '/images/screenshot_289.webp',
+        '/images/screenshot_290.webp'
       ],
       gradient: 'from-pink-500 via-rose-500 to-amber-500',
       description: lang === 'km' 
@@ -275,11 +275,11 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       title: lang === 'km' ? 'វេបសាយលក់អាវ Kimchi Com' : 'Kimchi Com Store Website',
       category: 'comics',
       categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
-      img: '/images/screenshot_291.png',
+      img: '/images/screenshot_291.webp',
       images: [
-        '/images/screenshot_291.png',
-        '/images/screenshot_292.png',
-        '/images/screenshot_293.png'
+        '/images/screenshot_291.webp',
+        '/images/screenshot_292.webp',
+        '/images/screenshot_293.webp'
       ],
       gradient: 'from-amber-400 via-orange-500 to-rose-600',
       description: lang === 'km' 
@@ -296,11 +296,11 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       title: lang === 'km' ? 'វេបសាយកាត់តវីដេអូ iFong KH' : 'iFong KH Video Portfolio Website',
       category: 'comics',
       categoryLabel: lang === 'km' ? 'បង្កើតវេបសាយ' : 'Web Dev',
-      img: '/images/screenshot_294.png',
+      img: '/images/screenshot_294.webp',
       images: [
-        '/images/screenshot_294.png',
-        '/images/screenshot_295.png',
-        '/images/screenshot_296.png'
+        '/images/screenshot_294.webp',
+        '/images/screenshot_295.webp',
+        '/images/screenshot_296.webp'
       ],
       gradient: 'from-sky-500 via-indigo-600 to-purple-700',
       description: lang === 'km' 
@@ -564,7 +564,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               💬 Telegram: <strong>@Phochaifong007</strong> &nbsp;|&nbsp; 🌐 Website: <strong>https://chaifong.website</strong>
             </div>
           </div>
-          <img src="${window.location.origin}/images/IMG_7733.JPG" class="profile-img" alt="Chai Fong" />
+          <img src="${window.location.origin}/images/IMG_7733.webp" class="profile-img" alt="Chai Fong" />
         </div>
 
         <div class="stats-grid">
@@ -662,7 +662,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         {/* HERO SECTION WITH FULL UNCROPPED NATURAL DIMENSIONS */}
         <section className="relative w-full overflow-hidden rounded-b-[24px] sm:rounded-b-[32px] bg-[#e2f0f9]">
           <img 
-            src="/images/IMG_8039.JPG" 
+            src="/images/IMG_8039.webp" 
             alt="Chai Fong Portfolio Hero"
             loading="eager"
             fetchPriority="high"
@@ -730,7 +730,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 title={t.interactiveHint}
               >
                 <img 
-                  src="/images/IMG_7733.JPG" 
+                  src="/images/IMG_7733.webp" 
                   alt="Chai Fong Profile" 
                   className="w-full h-full object-cover object-center"
                 />
