@@ -1201,34 +1201,34 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </div>
         </section>
 
-        {/* EDUCATION & SKILLS SECTION WITH GLASS CARDS */}
-        <section className="px-5 sm:px-7 py-5 bg-slate-50/40">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* EDUCATION & SKILLS SECTION WITH GLASS CARDS (ALWAYS 2 COLUMNS ON MOBILE & DESKTOP) */}
+        <section className="px-3 sm:px-7 py-4 sm:py-5 bg-slate-50/40">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
             
             {/* Education */}
-            <div className="relative glass-card p-4 rounded-2xl">
-              <div className="relative flex items-center mb-2">
-                <h3 className="font-display text-lg sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1.5">
-                  <GraduationCap className="w-5 h-5 text-brand-pink" />
+            <div className="relative glass-card p-3 sm:p-4 rounded-2xl">
+              <div className="relative flex items-center mb-1.5 sm:mb-2">
+                <h3 className="font-display text-base sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1 sm:gap-1.5">
+                  <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink shrink-0" />
                   <span>{t.eduTitle}</span>
                 </h3>
               </div>
-              <p className="text-[11.5px] leading-relaxed text-gray-600 font-normal whitespace-pre-line">
+              <p className="text-[10.5px] sm:text-[11.5px] leading-relaxed text-gray-600 font-normal whitespace-pre-line">
                 {t.eduDesc}
               </p>
             </div>
 
             {/* Skills */}
-            <div className="glass-card p-4 rounded-2xl">
-              <div className="flex items-center mb-2">
-                <h3 className="font-display text-lg sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1.5">
-                  <Award className="w-5 h-5 text-brand-pink" />
+            <div className="glass-card p-3 sm:p-4 rounded-2xl">
+              <div className="flex items-center mb-1.5 sm:mb-2">
+                <h3 className="font-display text-base sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1 sm:gap-1.5">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink shrink-0" />
                   <span>{t.skillsTitle}</span>
                 </h3>
               </div>
-              <ul className="list-disc pl-4 space-y-1">
+              <ul className="list-disc pl-3.5 sm:pl-4 space-y-1">
                 {t.skills.map((skill, i) => (
-                  <li key={i} className="text-[11.5px] text-gray-700 font-semibold leading-relaxed">
+                  <li key={i} className="text-[10.5px] sm:text-[11.5px] text-gray-700 font-semibold leading-relaxed">
                     {skill}
                   </li>
                 ))}
