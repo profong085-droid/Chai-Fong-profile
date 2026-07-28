@@ -886,12 +886,9 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
     document.body.removeChild(downloadLink);
     setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
 
-    // 2. Open print window to automatically popup "Save as PDF" dialog
-    const printWindow = window.open('', '_blank');
-    if (printWindow) {
-      printWindow.document.write(cvHTML);
-      printWindow.document.close();
-    }
+    // 2. Write to print window to automatically popup "Save as PDF" dialog
+    printWindow.document.write(cvHTML);
+    printWindow.document.close();
   };
 
   return (
