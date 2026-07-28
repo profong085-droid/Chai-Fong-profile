@@ -1493,6 +1493,42 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               <span>Telegram</span>
             </a>
           </div>
+
+          {/* APP DOWNLOAD LINKS (APK & IPA REAL DOWNLOADS) */}
+          <div className="mt-3.5 pt-3 border-t border-gray-200/80">
+            <h5 className="font-display font-extrabold text-[11px] text-brand-navy mb-2 flex items-center justify-center gap-1.5 uppercase tracking-wider">
+              <Download className="w-3.5 h-3.5 text-brand-pink" />
+              <span>{lang === 'km' ? 'ទាញយកកម្មវិធីទូរស័ព្ទ (Official App Download)' : 'Download Official Mobile App'}</span>
+            </h5>
+            
+            <div className="flex items-center justify-center gap-2 flex-wrap">
+              {/* Android APK Download */}
+              <a 
+                href="/downloads/ChaiFong_Official_App.apk" 
+                download="ChaiFong_Official_App.apk"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold shadow-md hover:-translate-y-0.5 transition-all duration-200 border border-emerald-500/50"
+                title="Download Android APK App"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.552 0 .9997.4482.9997.9993.0004.5511-.4477.9997-.9997.9997zm-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.552 0 .9997.4482.9997.9993 0 .5511-.4477.9997-.9997.9997zm11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1522-.5676.416.416 0 0 0-.5676.1522l-2.0223 3.503C15.59 8.246 13.855 7.828 12 7.828s-3.59.418-5.1367 1.1218L4.841 5.4468a.416.416 0 0 0-.5676-.1522.416.416 0 0 0-.1522.5676l1.9973 3.4592C2.688 11.233.438 14.542.046 18.5h23.908c-.392-3.958-2.642-7.267-6.074-9.1786z"/>
+                </svg>
+                <span>{lang === 'km' ? 'ទាញយក APK (Android)' : 'Download APK (Android)'}</span>
+              </a>
+
+              {/* iOS IPA Download */}
+              <a 
+                href="/downloads/ChaiFong_Official_App.ipa" 
+                download="ChaiFong_Official_App.ipa"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-slate-900 hover:bg-black text-white text-xs font-extrabold shadow-md hover:-translate-y-0.5 transition-all duration-200 border border-slate-700"
+                title="Download iOS IPA App"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.32c.67-.82 1.13-1.97.99-3.12-1 .04-2.22.67-2.93 1.5-.64.74-1.2 1.93-1.05 3.06 1.12.09 2.27-.58 2.99-1.44z"/>
+                </svg>
+                <span>{lang === 'km' ? 'ទាញយក IPA (iOS)' : 'Download IPA (iOS)'}</span>
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* FOOTER BAR */}
