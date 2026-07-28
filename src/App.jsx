@@ -699,7 +699,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           <!-- MINIMAL HEADER -->
           <div class="cv-header">
             <div class="header-left">
-              <div class="name-main">ឆៃហ្វុង (CHAI FONG)</div>
+              <div class="name-main">ផូ ឆៃហ្វុង (PHO CHAIFONG)</div>
               <div class="role-title">Graphic Designer & Video Editor</div>
               
               <div class="contact-row">
