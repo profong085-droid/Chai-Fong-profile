@@ -608,14 +608,13 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </div>
 
         <div class="section">
-          <div class="sec-title">🎓 បទពិសោធន៍ការងារ & ការអប់រំ (Work & Education)</div>
+          <div class="sec-title">🎓 ការអប់រំ & បទពិសោធន៍ការងារ</div>
           <div class="bio-text">
-            💼 <strong>Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម):</strong>
-            • ធ្វើជា Graphic Designer & Video Editor ឌីហ្សាញ Poster, Banner ផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិក Social Media។
-            • កាត់តវីដេអូផ្សព្វផ្សាយផលិតផលស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve និង Motion Graphics ជាមួយ After Effects។
-            
-            🎓 <strong>ការសិក្សា:</strong>
-            • សាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (RUA)
+            🎓 <strong>ការសិក្សា៖</strong><br>
+            • បច្ចុប្បន្នកំពុងសិក្សានៅសាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (RUA)<br><br>
+            💼 <strong>បទពិសោធន៍នៅ Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម)៖</strong><br>
+            • ធ្វើការជា Graphic Designer & Video Editor ទទួលបន្ទុកឌីហ្សាញ Poster, Banner ផ្សព្វផ្សាយផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិកលើ Social Media ដោយប្រើ Adobe Photoshop។<br>
+            • កាត់ត និងផលិតវីដេអូផ្សព្វផ្សាយផលិតផលកសិកម្មយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve ព្រមទាំងបង្កើត Motion Graphics ជាមួយ After Effects ដើម្បីឱ្យវីដេអូមានភាពរស់រវើក ទាក់ទាញ និងមានគុណភាពខ្ពស់។
           </div>
         </div>
 
@@ -767,14 +766,14 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </div>
       )}
 
-      <div className="w-full max-w-full sm:max-w-[440px] mx-auto flex justify-center pb-0 sm:pb-10 overflow-hidden">
-      <div className="w-full max-w-full bg-white sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative flex flex-col transition-all duration-300 sm:border sm:border-gray-100">
+      <div className="w-full max-w-full sm:max-w-[440px] mx-auto flex justify-center pb-0 sm:pb-10 overflow-hidden relative">
+        <div className="w-full max-w-full bg-white/90 backdrop-blur-xl sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative flex flex-col transition-all duration-300 sm:border sm:border-white/80 z-10">
 
         {/* FLOAT BAR: LANGUAGE TOGGLE & CV DOWNLOAD */}
         <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 z-30 flex items-center gap-1.5 sm:gap-2">
           <button 
             onClick={handleDownloadCV}
-            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-[#1d1b4b]/90 backdrop-blur-md shadow-md text-[10px] sm:text-xs font-bold text-white hover:scale-105 transition-all duration-200 border border-white/30 cursor-pointer"
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full glass-pill text-[10px] sm:text-xs font-bold text-brand-navy hover:text-brand-pink shadow-lg transition-all duration-200 border border-white/90 cursor-pointer active:scale-95 glass-shine"
             title="Download CV PDF"
           >
             <Download className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-pink shrink-0" />
@@ -782,7 +781,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </button>
           <button 
             onClick={() => setLang(l => l === 'km' ? 'en' : 'km')}
-            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-md text-[10px] sm:text-xs font-bold text-brand-navy hover:scale-105 transition-all duration-200 border border-white/50 cursor-pointer"
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full glass-pill text-[10px] sm:text-xs font-bold text-brand-navy hover:text-brand-pink shadow-lg transition-all duration-200 border border-white/90 cursor-pointer active:scale-95 glass-shine"
           >
             <Globe className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-pink shrink-0" />
             <span>{t.toggleLang}</span>
@@ -799,14 +798,15 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             className="w-full h-auto block hover:scale-105 transition-transform duration-700"
           />
           
-          {/* Subtle Floating Glow Effect Badge */}
-          <div className="absolute bottom-2 left-2.5 sm:bottom-4 sm:left-6 z-20 flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-md px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-white/70 shadow-lg text-[9.5px] sm:text-[11px] font-bold text-brand-navy">
+          {/* Glass Effect Badge */}
+          <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-6 z-20 flex items-center gap-1.5 sm:gap-2 glass-pill px-3.5 py-1.5 rounded-full border border-white/90 shadow-xl text-[9.5px] sm:text-[11px] font-bold text-brand-navy">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block shadow-sm" />
             <span>{lang === 'km' ? 'ស្នាដៃ Graphic Design & Video Edit ២០២៦' : 'Design & Video Portfolio 2026'}</span>
           </div>
         </section>
 
         {/* ABOUT ME SECTION */}
-        <section className="px-4 py-5 sm:p-7 sm:pb-5 bg-white relative overflow-hidden">
+        <section className="px-4 py-5 sm:p-7 sm:pb-5 bg-gradient-to-b from-white/95 to-slate-50/50 relative overflow-hidden">
           <div className="flex items-center justify-between mb-4 sm:mb-5">
             <h2 className="font-cursive text-xl sm:text-2xl font-bold text-gray-500 italic">
               {t.aboutTitle}
@@ -814,11 +814,11 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             
             <button 
               onClick={handleLike}
-              className={`flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-xs font-bold transition-all shadow-sm ${
-                liked ? 'bg-rose-500 text-white scale-105 shadow-rose-200' : 'bg-rose-50 text-rose-600 hover:bg-rose-100'
+              className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-md active:scale-95 glass-shine ${
+                liked ? 'bg-gradient-to-r from-rose-500 to-pink-500 text-white scale-105 shadow-rose-200' : 'glass-pill text-rose-600 hover:bg-rose-50'
               }`}
             >
-              <Heart className={`w-3.5 h-3.5 ${liked ? 'fill-white text-white' : 'fill-rose-500 text-rose-500'}`} />
+              <Heart className={`w-3.5 h-3.5 ${liked ? 'fill-white text-white animate-pulse' : 'fill-rose-500 text-rose-500'}`} />
               <span>{likesCount}</span>
             </button>
           </div>
@@ -827,7 +827,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             {/* Left Info */}
             <div className="flex-1 min-w-0">
               <div className="relative mb-2 sm:mb-3">
-                <h1 className="font-koulen text-[28px] sm:text-[36px] leading-snug text-brand-navy tracking-wider py-1">
+                <h1 className="font-koulen text-[28px] sm:text-[36px] leading-snug text-brand-navy tracking-wider py-1 animate-shimmer-text">
                   {lang === 'km' ? (
                     <>ផូ ឆៃហ្វុង</>
                   ) : (
@@ -845,7 +845,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 </svg>
               </div>
 
-              <div className="mt-3 sm:mt-4 text-[11px] sm:text-[11.5px] leading-relaxed text-gray-700">
+              <div className="mt-3 sm:mt-4 text-[11px] sm:text-[11.5px] leading-relaxed text-gray-700 glass-card p-3 sm:p-4 rounded-2xl">
                 <span className="font-bold text-sm sm:text-base mr-1 text-brand-navy">{t.greeting}</span>
                 <span className="font-normal whitespace-pre-line">{t.bio}</span>
               </div>
@@ -855,13 +855,13 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             <div className="flex flex-col items-center shrink-0 w-[110px] sm:w-[135px]">
               <div 
                 onClick={triggerHearts}
-                className="w-[105px] h-[105px] sm:w-[135px] sm:h-[135px] rounded-full overflow-hidden relative shadow-lg mb-3 cursor-pointer hover:scale-105 transition-all duration-300 group border-2 border-white ring-4 ring-rose-100/60 bg-white"
+                className="w-[105px] h-[105px] sm:w-[135px] sm:h-[135px] rounded-full overflow-hidden relative shadow-xl mb-3 cursor-pointer hover:scale-105 transition-all duration-300 group border-4 border-white ring-4 ring-rose-200/80 bg-white glass-shine animate-float-slow"
                 title={t.interactiveHint}
               >
                 <img 
                   src="/images/IMG_7733.webp" 
                   alt="Chai Fong Profile" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all" />
                 {showHearts.map(h => (
@@ -877,17 +877,17 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
               {/* Social Links */}
               <div className="flex flex-col gap-1.5 w-full text-left">
-                <a href="tel:0717773554" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors">
+                <a href="tel:0717773554" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors glass-pill px-2.5 py-1 rounded-xl">
                   <Phone className="w-3.5 h-3.5 text-brand-navy shrink-0" />
                   <span className="truncate">071 777 3554</span>
                 </a>
-                <a href="https://web.facebook.com/Phochaifong007/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors">
+                <a href="https://web.facebook.com/Phochaifong007/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors glass-pill px-2.5 py-1 rounded-xl">
                   <Compass className="w-3.5 h-3.5 text-brand-navy shrink-0" />
                   <span className="truncate">Phochaifong007</span>
                 </a>
                 <button 
                   onClick={handleCopyEmail}
-                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group"
+                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl cursor-pointer"
                 >
                   <Mail className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="truncate">{copied ? t.copiedEmail : 'Profong085@...'}</span>
@@ -896,38 +896,35 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
           </div>
 
-          {/* QUICK STATS HIGHLIGHT ROW */}
-          <div className="grid grid-cols-4 gap-1.5 sm:gap-2 mt-5 pt-4 border-t border-gray-100 text-center">
-            <div className="p-1.5 sm:p-2 rounded-xl bg-gray-50/80">
+          {/* QUICK STATS HIGHLIGHT ROW WITH GLASS CARDS */}
+          <div className="grid grid-cols-4 gap-1.5 sm:gap-2.5 mt-5 pt-4 border-t border-gray-100 text-center">
+            <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
               <div className="text-sm sm:text-base font-black text-brand-navy">50+</div>
-              <div className="text-[9px] sm:text-[9.5px] font-semibold text-gray-500 leading-tight mt-0.5">{t.stats.projects}</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.projects}</div>
             </div>
-            <div className="p-1.5 sm:p-2 rounded-xl bg-rose-50/60">
+            <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
               <div className="text-sm sm:text-base font-black text-brand-pink">15+</div>
-              <div className="text-[9px] sm:text-[9.5px] font-semibold text-gray-500 leading-tight mt-0.5">{t.stats.books}</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.books}</div>
             </div>
-            <div className="p-1.5 sm:p-2 rounded-xl bg-sky-50/60">
+            <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
               <div className="text-sm sm:text-base font-black text-brand-cyan">99%</div>
-              <div className="text-[9px] sm:text-[9.5px] font-semibold text-gray-500 leading-tight mt-0.5">{t.stats.satisfaction}</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.satisfaction}</div>
             </div>
-            <div className="p-1.5 sm:p-2 rounded-xl bg-amber-50/60">
-              <div className="text-sm sm:text-base font-black text-amber-600">5+</div>
-              <div className="text-[9px] sm:text-[9.5px] font-semibold text-gray-500 leading-tight mt-0.5">{t.stats.experience}</div>
+            <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
+              <div className="text-sm sm:text-base font-black text-amber-500">5+</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.experience}</div>
             </div>
           </div>
         </section>
 
-        {/* EDUCATION & SKILLS SECTION */}
-        <section className="px-7 py-5 bg-white">
-          <div className="grid grid-cols-2 gap-5">
+        {/* EDUCATION & SKILLS SECTION WITH GLASS CARDS */}
+        <section className="px-5 sm:px-7 py-5 bg-slate-50/40">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             {/* Education */}
-            <div className="relative">
+            <div className="relative glass-card p-4 rounded-2xl">
               <div className="relative flex items-center mb-2">
-                <svg className="absolute -top-6 -left-3 w-8 h-8" viewBox="0 0 40 40" fill="none">
-                  <path d="M5 25 C 10 5, 25 5, 20 20 C 15 35, 30 35, 35 20" stroke="#e85d75" strokeWidth="2.5" strokeLinecap="round"/>
-                </svg>
-                <h3 className="font-display text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1.5">
+                <h3 className="font-display text-lg sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1.5">
                   <GraduationCap className="w-5 h-5 text-brand-pink" />
                   <span>{t.eduTitle}</span>
                 </h3>
@@ -938,16 +935,16 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
 
             {/* Skills */}
-            <div>
+            <div className="glass-card p-4 rounded-2xl">
               <div className="flex items-center mb-2">
-                <h3 className="font-display text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1.5">
+                <h3 className="font-display text-lg sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1.5">
                   <Award className="w-5 h-5 text-brand-pink" />
                   <span>{t.skillsTitle}</span>
                 </h3>
               </div>
-              <ul className="list-disc pl-4 space-y-0.5">
+              <ul className="list-disc pl-4 space-y-1">
                 {t.skills.map((skill, i) => (
-                  <li key={i} className="text-[11.5px] text-gray-700 font-medium leading-relaxed">
+                  <li key={i} className="text-[11.5px] text-gray-700 font-semibold leading-relaxed">
                     {skill}
                   </li>
                 ))}
@@ -957,22 +954,22 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </div>
         </section>
 
-        {/* SOFTWARES SECTION */}
-        <section className="px-7 pb-6 bg-white border-b border-gray-100">
+        {/* SOFTWARES SECTION WITH GLASS STYLING */}
+        <section className="px-5 sm:px-7 py-6 bg-white/60 backdrop-blur-md border-b border-gray-100">
           <h3 className="font-display text-xl font-extrabold text-brand-navy tracking-tight mb-4 flex items-center gap-2">
             <Layers className="w-5 h-5 text-brand-pink" />
             <span>{t.softwaresTitle}</span>
           </h3>
 
-          <div className="flex gap-5 items-start">
+          <div className="flex gap-4 sm:gap-5 items-start">
             {/* Icons Grid */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2.5">
               <div className="flex gap-2">
                 {/* CapCut */}
                 <div 
                   onMouseEnter={() => setActiveSoftware(0)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-black border border-gray-800 p-1 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  className="w-[50px] h-[50px] rounded-2xl bg-black border border-gray-700 p-1 flex items-center justify-center shadow-lg hover:scale-115 transition-all duration-300 cursor-pointer overflow-hidden relative glass-shine"
                   title="CapCut (91%)"
                 >
                   <img 
@@ -986,7 +983,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 <div 
                   onMouseEnter={() => setActiveSoftware(1)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#001e36] border-2 border-[#31a8ff] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  className="w-[50px] h-[50px] rounded-2xl bg-[#001e36] border-2 border-[#31a8ff] flex items-center justify-center shadow-lg hover:scale-115 transition-all duration-300 cursor-pointer overflow-hidden relative glass-shine"
                   title="Photoshop (84%)"
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -999,7 +996,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 <div 
                   onMouseEnter={() => setActiveSoftware(2)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#12131A] border border-gray-800 p-1 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden"
+                  className="w-[50px] h-[50px] rounded-2xl bg-[#12131A] border border-gray-700 p-1 flex items-center justify-center shadow-lg hover:scale-115 transition-all duration-300 cursor-pointer overflow-hidden glass-shine"
                   title="DaVinci Resolve (50%)"
                 >
                   <img 
@@ -1018,7 +1015,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 <div 
                   onMouseEnter={() => setActiveSoftware(3)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#1a0033] border-2 border-[#cf9bff] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  className="w-[50px] h-[50px] rounded-2xl bg-[#1a0033] border-2 border-[#cf9bff] flex items-center justify-center shadow-lg hover:scale-115 transition-all duration-300 cursor-pointer overflow-hidden relative glass-shine"
                   title="After Effects (48%)"
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -1031,7 +1028,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 <div 
                   onMouseEnter={() => setActiveSoftware(4)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#001c38] border border-blue-900/60 p-2 flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden"
+                  className="w-[50px] h-[50px] rounded-2xl bg-[#001c38] border border-blue-900/60 p-2 flex items-center justify-center shadow-lg hover:scale-115 transition-all duration-300 cursor-pointer overflow-hidden glass-shine"
                   title="VS Code (45%)"
                 >
                   <img 
@@ -1046,7 +1043,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 <div 
                   onMouseEnter={() => setActiveSoftware(5)}
                   onMouseLeave={() => setActiveSoftware(null)}
-                  className="w-[50px] h-[50px] rounded-xl bg-[#261300] border-2 border-[#ff9a00] flex items-center justify-center shadow-md hover:scale-110 transition-transform cursor-pointer overflow-hidden relative"
+                  className="w-[50px] h-[50px] rounded-2xl bg-[#261300] border-2 border-[#ff9a00] flex items-center justify-center shadow-lg hover:scale-115 transition-all duration-300 cursor-pointer overflow-hidden relative glass-shine"
                   title="Illustrator (38%)"
                 >
                   <svg viewBox="0 0 100 100" className="w-full h-full">
@@ -1065,17 +1062,17 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   <div key={index} className="flex flex-col gap-1 group">
                     <div className="flex justify-between items-center text-[11px] font-bold text-brand-navy">
                       <span className={isHovered ? 'text-brand-pink transition-colors' : ''}>{sw.name}</span>
-                      <span className="text-[10px] text-gray-500">{sw.percent}%</span>
+                      <span className="text-[10px] text-gray-500 font-extrabold">{sw.percent}%</span>
                     </div>
-                    <div className="w-full h-[7px] bg-gray-200 rounded-full overflow-hidden">
+                    <div className="w-full h-[8px] bg-gray-100 rounded-full overflow-hidden border border-gray-200/50 shadow-inner">
                       <div 
                         className={`h-full rounded-full transition-all duration-700 ease-out ${
-                          sw.name === 'CapCut' ? 'bg-[#222222]' :
-                          sw.name === 'Photoshop' ? 'bg-[#31a8ff]' :
-                          sw.name === 'DaVinci' ? 'bg-[#f43f5e]' :
-                          sw.name === 'After Effects' ? 'bg-[#9c8dc7]' :
-                          sw.name === 'VS Code' ? 'bg-[#007acc]' : 'bg-[#f7b731]'
-                        } ${isHovered ? 'brightness-110 shadow-sm' : ''}`} 
+                          sw.name === 'CapCut' ? 'bg-gradient-to-r from-gray-800 to-black' :
+                          sw.name === 'Photoshop' ? 'bg-gradient-to-r from-blue-600 to-sky-400' :
+                          sw.name === 'DaVinci' ? 'bg-gradient-to-r from-rose-600 to-pink-500' :
+                          sw.name === 'After Effects' ? 'bg-gradient-to-r from-purple-600 to-indigo-400' :
+                          sw.name === 'VS Code' ? 'bg-gradient-to-r from-sky-600 to-blue-400' : 'bg-gradient-to-r from-amber-500 to-yellow-400'
+                        } ${isHovered ? 'brightness-125 shadow-md scale-y-110' : ''}`} 
                         style={{ width: `${sw.percent}%` }}
                       />
                     </div>
@@ -1086,8 +1083,8 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </div>
         </section>
 
-        {/* PORTFOLIO SHOWCASE GALLERY (MOVED TO BOTTOM) */}
-        <section className="px-7 py-6 bg-gradient-to-b from-gray-50 to-white border-t border-b border-gray-100">
+        {/* PORTFOLIO SHOWCASE GALLERY WITH GLASS CARDS & VIBRANT HOVER */}
+        <section className="px-5 sm:px-7 py-6 bg-gradient-to-b from-slate-50/50 to-white">
           <div className="flex items-center justify-between mb-2">
             <div>
               <h3 className="font-display text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-2">
@@ -1099,17 +1096,17 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex items-center gap-1.5 overflow-x-auto py-2 my-2 no-scrollbar">
+          <div className="flex items-center gap-1.5 overflow-x-auto py-2.5 my-2 no-scrollbar">
             {Object.keys(t.categories).map((catKey) => {
               const isActive = activeTab === catKey;
               return (
                 <button
                   key={catKey}
                   onClick={() => setActiveTab(catKey)}
-                  className={`px-3 py-1 rounded-full text-[11px] font-bold whitespace-nowrap transition-all ${
+                  className={`px-3.5 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap transition-all duration-300 cursor-pointer ${
                     isActive 
-                      ? 'bg-brand-navy text-white shadow-sm scale-105' 
-                      : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-100'
+                      ? 'bg-gradient-to-r from-brand-navy via-indigo-950 to-brand-pink text-white shadow-lg scale-105 border border-white/40' 
+                      : 'glass-pill text-gray-700 hover:text-brand-pink'
                   }`}
                 >
                   {t.categories[catKey]}
@@ -1119,26 +1116,26 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </div>
 
           {/* Artwork Cards Grid */}
-          <div className="grid grid-cols-2 gap-3 mt-3">
+          <div className="grid grid-cols-2 gap-3.5 mt-3">
             {filteredArtworks.map((art) => (
               <div
                 key={art.id}
                 onClick={() => setSelectedArtwork(art)}
-                className="group relative rounded-2xl overflow-hidden shadow-md bg-white border border-gray-100 cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative rounded-2xl overflow-hidden glass-card glass-shine cursor-pointer"
               >
                 {/* Visual Artwork Box */}
-                <div className={`w-full h-[125px] relative overflow-hidden bg-gradient-to-br ${art.gradient}`}>
+                <div className={`w-full h-[130px] relative overflow-hidden bg-gradient-to-br ${art.gradient}`}>
                   <img 
                     src={art.images ? art.images[slideshowIndices[art.id] || 0] : art.img} 
                     alt={art.title}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-700 opacity-95 group-hover:opacity-100"
+                    className="w-full h-full object-cover object-top group-hover:scale-110 transition-all duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-85 group-hover:opacity-60 transition-opacity duration-300" />
                   
                   {/* Category Tag */}
-                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-[9px] font-bold text-white uppercase tracking-wider">
+                  <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md glass-pill text-[9px] font-extrabold text-brand-navy uppercase tracking-wider shadow-sm">
                     {art.categoryLabel}
                   </span>
 
@@ -1150,22 +1147,22 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   )}
 
                   {/* Quick View Hover Icon */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="px-3 py-1.5 rounded-full bg-white/90 text-brand-navy text-xs font-bold shadow-lg flex items-center gap-1 scale-95 group-hover:scale-100 transition-transform">
-                      <Eye className="w-3.5 h-3.5" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="px-3.5 py-1.5 rounded-full glass-effect text-brand-navy text-xs font-black shadow-xl flex items-center gap-1 scale-90 group-hover:scale-100 transition-transform duration-300 border border-white/90">
+                      <Eye className="w-3.5 h-3.5 text-brand-pink" />
                       <span>{lang === 'km' ? 'មើល' : 'View'}</span>
                     </span>
                   </div>
                 </div>
 
                 {/* Info Footer */}
-                <div className="p-2.5">
-                  <h4 className="font-bold text-[12px] text-brand-navy truncate leading-snug">
+                <div className="p-3">
+                  <h4 className="font-extrabold text-[12px] text-brand-navy truncate leading-snug group-hover:text-brand-pink transition-colors">
                     {art.title}
                   </h4>
-                  <div className="flex items-center justify-between mt-1 text-[10px] text-gray-500">
+                  <div className="flex items-center justify-between mt-1 text-[10px] text-gray-500 font-semibold">
                     <span>{art.year} • {art.client}</span>
-                    <span className="flex items-center gap-0.5 text-rose-500 font-semibold">
+                    <span className="flex items-center gap-0.5 text-rose-500 font-black">
                       <Heart className="w-3 h-3 fill-rose-500" />
                       {art.likes}
                     </span>
@@ -1239,6 +1236,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </div>
         </footer>
 
+      </div>
       </div>
 
       {/* ARTWORK LIGHTBOX MODAL */}
@@ -1478,7 +1476,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </div>
       )}
 
-    </div>
     </>
   );
 }
