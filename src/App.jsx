@@ -28,7 +28,8 @@ import {
   Image as ImageIcon,
   Download,
   FileText,
-  Phone
+  Phone,
+  Sparkles
 } from 'lucide-react';
 
 export default function App() {
@@ -1069,9 +1070,9 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             className="w-full h-auto block hover:scale-105 transition-transform duration-700"
           />
           
-          {/* Glass Effect Badge */}
-          <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-6 z-20 flex items-center gap-1.5 sm:gap-2 glass-pill px-3.5 py-1.5 rounded-full border border-white/90 shadow-xl text-[9.5px] sm:text-[11px] font-bold text-brand-navy">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block shadow-sm" />
+          {/* Black & White Glass Badge */}
+          <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-6 z-20 flex items-center gap-2 bg-slate-950/90 backdrop-blur-xl px-3.5 py-1.5 rounded-full border border-slate-700/80 shadow-2xl text-[9.5px] sm:text-[11px] font-bold text-white tracking-wide">
+            <Sparkles className="w-3.5 h-3.5 text-white animate-pulse shrink-0" />
             <span>{lang === 'km' ? 'ស្នាដៃ Graphic Design & Video Edit ២០២៦' : 'Design & Video Portfolio 2026'}</span>
           </div>
         </section>
