@@ -457,399 +457,411 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         <meta charset="UTF-8">
         <title>Chai_Fong_Official_Resume.pdf</title>
         <style>
-          @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Outfit:wght@600;700;800;900&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
           
           * { box-sizing: border-box; margin: 0; padding: 0; }
           body {
-            font-family: 'Kantumruy Pro', 'Outfit', sans-serif;
+            font-family: 'Kantumruy Pro', 'Plus Jakarta Sans', sans-serif;
             color: #1e293b;
-            background: #f1f5f9;
-            line-height: 1.55;
-            padding: 20px;
+            background: #ffffff;
+            line-height: 1.6;
+            padding: 24px;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
           }
           @page {
             size: A4 portrait;
-            margin: 8mm;
+            margin: 10mm;
           }
-          .cv-card {
-            max-width: 840px;
+          .cv-wrapper {
+            max-width: 800px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 18px;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 270px 1fr;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
             border: 1px solid #cbd5e1;
-            min-height: 1000px;
+            border-radius: 12px;
+            overflow: hidden;
           }
 
-          /* LEFT SIDEBAR (DARK NAVY ACCENT) */
-          .sidebar {
-            background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
+          /* MINIMAL HEADER */
+          .cv-header {
+            background: #0f172a;
             color: #ffffff;
-            padding: 30px 22px;
+            padding: 30px 36px;
             display: flex;
-            flex-col;
-            flex-direction: column;
-            gap: 22px;
+            align-items: center;
+            justify-content: space-between;
           }
-          .profile-avatar-wrap {
-            text-align: center;
+          .header-left {
+            flex: 1;
           }
-          .avatar-circle {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 14px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #ffffff;
-            outline: 3px solid #e85d75;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-          }
-          .avatar-circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-          .name-km {
-            font-size: 24px;
+          .name-main {
+            font-size: 28px;
             font-weight: 800;
             color: #ffffff;
+            letter-spacing: 0.5px;
             line-height: 1.2;
           }
-          .name-en {
-            font-size: 11px;
+          .role-title {
+            font-size: 12px;
             font-weight: 700;
-            color: #e85d75;
-            letter-spacing: 1px;
-            margin-top: 2px;
+            color: #94a3b8;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
+            margin-top: 6px;
           }
-          .badge-role {
-            display: inline-block;
-            background: rgba(232, 93, 117, 0.2);
-            border: 1px solid rgba(232, 93, 117, 0.5);
-            color: #fecdd3;
-            font-size: 9.5px;
-            font-weight: 800;
-            padding: 4px 10px;
-            border-radius: 20px;
-            margin-top: 8px;
-            line-height: 1.3;
-          }
-
-          .side-sec-title {
-            font-size: 12.5px;
-            font-weight: 800;
-            color: #e85d75;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-          }
-
-          .contact-list {
+          .contact-row {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 16px;
             font-size: 11px;
             color: #cbd5e1;
-            font-weight: 600;
+            font-weight: 500;
           }
           .contact-item {
             display: flex;
             align-items: center;
+            gap: 6px;
+          }
+          .contact-item svg {
+            width: 13px;
+            height: 13px;
+            stroke: #94a3b8;
+          }
+
+          .avatar-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #334155;
+            flex-shrink: 0;
+          }
+          .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          /* STATS ROW */
+          .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 12px 20px;
+            text-align: center;
+          }
+          .stat-box {
+            border-right: 1px solid #e2e8f0;
+          }
+          .stat-box:last-child { border-right: none; }
+          .stat-number {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0f172a;
+          }
+          .stat-text {
+            font-size: 10px;
+            font-weight: 600;
+            color: #64748b;
+          }
+
+          /* MAIN BODY GRID */
+          .cv-body {
+            padding: 30px 36px;
+            display: grid;
+            grid-template-columns: 1fr 240px;
+            gap: 28px;
+          }
+
+          .section-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
             gap: 8px;
-            word-break: break-all;
+            border-bottom: 1.5px solid #0f172a;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+          }
+          .section-title svg {
+            width: 15px;
+            height: 15px;
+            stroke: #0f172a;
+          }
+
+          .content-block {
+            margin-bottom: 22px;
+          }
+          .content-block:last-child { margin-bottom: 0; }
+
+          .body-text {
+            font-size: 11.5px;
+            color: #334155;
+            line-height: 1.7;
+            font-weight: 500;
+          }
+
+          .job-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 14px 16px;
+          }
+          .job-title {
+            font-size: 12.5px;
+            font-weight: 800;
+            color: #0f172a;
+          }
+          .job-company {
+            font-size: 11px;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 8px;
+          }
+          .job-bullets {
+            padding-left: 16px;
+            font-size: 11px;
+            color: #334155;
+          }
+          .job-bullets li {
+            margin-bottom: 5px;
+            line-height: 1.65;
           }
 
           /* SOFTWARE SKILLS BARS */
-          .sw-item {
-            margin-bottom: 10px;
+          .skill-row {
+            margin-bottom: 11px;
           }
-          .sw-info {
+          .skill-row:last-child { margin-bottom: 0; }
+          .skill-meta {
             display: flex;
             justify-content: space-between;
             font-size: 10.5px;
             font-weight: 700;
-            color: #f1f5f9;
+            color: #1e293b;
             margin-bottom: 3px;
           }
-          .sw-bar-bg {
-            height: 7px;
-            background: rgba(255,255,255,0.15);
-            border-radius: 10px;
+          .skill-track {
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 4px;
             overflow: hidden;
           }
-          .sw-bar-fill {
+          .skill-fill {
             height: 100%;
-            background: linear-gradient(90deg, #e85d75, #38b6ff);
-            border-radius: 10px;
+            background: #0f172a;
+            border-radius: 4px;
           }
 
-          /* MAIN RIGHT COLUMN */
-          .main-content {
-            padding: 32px 30px;
-            background: #ffffff;
+          /* TAG CHIPS */
+          .tags-container {
             display: flex;
             flex-direction: column;
-            gap: 22px;
-          }
-
-          .header-title-box {
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 16px;
-          }
-          .doc-title {
-            font-size: 26px;
-            font-weight: 900;
-            color: #1e1b4b;
-          }
-          .doc-sub {
-            font-size: 12px;
-            font-weight: 700;
-            color: #64748b;
-            margin-top: 2px;
-          }
-
-          /* STATS GRID */
-          .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 12px;
-            text-align: center;
-          }
-          .stat-num {
-            font-size: 16px;
-            font-weight: 900;
-            color: #1e1b4b;
-          }
-          .stat-label {
-            font-size: 9.5px;
-            font-weight: 800;
-            color: #e85d75;
-          }
-
-          .section-block {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-          }
-          .sec-header {
-            font-size: 14px;
-            font-weight: 800;
-            color: #1e1b4b;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid #e85d75;
-            padding-bottom: 4px;
-          }
-
-          .bio-box {
-            font-size: 12px;
-            color: #334155;
-            line-height: 1.7;
-            background: #f8fafc;
-            padding: 14px 16px;
-            border-radius: 10px;
-            border-left: 4px solid #1e1b4b;
-            font-weight: 500;
-          }
-
-          .timeline-card {
-            background: #ffffff;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 14px 16px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-          }
-          .card-head-title {
-            font-size: 13px;
-            font-weight: 800;
-            color: #1e1b4b;
-          }
-          .card-subtitle {
-            font-size: 11px;
-            font-weight: 700;
-            color: #e85d75;
-            margin-bottom: 8px;
-          }
-          .bullet-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            font-size: 11.5px;
-            color: #475569;
-          }
-          .bullet-list li {
-            position: relative;
-            padding-left: 14px;
-            line-height: 1.6;
-          }
-          .bullet-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #e85d75;
-            font-weight: bold;
-            font-size: 14px;
-          }
-
-          /* SKILLS TAGS */
-          .skills-tags {
-            display: flex;
-            flex-wrap: wrap;
             gap: 6px;
           }
           .tag-item {
             background: #f1f5f9;
-            color: #1e1b4b;
-            font-size: 11px;
+            color: #0f172a;
+            font-size: 10.5px;
             font-weight: 700;
-            padding: 5px 12px;
-            border-radius: 20px;
+            padding: 6px 12px;
+            border-radius: 6px;
             border: 1px solid #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+          }
+          .tag-item svg {
+            width: 12px;
+            height: 12px;
+            stroke: #0f172a;
           }
 
-          .footer-bar {
-            margin-top: auto;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 12px;
+          .footer-note {
             text-align: center;
+            padding: 14px;
             font-size: 10px;
-            color: #94a3b8;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
             font-weight: 600;
+            background: #f8fafc;
           }
         </style>
       </head>
       <body>
-        <div class="cv-card">
+        <div class="cv-wrapper">
           
-          <!-- LEFT SIDEBAR -->
-          <div class="sidebar">
-            <div class="profile-avatar-wrap">
-              <div class="avatar-circle">
-                <img src="${window.location.origin}/images/IMG_7733.webp" alt="Chai Fong" />
-              </div>
-              <h1 class="name-km">ផូ ឆៃហ្វុង</h1>
-              <div class="name-en">PHO CHAIFONG</div>
-              <div class="badge-role">GRAPHIC DESIGNER & VIDEO EDITOR</div>
-            </div>
-
-            <!-- CONTACT DETAILS -->
-            <div>
-              <div class="side-sec-title">📞 ទំនាក់ទំនង (Contact)</div>
-              <div class="contact-list">
-                <div class="contact-item">📱 <span>071 777 3554</span></div>
-                <div class="contact-item">✉️ <span>Profong085@gmail.com</span></div>
-                <div class="contact-item">💬 <span>Telegram: @Phochaifong007</span></div>
-                <div class="contact-item">🌐 <span>chaifong.website</span></div>
-              </div>
-            </div>
-
-            <!-- SOFTWARE SKILLS METERS -->
-            <div>
-              <div class="side-sec-title">🛠️ កម្មវិធីស្ទាត់ជំនាញ</div>
+          <!-- MINIMAL HEADER -->
+          <div class="cv-header">
+            <div class="header-left">
+              <div class="name-main">ឆៃហ្វុង (CHAI FONG)</div>
+              <div class="role-title">Graphic Designer & Video Editor</div>
               
-              <div class="sw-item">
-                <div class="sw-info"><span>CapCut</span><span>91%</span></div>
-                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 91%;"></div></div>
+              <div class="contact-row">
+                <div class="contact-item">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  <span>071 777 3554</span>
+                </div>
+                <div class="contact-item">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span>Profong085@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                  <span>Telegram: @Phochaifong007</span>
+                </div>
+                <div class="contact-item">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                  <span>chaifong.website</span>
+                </div>
               </div>
-              <div class="sw-item">
-                <div class="sw-info"><span>Adobe Photoshop (Ps)</span><span>88%</span></div>
-                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 88%;"></div></div>
-              </div>
-              <div class="sw-item">
-                <div class="sw-info"><span>DaVinci Resolve</span><span>75%</span></div>
-                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 75%;"></div></div>
-              </div>
-              <div class="sw-item">
-                <div class="sw-info"><span>Adobe After Effects (Ae)</span><span>48%</span></div>
-                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 48%;"></div></div>
-              </div>
-              <div class="sw-item">
-                <div class="sw-info"><span>VS Code (Web Dev)</span><span>45%</span></div>
-                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 45%;"></div></div>
-              </div>
-              <div class="sw-item">
-                <div class="sw-info"><span>Adobe Illustrator (Ai)</span><span>38%</span></div>
-                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 38%;"></div></div>
-              </div>
+            </div>
+
+            <div class="avatar-container">
+              <img src="${window.location.origin}/images/IMG_7733.webp" alt="Chai Fong" />
             </div>
           </div>
 
-          <!-- MAIN RIGHT CONTENT -->
-          <div class="main-content">
+          <!-- STATS ROW -->
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-number">50+</div>
+              <div class="stat-text">គម្រោងបញ្ចប់</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">15+</div>
+              <div class="stat-text">វីដេអូកាត់ត</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">99%</div>
+              <div class="stat-text">ការពេញចិត្ត</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">5+ ឆ្នាំ</div>
+              <div class="stat-text">បទពិសោធន៍</div>
+            </div>
+          </div>
+
+          <!-- MAIN BODY GRID -->
+          <div class="cv-body">
             
-            <div class="header-title-box">
-              <div class="doc-title">ប្រវត្តិរូបសង្ខេប (Official CV)</div>
-              <div class="doc-sub">GRAPHIC DESIGN & VIDEO EDITING PORTFOLIO RESUME</div>
-            </div>
+            <!-- LEFT COLUMN -->
+            <div>
+              <!-- ABOUT ME -->
+              <div class="content-block">
+                <div class="section-title">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                  <span>អំពីខ្ញុំ (About Me)</span>
+                </div>
+                <div class="body-text">
+                  ខ្ញុំគឺជា Graphic Designer និងជា Video Editor ដែលមានបេះដូងស្រឡាញ់ការបង្កើតសាច់រឿង និងគំនិតច្នៃប្រឌិតប្លែកៗ។ ជំនាញចម្បងរបស់ខ្ញុំគឺការឌីហ្សាញ Poster និងរូបភាពផ្សេងៗដោយប្រើប្រាស់ Adobe Photoshop ព្រមទាំងការកាត់តវីដេអូយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut និង DaVinci Resolve។ ក្រៅពីនេះ ខ្ញុំក៏មានមូលដ្ឋានគ្រឹះក្នុងការធ្វើ Motion Graphics (After Effects) និង Web Development (VS Code) ផងដែរ។
+                </div>
+              </div>
 
-            <!-- QUICK STATS ROW -->
-            <div class="stats-grid">
-              <div><div class="stat-num">50+</div><div class="stat-label">គម្រោងបញ្ចប់</div></div>
-              <div><div class="stat-num">15+</div><div class="stat-label">វីដេអូកាត់ត</div></div>
-              <div><div class="stat-num">99%</div><div class="stat-label">ការពេញចិត្ត</div></div>
-              <div><div class="stat-num">5+ ឆ្នាំ</div><div class="stat-label">បទពិសោធន៍</div></div>
-            </div>
+              <!-- WORK EXPERIENCE -->
+              <div class="content-block">
+                <div class="section-title">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span>បទពិសោធន៍ការងារ (Work Experience)</span>
+                </div>
+                
+                <div class="job-card">
+                  <div class="job-title">Graphic Designer & Video Editor</div>
+                  <div class="job-company">Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម)</div>
+                  <ul class="job-bullets">
+                    <li>ទទួលបន្ទុកឌីហ្សាញ Poster, Banner ផ្សព្វផ្សាយផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិកលើ Social Media ដោយប្រើ Adobe Photoshop។</li>
+                    <li>កាត់ត និងផលិតវីដេអូផ្សព្វផ្សាយផលិតផលកសិកម្មយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve ព្រមទាំងបង្កើត Motion Graphics ជាមួយ After Effects ដើម្បីឱ្យវីដេអូមានភាពរស់រវើក ទាក់ទាញ និងមានគុណភាពខ្ពស់។</li>
+                  </ul>
+                </div>
+              </div>
 
-            <!-- ABOUT ME SECTION -->
-            <div class="section-block">
-              <div class="sec-header">📌 អំពីខ្ញុំ (About Me)</div>
-              <div class="bio-box">
-                ខ្ញុំគឺជា Graphic Designer និងជា Video Editor ដែលមានបេះដូងស្រឡាញ់ការបង្កើតសាច់រឿង និងគំនិតច្នៃប្រឌិតប្លែកៗ។ ជំនាញចម្បងរបស់ខ្ញុំគឺការឌីហ្សាញ Poster និងរូបភាពផ្សេងៗដោយប្រើប្រាស់ Adobe Photoshop ព្រមទាំងការកាត់តវីដេអូយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut និង DaVinci Resolve។ ក្រៅពីនេះ ខ្ញុំក៏មានមូលដ្ឋានគ្រឹះក្នុងការធ្វើ Motion Graphics (After Effects) និង Web Development (VS Code) ផងដែរ។
+              <!-- EDUCATION -->
+              <div class="content-block">
+                <div class="section-title">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                  <span>ការសិក្សា (Education)</span>
+                </div>
+                
+                <div class="job-card">
+                  <div class="job-title">សាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (RUA)</div>
+                  <div class="job-company">Royal University of Agriculture — Bachelor Degree</div>
+                </div>
               </div>
             </div>
 
-            <!-- WORK EXPERIENCE SECTION -->
-            <div class="section-block">
-              <div class="sec-header">💼 បទពិសោធន៍ការងារ (Work Experience)</div>
-              <div class="timeline-card">
-                <div class="card-head-title">Graphic Designer & Video Editor</div>
-                <div class="card-subtitle">Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម)</div>
-                <ul class="bullet-list">
-                  <li>ទទួលបន្ទុកឌីហ្សាញ Poster, Banner ផ្សព្វផ្សាយផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិកលើ Social Media ដោយប្រើ Adobe Photoshop។</li>
-                  <li>កាត់ត និងផលិតវីដេអូផ្សព្វផ្សាយផលិតផលកសិកម្មយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve ព្រមទាំងបង្កើត Motion Graphics ជាមួយ After Effects ដើម្បីឱ្យវីដេអូមានភាពរស់រវើក ទាក់ទាញ និងមានគុណភាពខ្ពស់។</li>
-                </ul>
+            <!-- RIGHT COLUMN -->
+            <div>
+              <!-- SOFTWARE SKILLS -->
+              <div class="content-block">
+                <div class="section-title">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>កម្មវិធីស្ទាត់ជំនាញ</span>
+                </div>
+
+                <div class="skill-row">
+                  <div class="skill-meta"><span>CapCut</span><span>91%</span></div>
+                  <div class="skill-track"><div class="skill-fill" style="width: 91%;"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-meta"><span>Adobe Photoshop</span><span>88%</span></div>
+                  <div class="skill-track"><div class="skill-fill" style="width: 88%;"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-meta"><span>DaVinci Resolve</span><span>75%</span></div>
+                  <div class="skill-track"><div class="skill-fill" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-meta"><span>After Effects</span><span>48%</span></div>
+                  <div class="skill-track"><div class="skill-fill" style="width: 48%;"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-meta"><span>VS Code (Web Dev)</span><span>45%</span></div>
+                  <div class="skill-track"><div class="skill-fill" style="width: 45%;"></div></div>
+                </div>
+                <div class="skill-row">
+                  <div class="skill-meta"><span>Adobe Illustrator</span><span>38%</span></div>
+                  <div class="skill-track"><div class="skill-fill" style="width: 38%;"></div></div>
+                </div>
+              </div>
+
+              <!-- CORE COMPETENCIES -->
+              <div class="content-block">
+                <div class="section-title">
+                  <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                  <span>ជំនាញស្ទាត់ជំនាញ</span>
+                </div>
+
+                <div class="tags-container">
+                  <div class="tag-item">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <span>Poster & Graphics (Photoshop)</span>
+                  </div>
+                  <div class="tag-item">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <span>Video Editing (CapCut & DaVinci)</span>
+                  </div>
+                  <div class="tag-item">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <span>Motion Graphics (After Effects)</span>
+                  </div>
+                  <div class="tag-item">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                    <span>Web Development (VS Code)</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- EDUCATION SECTION -->
-            <div class="section-block">
-              <div class="sec-header">🎓 ការសិក្សា (Education)</div>
-              <div class="timeline-card">
-                <div class="card-head-title">សាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (Royal University of Agriculture - RUA)</div>
-                <div class="card-subtitle">ថ្នាក់បរិញ្ញាបត្រ (Bachelor Degree)</div>
-              </div>
-            </div>
+          </div>
 
-            <!-- CORE SKILLS TAGS -->
-            <div class="section-block">
-              <div class="sec-header">⚡ ជំនាញស្ទាត់ជំនាញ (Core Competencies)</div>
-              <div class="skills-tags">
-                <span class="tag-item">🎨 Poster & Graphics (Photoshop)</span>
-                <span class="tag-item">🎬 Video Editing (CapCut & DaVinci)</span>
-                <span class="tag-item">✨ Motion Graphics (After Effects)</span>
-                <span class="tag-item">💻 Web Development (VS Code)</span>
-              </div>
-            </div>
-
-            <div class="footer-bar">
-              © 2025 Chai Fong Studio | Official Resume generated from https://chaifong.website
-            </div>
-
+          <!-- FOOTER -->
+          <div class="footer-note">
+            © 2025 Chai Fong Studio | Official Resume generated from https://chaifong.website
           </div>
 
         </div>
