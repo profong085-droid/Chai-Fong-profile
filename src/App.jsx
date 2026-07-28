@@ -855,56 +855,56 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   </div>
                 </div>
 
-                <!-- 6 SOFTWARE LOGOS GRID UNDER CORE COMPETENCIES (100% EQUAL SIZE) -->
+                <!-- 6 SOFTWARE LOGOS GRID UNDER CORE COMPETENCIES (NO CUTOFF / CLEAN 2-COLUMN LAYOUT) -->
                 <div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed #cbd5e1;">
                   <div style="font-size: 10.5px; font-weight: 700; color: #475569; margin-bottom: 8px;">LOGOS កម្មវិធីប្រើប្រាស់៖</div>
-                  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;">
+                  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px;">
                     <!-- CapCut -->
-                    <div style="display: flex; align-items: center; gap: 7px; background: #f8fafc; padding: 6px 9px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10px; font-weight: 700; color: #0f172a;">
+                    <div style="display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 6px 10px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10.5px; font-weight: 700; color: #0f172a;">
                       <div style="width: 24px; height: 24px; min-width: 24px; border-radius: 5px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000000; flex-shrink: 0;">
                         <img src="${window.location.origin}/images/image.png" style="width: 100%; height: 100%; object-fit: contain; padding: 1px;" alt="CapCut" />
                       </div>
-                      <span>CapCut</span>
+                      <span style="white-space: nowrap;">CapCut</span>
                     </div>
 
                     <!-- Photoshop -->
-                    <div style="display: flex; align-items: center; gap: 7px; background: #f8fafc; padding: 6px 9px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10px; font-weight: 700; color: #0f172a;">
+                    <div style="display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 6px 10px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10.5px; font-weight: 700; color: #0f172a;">
                       <div style="width: 24px; height: 24px; min-width: 24px; border-radius: 5px; overflow: hidden; flex-shrink: 0;">
                         <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;"><rect width="100" height="100" rx="18" fill="#001E36"/><text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="54" fill="#31A8FF">Ps</text></svg>
                       </div>
-                      <span>Photoshop</span>
+                      <span style="white-space: nowrap;">Photoshop</span>
                     </div>
 
                     <!-- DaVinci Resolve -->
-                    <div style="display: flex; align-items: center; gap: 7px; background: #f8fafc; padding: 6px 9px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10px; font-weight: 700; color: #0f172a;">
+                    <div style="display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 6px 10px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10.5px; font-weight: 700; color: #0f172a;">
                       <div style="width: 24px; height: 24px; min-width: 24px; border-radius: 5px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #12131A; flex-shrink: 0;">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/DaVinci_Resolve_Studio.png" style="width: 100%; height: 100%; object-fit: contain; padding: 1px;" alt="DaVinci" />
                       </div>
-                      <span>DaVinci</span>
+                      <span style="white-space: nowrap;">DaVinci</span>
                     </div>
 
                     <!-- After Effects -->
-                    <div style="display: flex; align-items: center; gap: 7px; background: #f8fafc; padding: 6px 9px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10px; font-weight: 700; color: #0f172a;">
+                    <div style="display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 6px 10px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10.5px; font-weight: 700; color: #0f172a;">
                       <div style="width: 24px; height: 24px; min-width: 24px; border-radius: 5px; overflow: hidden; flex-shrink: 0;">
                         <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;"><rect width="100" height="100" rx="18" fill="#1A0033"/><text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="54" fill="#CF9BFF">Ae</text></svg>
                       </div>
-                      <span>After Effects</span>
+                      <span style="white-space: nowrap;">After Effects</span>
                     </div>
 
                     <!-- VS Code -->
-                    <div style="display: flex; align-items: center; gap: 7px; background: #f8fafc; padding: 6px 9px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10px; font-weight: 700; color: #0f172a;">
+                    <div style="display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 6px 10px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10.5px; font-weight: 700; color: #0f172a;">
                       <div style="width: 24px; height: 24px; min-width: 24px; border-radius: 5px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #001c38; flex-shrink: 0;">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" style="width: 100%; height: 100%; object-fit: contain; padding: 2px;" alt="VS Code" />
                       </div>
-                      <span>VS Code</span>
+                      <span style="white-space: nowrap;">VS Code</span>
                     </div>
 
                     <!-- Illustrator -->
-                    <div style="display: flex; align-items: center; gap: 7px; background: #f8fafc; padding: 6px 9px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10px; font-weight: 700; color: #0f172a;">
+                    <div style="display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 6px 10px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 10.5px; font-weight: 700; color: #0f172a;">
                       <div style="width: 24px; height: 24px; min-width: 24px; border-radius: 5px; overflow: hidden; flex-shrink: 0;">
                         <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;"><rect width="100" height="100" rx="18" fill="#261300"/><text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="54" fill="#FF9A00">Ai</text></svg>
                       </div>
-                      <span>Illustrator</span>
+                      <span style="white-space: nowrap;">Illustrator</span>
                     </div>
                   </div>
                 </div>
