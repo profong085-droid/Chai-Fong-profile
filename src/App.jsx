@@ -1070,9 +1070,8 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             className="w-full h-auto block hover:scale-105 transition-transform duration-700"
           />
           
-          {/* Black & White Glass Badge */}
-          <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-6 z-20 flex items-center gap-2 bg-slate-950/90 backdrop-blur-xl px-3.5 py-1.5 rounded-full border border-slate-700/80 shadow-2xl text-[9.5px] sm:text-[11px] font-bold text-white tracking-wide">
-            <Sparkles className="w-3.5 h-3.5 text-white animate-pulse shrink-0" />
+          {/* Ultra-Small Black & White Glass Badge (No Icon) */}
+          <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-4 z-20 bg-slate-950/90 backdrop-blur-md px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full border border-slate-800 shadow-md text-[8px] sm:text-[9.5px] font-semibold text-white tracking-tight">
             <span>{lang === 'km' ? 'ស្នាដៃ Graphic Design & Video Edit ២០២៦' : 'Design & Video Portfolio 2026'}</span>
           </div>
         </section>
