@@ -949,15 +949,19 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
     <>
       <Analytics />
       <SpeedInsights />
-      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - ULTRA-PREMIUM CIRCULAR GLASS STYLE */}
+      {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - ULTRA-COOL NEON GLASS STYLE */}
       {!isLoaded && (
         <div 
-          className={`fixed inset-0 z-[100] bg-[#e2f0f9] flex flex-col justify-center items-center p-4 select-none overflow-hidden transition-all duration-700 ease-out ${
+          className={`fixed inset-0 z-[100] bg-gradient-to-br from-[#e0f2fe] via-[#f1f5f9] to-[#fce7f3] flex flex-col justify-center items-center p-4 select-none overflow-hidden transition-all duration-700 ease-out ${
             fadeOutLoader ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
           }`}
         >
+          {/* Ambient Glowing Background Orbs */}
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-rose-400/25 rounded-full blur-3xl animate-pulse pointer-events-none" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sky-400/25 rounded-full blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+
           {/* Background Blurred Hero Teaser */}
-          <div className="absolute inset-0 overflow-hidden opacity-30 pointer-events-none">
+          <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
             <img 
               src="/images/IMG_8039.webp" 
               alt="Hero Preview" 
@@ -965,19 +969,19 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             />
           </div>
 
-          {/* Glass Card Container */}
-          <div className="w-full max-w-[360px] sm:max-w-[390px] bg-white/85 backdrop-blur-2xl border border-white/90 rounded-[38px] shadow-[0_25px_60px_-15px_rgba(29,27,75,0.18)] p-7 sm:p-8 flex flex-col items-center text-center relative z-10">
+          {/* Ultra-Cool Glass Card Container */}
+          <div className="w-full max-w-[360px] sm:max-w-[400px] bg-white/85 backdrop-blur-3xl border border-white/95 rounded-[44px] shadow-[0_30px_70px_-15px_rgba(29,27,75,0.22)] p-8 sm:p-9 flex flex-col items-center text-center relative z-10">
             
             {/* Circular SVG Progress Ring around Avatar */}
-            <div className="relative mb-5 flex items-center justify-center">
-              <svg className="w-36 h-36 sm:w-40 sm:h-40 transform -rotate-90" viewBox="0 0 120 120">
+            <div className="relative mb-6 flex items-center justify-center">
+              <svg className="w-36 h-36 sm:w-40 sm:h-40 transform -rotate-90 filter drop-shadow-md" viewBox="0 0 120 120">
                 {/* Background Ring Track */}
                 <circle 
                   cx="60" 
                   cy="60" 
                   r="52" 
                   stroke="#e2e8f0" 
-                  strokeWidth="5" 
+                  strokeWidth="6" 
                   fill="transparent" 
                 />
                 {/* Glowing Active Progress Ring */}
@@ -985,8 +989,8 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   cx="60" 
                   cy="60" 
                   r="52" 
-                  stroke="url(#progressGradient)" 
-                  strokeWidth="6" 
+                  stroke="url(#splashGradient)" 
+                  strokeWidth="7" 
                   strokeLinecap="round" 
                   fill="transparent" 
                   strokeDasharray="326.7" 
@@ -994,16 +998,16 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   className="transition-all duration-100 ease-out"
                 />
                 <defs>
-                  <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#1d1b4b" />
-                    <stop offset="50%" stopColor="#e85d75" />
+                  <linearGradient id="splashGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#0f172a" />
+                    <stop offset="45%" stopColor="#e85d75" />
                     <stop offset="100%" stopColor="#38b6ff" />
                   </linearGradient>
                 </defs>
               </svg>
 
               {/* Profile Avatar Centered in Ring */}
-              <div className="absolute w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-lg p-0.5 bg-white">
+              <div className="absolute w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-xl p-0.5 bg-white ring-4 ring-rose-500/20">
                 <img 
                   src="/images/IMG_7733.webp" 
                   alt="Chai Fong Profile" 
@@ -1012,38 +1016,43 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               </div>
 
               {/* Floating Percentage Badge on Ring */}
-              <div className="absolute -bottom-2 px-3.5 py-0.5 rounded-full bg-brand-navy text-white text-xs font-black font-display shadow-md border border-white">
+              <div className="absolute -bottom-2.5 px-4 py-1 rounded-full bg-slate-900 text-white text-xs font-extrabold font-display shadow-lg border border-slate-700/60 tracking-wider">
                 {loadingProgress}%
               </div>
             </div>
 
             {/* Author Title & Subtitle */}
             <div className="flex flex-col items-center">
-              <h1 className="font-koulen text-3xl sm:text-4xl tracking-wider text-brand-navy leading-snug py-1">
+              <h1 className="font-koulen text-3xl sm:text-4xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-rose-600 to-indigo-950 font-black leading-snug py-1">
                 {lang === 'km' ? 'ផូ ឆៃហ្វុង' : 'PHO CHAIFONG'}
               </h1>
-              <div className="mt-1 flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-100/80 shadow-xs">
-                <span className="text-[10px] sm:text-[10.5px] font-outfit font-extrabold tracking-[0.2em] text-brand-pink uppercase">
+              <div className="mt-1.5 flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-500/10 via-pink-500/10 to-indigo-500/10 border border-rose-300/60 shadow-xs">
+                <span className="text-[10px] sm:text-[10.5px] font-outfit font-extrabold tracking-[0.18em] text-rose-600 uppercase">
                   GRAPHIC DESIGNER & VIDEO EDITOR
                 </span>
               </div>
             </div>
 
             {/* Linear Progress Bar */}
-            <div className="w-full mt-6">
-              <div className="w-full h-2.5 bg-gray-100 rounded-full p-0.5 border border-gray-200/80 shadow-inner overflow-hidden">
+            <div className="w-full mt-7">
+              <div className="w-full h-3 bg-slate-100 rounded-full p-0.5 border border-slate-200/80 shadow-inner overflow-hidden relative">
                 <div 
-                  className="h-full bg-gradient-to-r from-brand-navy via-brand-pink to-brand-cyan rounded-full transition-all duration-75 ease-out shadow-xs"
+                  className="h-full bg-gradient-to-r from-slate-900 via-rose-500 to-pink-500 rounded-full transition-all duration-75 ease-out shadow-xs relative overflow-hidden"
                   style={{ width: `${loadingProgress}%` }}
-                />
+                >
+                  <div className="absolute inset-0 bg-white/20 animate-pulse" />
+                </div>
               </div>
-              <p className="mt-2.5 text-[11.5px] font-semibold text-gray-500 italic">
-                {loadingProgress < 40 
-                  ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
-                  : loadingProgress < 85 
-                  ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
-                  : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
-              </p>
+              <div className="mt-3 flex items-center justify-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                <p className="text-[11.5px] font-bold text-slate-600 tracking-wide">
+                  {loadingProgress < 40 
+                    ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
+                    : loadingProgress < 85 
+                    ? (lang === 'km' ? 'កំពុងផ្ទុករូបភាព...' : 'Preparing graphics...') 
+                    : (lang === 'km' ? 'រួចរាល់ហើយ!' : 'Welcome!')}
+                </p>
+              </div>
             </div>
 
           </div>
