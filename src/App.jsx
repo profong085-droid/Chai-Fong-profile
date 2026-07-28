@@ -455,67 +455,107 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       <html lang="km">
       <head>
         <meta charset="UTF-8">
-        <title>Chai_Fong_CV_Official.pdf</title>
+        <title>Chai_Fong_Official_Resume.pdf</title>
         <style>
-          @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700;800;900&family=Outfit:wght@700;800;900&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,400;0,600;0,700;0,800;1,600&family=Outfit:wght@600;700;800;900&display=swap');
+          
           * { box-sizing: border-box; margin: 0; padding: 0; }
           body {
             font-family: 'Kantumruy Pro', 'Outfit', sans-serif;
-            color: #0f172a;
-            background: #f8fafc;
-            line-height: 1.5;
-            padding: 24px;
+            color: #1e293b;
+            background: #f1f5f9;
+            line-height: 1.55;
+            padding: 20px;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
           }
           @page {
             size: A4 portrait;
-            margin: 10mm;
+            margin: 8mm;
           }
-          .cv-container {
-            max-width: 820px;
+          .cv-card {
+            max-width: 840px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 20px;
+            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
-            border: 1px solid #e2e8f0;
+            display: grid;
+            grid-template-columns: 270px 1fr;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+            border: 1px solid #cbd5e1;
+            min-height: 1000px;
           }
-          /* HEADER BANNER */
-          .cv-banner {
-            background: linear-gradient(135deg, #1d1b4b 0%, #111827 60%, #e85d75 130%);
+
+          /* LEFT SIDEBAR (DARK NAVY ACCENT) */
+          .sidebar {
+            background: linear-gradient(180deg, #1e1b4b 0%, #0f172a 100%);
             color: #ffffff;
-            padding: 28px 32px;
+            padding: 30px 22px;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
+            flex-col;
+            flex-direction: column;
+            gap: 22px;
           }
-          .name-title {
-            font-size: 30px;
-            font-weight: 900;
-            letter-spacing: 0.5px;
+          .profile-avatar-wrap {
+            text-align: center;
+          }
+          .avatar-circle {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            outline: 3px solid #e85d75;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+          }
+          .avatar-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .name-km {
+            font-size: 24px;
+            font-weight: 800;
             color: #ffffff;
             line-height: 1.2;
           }
-          .role-badge {
-            display: inline-block;
-            background: rgba(232, 93, 117, 0.25);
-            border: 1px solid rgba(232, 93, 117, 0.6);
-            color: #ffb4c0;
+          .name-en {
             font-size: 11px;
-            font-weight: 800;
-            padding: 4px 12px;
-            border-radius: 30px;
-            margin-top: 6px;
+            font-weight: 700;
+            color: #e85d75;
             letter-spacing: 1px;
+            margin-top: 2px;
             text-transform: uppercase;
           }
-          .contact-bar {
-            margin-top: 14px;
+          .badge-role {
+            display: inline-block;
+            background: rgba(232, 93, 117, 0.2);
+            border: 1px solid rgba(232, 93, 117, 0.5);
+            color: #fecdd3;
+            font-size: 9.5px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-top: 8px;
+            line-height: 1.3;
+          }
+
+          .side-sec-title {
+            font-size: 12.5px;
+            font-weight: 800;
+            color: #e85d75;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+
+          .contact-list {
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            flex-direction: column;
+            gap: 10px;
             font-size: 11px;
             color: #cbd5e1;
             font-weight: 600;
@@ -523,256 +563,293 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           .contact-item {
             display: flex;
             align-items: center;
-            gap: 5px;
-            background: rgba(255,255,255,0.08);
-            padding: 3px 10px;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.12);
-          }
-          .avatar-box {
-            width: 105px;
-            height: 105px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 3.5px solid #ffffff;
-            outline: 3px solid #e85d75;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            shrink: 0;
-          }
-          .avatar-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            gap: 8px;
+            word-break: break-all;
           }
 
-          /* STATS STRIP */
-          .stats-strip {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            background: #f1f5f9;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 12px 16px;
-            text-align: center;
-          }
-          .stat-card {
-            border-right: 1px solid #cbd5e1;
-          }
-          .stat-card:last-child { border-right: none; }
-          .stat-val {
-            font-size: 17px;
-            font-weight: 900;
-            color: #1d1b4b;
-          }
-          .stat-lbl {
-            font-size: 10px;
-            font-weight: 800;
-            color: #64748b;
-          }
-
-          /* MAIN BODY 2 COLUMNS */
-          .cv-body {
-            padding: 24px 28px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-          }
-          .full-col { grid-column: span 2; }
-          
-          .card-block {
-            background: #ffffff;
-            border-radius: 14px;
-            padding: 16px 18px;
-            border: 1.5px solid #e2e8f0;
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
-            margin-bottom: 16px;
-          }
-          .card-block:last-child { margin-bottom: 0; }
-          
-          .card-title {
-            font-size: 14px;
-            font-weight: 900;
-            color: #1d1b4b;
-            border-bottom: 2px solid #e85d75;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-          }
-          .card-text {
-            font-size: 11.5px;
-            color: #334155;
-            line-height: 1.65;
-            font-weight: 500;
-          }
-          
-          /* SKILLS METER */
-          .skill-item {
+          /* SOFTWARE SKILLS BARS */
+          .sw-item {
             margin-bottom: 10px;
           }
-          .skill-item:last-child { margin-bottom: 0; }
-          .skill-header {
+          .sw-info {
             display: flex;
             justify-content: space-between;
-            font-size: 11px;
-            font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 4px;
+            font-size: 10.5px;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 3px;
           }
-          .skill-track {
-            height: 8px;
-            background: #e2e8f0;
+          .sw-bar-bg {
+            height: 7px;
+            background: rgba(255,255,255,0.15);
             border-radius: 10px;
             overflow: hidden;
           }
-          .skill-fill {
+          .sw-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, #1d1b4b 0%, #e85d75 100%);
+            background: linear-gradient(90deg, #e85d75, #38b6ff);
             border-radius: 10px;
           }
 
-          /* SKILLS TAG CHIPS */
-          .tag-list {
+          /* MAIN RIGHT COLUMN */
+          .main-content {
+            padding: 32px 30px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+          }
+
+          .header-title-box {
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 16px;
+          }
+          .doc-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #1e1b4b;
+          }
+          .doc-sub {
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+            margin-top: 2px;
+          }
+
+          /* STATS GRID */
+          .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+          }
+          .stat-num {
+            font-size: 16px;
+            font-weight: 900;
+            color: #1e1b4b;
+          }
+          .stat-label {
+            font-size: 9.5px;
+            font-weight: 800;
+            color: #e85d75;
+          }
+
+          .section-block {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+          .sec-header {
+            font-size: 14px;
+            font-weight: 800;
+            color: #1e1b4b;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #e85d75;
+            padding-bottom: 4px;
+          }
+
+          .bio-box {
+            font-size: 12px;
+            color: #334155;
+            line-height: 1.7;
+            background: #f8fafc;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border-left: 4px solid #1e1b4b;
+            font-weight: 500;
+          }
+
+          .timeline-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+          }
+          .card-head-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #1e1b4b;
+          }
+          .card-subtitle {
+            font-size: 11px;
+            font-weight: 700;
+            color: #e85d75;
+            margin-bottom: 8px;
+          }
+          .bullet-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 11.5px;
+            color: #475569;
+          }
+          .bullet-list li {
+            position: relative;
+            padding-left: 14px;
+            line-height: 1.6;
+          }
+          .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e85d75;
+            font-weight: bold;
+            font-size: 14px;
+          }
+
+          /* SKILLS TAGS */
+          .skills-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
-            margin-top: 4px;
           }
-          .tag-chip {
+          .tag-item {
             background: #f1f5f9;
             color: #1e1b4b;
-            font-size: 10.5px;
-            font-weight: 800;
-            padding: 4px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 12px;
             border-radius: 20px;
             border: 1px solid #cbd5e1;
           }
 
-          .footer-credit {
+          .footer-bar {
+            margin-top: auto;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 12px;
             text-align: center;
-            padding: 12px;
             font-size: 10px;
             color: #94a3b8;
-            background: #0f172a;
-            color: #cbd5e1;
-            font-weight: 700;
+            font-weight: 600;
           }
         </style>
       </head>
       <body>
-        <div class="cv-container">
+        <div class="cv-card">
           
-          <!-- BANNER HEADER -->
-          <div class="cv-banner">
+          <!-- LEFT SIDEBAR -->
+          <div class="sidebar">
+            <div class="profile-avatar-wrap">
+              <div class="avatar-circle">
+                <img src="${window.location.origin}/images/IMG_7733.webp" alt="Chai Fong" />
+              </div>
+              <h1 class="name-km">ផូ ឆៃហ្វុង</h1>
+              <div class="name-en">PHO CHAIFONG</div>
+              <div class="badge-role">GRAPHIC DESIGNER & VIDEO EDITOR</div>
+            </div>
+
+            <!-- CONTACT DETAILS -->
             <div>
-              <div class="name-title">ឆៃហ្វុង (CHAI FONG)</div>
-              <div class="role-badge">GRAPHIC DESIGNER & VIDEO EDITOR</div>
-              <div class="contact-bar">
-                <div class="contact-item">📞 071 777 3554</div>
-                <div class="contact-item">✉️ Profong085@gmail.com</div>
-                <div class="contact-item">💬 Telegram: @Phochaifong007</div>
-                <div class="contact-item">🌐 https://chaifong.website</div>
+              <div class="side-sec-title">📞 ទំនាក់ទំនង (Contact)</div>
+              <div class="contact-list">
+                <div class="contact-item">📱 <span>071 777 3554</span></div>
+                <div class="contact-item">✉️ <span>Profong085@gmail.com</span></div>
+                <div class="contact-item">💬 <span>Telegram: @Phochaifong007</span></div>
+                <div class="contact-item">🌐 <span>chaifong.website</span></div>
               </div>
             </div>
-            <div class="avatar-box">
-              <img src="${window.location.origin}/images/IMG_7733.webp" class="avatar-img" alt="Chai Fong" />
+
+            <!-- SOFTWARE SKILLS METERS -->
+            <div>
+              <div class="side-sec-title">🛠️ កម្មវិធីស្ទាត់ជំនាញ</div>
+              
+              <div class="sw-item">
+                <div class="sw-info"><span>CapCut</span><span>91%</span></div>
+                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 91%;"></div></div>
+              </div>
+              <div class="sw-item">
+                <div class="sw-info"><span>Adobe Photoshop (Ps)</span><span>88%</span></div>
+                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="sw-item">
+                <div class="sw-info"><span>DaVinci Resolve</span><span>75%</span></div>
+                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 75%;"></div></div>
+              </div>
+              <div class="sw-item">
+                <div class="sw-info"><span>Adobe After Effects (Ae)</span><span>48%</span></div>
+                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 48%;"></div></div>
+              </div>
+              <div class="sw-item">
+                <div class="sw-info"><span>VS Code (Web Dev)</span><span>45%</span></div>
+                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 45%;"></div></div>
+              </div>
+              <div class="sw-item">
+                <div class="sw-info"><span>Adobe Illustrator (Ai)</span><span>38%</span></div>
+                <div class="sw-bar-bg"><div class="sw-bar-fill" style="width: 38%;"></div></div>
+              </div>
             </div>
           </div>
 
-          <!-- STATS STRIP -->
-          <div class="stats-strip">
-            <div class="stat-card">
-              <div class="stat-val">50+</div>
-              <div class="stat-lbl">គម្រោងបញ្ចប់</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-val">15+</div>
-              <div class="stat-lbl">វីដេអូកាត់ត</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-val">99%</div>
-              <div class="stat-lbl">ការពេញចិត្ត</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-val">5+ ឆ្នាំ</div>
-              <div class="stat-lbl">បទពិសោធន៍</div>
-            </div>
-          </div>
-
-          <!-- BODY CONTENT -->
-          <div class="cv-body">
+          <!-- MAIN RIGHT CONTENT -->
+          <div class="main-content">
             
-            <!-- ABOUT ME -->
-            <div class="card-block full-col">
-              <div class="card-title">📌 អំពីខ្ញុំ (About Me)</div>
-              <div class="card-text">
+            <div class="header-title-box">
+              <div class="doc-title">ប្រវត្តិរូបសង្ខេប (Official CV)</div>
+              <div class="doc-sub">GRAPHIC DESIGN & VIDEO EDITING PORTFOLIO RESUME</div>
+            </div>
+
+            <!-- QUICK STATS ROW -->
+            <div class="stats-grid">
+              <div><div class="stat-num">50+</div><div class="stat-label">គម្រោងបញ្ចប់</div></div>
+              <div><div class="stat-num">15+</div><div class="stat-label">វីដេអូកាត់ត</div></div>
+              <div><div class="stat-num">99%</div><div class="stat-label">ការពេញចិត្ត</div></div>
+              <div><div class="stat-num">5+ ឆ្នាំ</div><div class="stat-label">បទពិសោធន៍</div></div>
+            </div>
+
+            <!-- ABOUT ME SECTION -->
+            <div class="section-block">
+              <div class="sec-header">📌 អំពីខ្ញុំ (About Me)</div>
+              <div class="bio-box">
                 ខ្ញុំគឺជា Graphic Designer និងជា Video Editor ដែលមានបេះដូងស្រឡាញ់ការបង្កើតសាច់រឿង និងគំនិតច្នៃប្រឌិតប្លែកៗ។ ជំនាញចម្បងរបស់ខ្ញុំគឺការឌីហ្សាញ Poster និងរូបភាពផ្សេងៗដោយប្រើប្រាស់ Adobe Photoshop ព្រមទាំងការកាត់តវីដេអូយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut និង DaVinci Resolve។ ក្រៅពីនេះ ខ្ញុំក៏មានមូលដ្ឋានគ្រឹះក្នុងការធ្វើ Motion Graphics (After Effects) និង Web Development (VS Code) ផងដែរ។
               </div>
             </div>
 
-            <!-- LEFT COLUMN: EXPERIENCE & EDUCATION -->
-            <div>
-              <div class="card-block">
-                <div class="card-title">🎓 ការអប់រំ & បទពិសោធន៍ការងារ</div>
-                <div class="card-text">
-                  <strong>🎓 ការសិក្សា៖</strong><br>
-                  • បច្ចុប្បន្នកំពុងសិក្សានៅសាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (RUA)<br><br>
-
-                  <strong>💼 បទពិសោធន៍នៅ Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម)៖</strong><br>
-                  • ធ្វើការជា Graphic Designer & Video Editor ទទួលបន្ទុកឌីហ្សាញ Poster, Banner ផ្សព្វផ្សាយផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិកលើ Social Media ដោយប្រើ Adobe Photoshop។<br>
-                  • កាត់ត និងផលិតវីដេអូផ្សព្វផ្សាយផលិតផលកសិកម្មយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve ព្រមទាំងបង្កើត Motion Graphics ជាមួយ After Effects ដើម្បីឱ្យវីដេអូមានភាពរស់រវើក ទាក់ទាញ និងមានគុណភាពខ្ពស់។
-                </div>
+            <!-- WORK EXPERIENCE SECTION -->
+            <div class="section-block">
+              <div class="sec-header">💼 បទពិសោធន៍ការងារ (Work Experience)</div>
+              <div class="timeline-card">
+                <div class="card-head-title">Graphic Designer & Video Editor</div>
+                <div class="card-subtitle">Loctroi Cambodia (ក្រុមហ៊ុនថ្នាំកសិកម្ម)</div>
+                <ul class="bullet-list">
+                  <li>ទទួលបន្ទុកឌីហ្សាញ Poster, Banner ផ្សព្វផ្សាយផលិតផលថ្នាំកសិកម្ម និងក្រាហ្វិកលើ Social Media ដោយប្រើ Adobe Photoshop។</li>
+                  <li>កាត់ត និងផលិតវីដេអូផ្សព្វផ្សាយផលិតផលកសិកម្មយ៉ាងស្ទាត់ជំនាញជាមួយ CapCut & DaVinci Resolve ព្រមទាំងបង្កើត Motion Graphics ជាមួយ After Effects ដើម្បីឱ្យវីដេអូមានភាពរស់រវើក ទាក់ទាញ និងមានគុណភាពខ្ពស់។</li>
+                </ul>
               </div>
             </div>
 
-            <!-- RIGHT COLUMN: SOFTWARE SKILLS & CORE COMPETENCIES -->
-            <div>
-              <div class="card-block">
-                <div class="card-title">🛠️ កម្មវិធីប្រើប្រាស់ស្ទាត់ជំនាញ</div>
-                
-                <div class="skill-item">
-                  <div class="skill-header"><span>CapCut</span><span>91%</span></div>
-                  <div class="skill-track"><div class="skill-fill" style="width: 91%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header"><span>Adobe Photoshop (Ps)</span><span>88%</span></div>
-                  <div class="skill-track"><div class="skill-fill" style="width: 88%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header"><span>DaVinci Resolve</span><span>75%</span></div>
-                  <div class="skill-track"><div class="skill-fill" style="width: 75%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header"><span>Adobe After Effects (Ae)</span><span>48%</span></div>
-                  <div class="skill-track"><div class="skill-fill" style="width: 48%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header"><span>VS Code (Web Dev)</span><span>45%</span></div>
-                  <div class="skill-track"><div class="skill-fill" style="width: 45%;"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header"><span>Adobe Illustrator (Ai)</span><span>38%</span></div>
-                  <div class="skill-track"><div class="skill-fill" style="width: 38%;"></div></div>
-                </div>
-              </div>
-
-              <div class="card-block">
-                <div class="card-title">⚡ ជំនាញស្ទាត់ជំនាញ</div>
-                <div class="tag-list">
-                  <span class="tag-chip">🎨 Poster & Graphic Design</span>
-                  <span class="tag-chip">🎬 Professional Video Editing</span>
-                  <span class="tag-chip">✨ Motion Graphics (Ae)</span>
-                  <span class="tag-chip">💻 Web Development (VS Code)</span>
-                  <span class="tag-chip">📱 Social Media Branding</span>
-                </div>
+            <!-- EDUCATION SECTION -->
+            <div class="section-block">
+              <div class="sec-header">🎓 ការសិក្សា (Education)</div>
+              <div class="timeline-card">
+                <div class="card-head-title">សាកលវិទ្យាល័យភូមិន្ទកសិកម្ម (Royal University of Agriculture - RUA)</div>
+                <div class="card-subtitle">ថ្នាក់បរិញ្ញាបត្រ (Bachelor Degree)</div>
               </div>
             </div>
 
-          </div>
+            <!-- CORE SKILLS TAGS -->
+            <div class="section-block">
+              <div class="sec-header">⚡ ជំនាញស្ទាត់ជំនាញ (Core Competencies)</div>
+              <div class="skills-tags">
+                <span class="tag-item">🎨 Poster & Graphics (Photoshop)</span>
+                <span class="tag-item">🎬 Video Editing (CapCut & DaVinci)</span>
+                <span class="tag-item">✨ Motion Graphics (After Effects)</span>
+                <span class="tag-item">💻 Web Development (VS Code)</span>
+              </div>
+            </div>
 
-          <!-- FOOTER -->
-          <div class="footer-credit">
-            © 2025 Chai Fong Studio | Official Resume generated from https://chaifong.website
+            <div class="footer-bar">
+              © 2025 Chai Fong Studio | Official Resume generated from https://chaifong.website
+            </div>
+
           </div>
 
         </div>
