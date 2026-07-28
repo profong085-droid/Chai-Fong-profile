@@ -864,15 +864,34 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             © 2025 Chai Fong Studio | Official Resume generated from https://chaifong.website
           </div>
 
-        </div>
+        <script>
+          window.onload = function() {
+            setTimeout(function() {
+              window.print();
+            }, 300);
+          };
+        </script>
       </body>
       </html>
     `;
-    printWindow.document.write(cvHTML);
-    printWindow.document.close();
-    setTimeout(() => {
-      printWindow.print();
-    }, 600);
+
+    // 1. Direct auto-download HTML/PDF file to user's downloads folder
+    const blob = new Blob([cvHTML], { type: 'text/html' });
+    const blobUrl = URL.createObjectURL(blob);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = blobUrl;
+    downloadLink.download = 'Chai_Fong_CV_Official.html';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+
+    // 2. Open print window to automatically popup "Save as PDF" dialog
+    const printWindow = window.open('', '_blank');
+    if (printWindow) {
+      printWindow.document.write(cvHTML);
+      printWindow.document.close();
+    }
   };
 
   return (
