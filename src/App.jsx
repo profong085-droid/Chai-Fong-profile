@@ -29,7 +29,8 @@ import {
   Download,
   FileText,
   Phone,
-  Sparkles
+  Sparkles,
+  Code
 } from 'lucide-react';
 
 export default function App() {
@@ -131,6 +132,7 @@ export default function App() {
       closeBtn: "បិទ",
       copyEmail: "ចម្លងអ៉ីមែល",
       copiedEmail: "បានចម្លងអ៉ីមែល!",
+      viewCode: "មើលកូដវេបសាយ",
       toggleLang: "English",
       interactiveHint: "ចុចលើរូបដើម្បីមើលសមត្ថភាព!"
     },
@@ -187,6 +189,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       closeBtn: "Close",
       copyEmail: "Copy Email",
       copiedEmail: "Email Copied!",
+      viewCode: "Source Code",
       toggleLang: "ភាសាខ្មែរ",
       interactiveHint: "Click profile for magic!"
     }
@@ -1163,6 +1166,16 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   <Mail className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="truncate">{copied ? t.copiedEmail : 'Profong085@...'}</span>
                 </button>
+                <a 
+                  href="https://github.com/profong085-droid/Chai-Fong-profile" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl"
+                  title={t.viewCode}
+                >
+                  <Code className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
+                  <span className="truncate">{t.viewCode}</span>
+                </a>
               </div>
             </div>
           </div>
