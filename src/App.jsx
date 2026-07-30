@@ -1221,27 +1221,27 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
               {/* Social Links */}
               <div className="flex flex-col gap-1.5 w-full text-left">
-                <a href="tel:0717773554" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors glass-pill px-2.5 py-1 rounded-xl">
-                  <Phone className="w-3.5 h-3.5 text-brand-navy shrink-0" />
+                <a href="tel:0717773554" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 dark:text-slate-200 hover:text-brand-pink transition-colors glass-pill px-2.5 py-1 rounded-xl">
+                  <Phone className="w-3.5 h-3.5 text-brand-navy dark:text-sky-400 shrink-0" />
                   <span className="truncate">071 777 3554</span>
                 </a>
-                <a href="https://web.facebook.com/Phochaifong007/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors glass-pill px-2.5 py-1 rounded-xl">
-                  <Compass className="w-3.5 h-3.5 text-brand-navy shrink-0" />
+                <a href="https://web.facebook.com/Phochaifong007/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 dark:text-slate-200 hover:text-brand-pink transition-colors glass-pill px-2.5 py-1 rounded-xl">
+                  <Compass className="w-3.5 h-3.5 text-brand-navy dark:text-sky-400 shrink-0" />
                   <span className="truncate">Phochaifong007</span>
                 </a>
                 <button 
                   onClick={handleCopyEmail}
-                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl cursor-pointer"
+                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 dark:text-slate-200 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl cursor-pointer"
                 >
-                  <Mail className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
+                  <Mail className="w-3.5 h-3.5 text-brand-navy dark:text-sky-400 shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="truncate">{copied ? t.copiedEmail : 'Profong085@...'}</span>
                 </button>
                 <button 
                   onClick={() => setShowCodeModal(true)}
-                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl cursor-pointer"
+                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 dark:text-slate-200 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl cursor-pointer"
                   title={t.viewCode}
                 >
-                  <Code className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
+                  <Code className="w-3.5 h-3.5 text-brand-navy dark:text-sky-400 shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="truncate">{t.viewCode}</span>
                 </button>
               </div>
@@ -1249,39 +1249,39 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
           </div>
 
           {/* QUICK STATS HIGHLIGHT ROW WITH GLASS CARDS */}
-          <div className="grid grid-cols-4 gap-1.5 sm:gap-2.5 mt-5 pt-4 border-t border-gray-100 text-center">
+          <div className="grid grid-cols-4 gap-1.5 sm:gap-2.5 mt-5 pt-4 border-t border-gray-100 dark:border-slate-800 text-center">
             <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
-              <div className="text-sm sm:text-base font-black text-brand-navy">50+</div>
-              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.projects}</div>
+              <div className="text-sm sm:text-base font-black text-brand-navy dark:text-sky-400">50+</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 dark:text-slate-400 leading-tight mt-0.5">{t.stats.projects}</div>
             </div>
             <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
               <div className="text-sm sm:text-base font-black text-brand-pink">15+</div>
-              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.books}</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 dark:text-slate-400 leading-tight mt-0.5">{t.stats.books}</div>
             </div>
             <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
               <div className="text-sm sm:text-base font-black text-brand-cyan">99%</div>
-              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.satisfaction}</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 dark:text-slate-400 leading-tight mt-0.5">{t.stats.satisfaction}</div>
             </div>
             <div className="p-2 rounded-2xl glass-card hover:scale-105 transition-transform duration-300">
               <div className="text-sm sm:text-base font-black text-amber-500">5+</div>
-              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 leading-tight mt-0.5">{t.stats.experience}</div>
+              <div className="text-[9px] sm:text-[9.5px] font-bold text-gray-500 dark:text-slate-400 leading-tight mt-0.5">{t.stats.experience}</div>
             </div>
           </div>
         </section>
 
         {/* EDUCATION & SKILLS SECTION WITH GLASS CARDS (ALWAYS 2 COLUMNS ON MOBILE & DESKTOP) */}
-        <section className="px-3 sm:px-7 py-4 sm:py-5 bg-slate-50/40">
+        <section className="px-3 sm:px-7 py-4 sm:py-5 bg-slate-50/40 dark:bg-slate-950/60">
           <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
             
             {/* Education */}
             <div className="relative glass-card p-3 sm:p-4 rounded-2xl">
               <div className="relative flex items-center mb-1.5 sm:mb-2">
-                <h3 className="font-display text-base sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1 sm:gap-1.5">
+                <h3 className="font-display text-base sm:text-xl font-extrabold text-brand-navy dark:text-sky-300 tracking-tight flex items-center gap-1 sm:gap-1.5">
                   <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink shrink-0" />
                   <span>{t.eduTitle}</span>
                 </h3>
               </div>
-              <p className="text-[10.5px] sm:text-[11.5px] leading-relaxed text-gray-600 font-normal whitespace-pre-line">
+              <p className="text-[10.5px] sm:text-[11.5px] leading-relaxed text-gray-600 dark:text-slate-300 font-normal whitespace-pre-line">
                 {t.eduDesc}
               </p>
             </div>
@@ -1289,14 +1289,14 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             {/* Skills */}
             <div className="glass-card p-3 sm:p-4 rounded-2xl">
               <div className="flex items-center mb-1.5 sm:mb-2">
-                <h3 className="font-display text-base sm:text-xl font-extrabold text-brand-navy tracking-tight flex items-center gap-1 sm:gap-1.5">
+                <h3 className="font-display text-base sm:text-xl font-extrabold text-brand-navy dark:text-sky-300 tracking-tight flex items-center gap-1 sm:gap-1.5">
                   <Award className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink shrink-0" />
                   <span>{t.skillsTitle}</span>
                 </h3>
               </div>
               <ul className="list-disc pl-3.5 sm:pl-4 space-y-1">
                 {t.skills.map((skill, i) => (
-                  <li key={i} className="text-[10.5px] sm:text-[11.5px] text-gray-700 font-semibold leading-relaxed">
+                  <li key={i} className="text-[10.5px] sm:text-[11.5px] text-gray-700 dark:text-slate-200 font-semibold leading-relaxed">
                     {skill}
                   </li>
                 ))}

@@ -39,9 +39,16 @@
   }
 }
 
-.dark body {
+html.dark,
+html.dark body {
   background-color: #090d16 !important;
-  color: #f1f5f9;
+  color: #f1f5f9 !important;
+}
+
+@media (min-width: 640px) {
+  html.dark body {
+    background-color: #090d16 !important;
+  }
 }
 
 /* Custom scrollbar */
