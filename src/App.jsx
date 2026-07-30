@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+
+// Raw source imports for full live code viewer
+import appCode from './App.jsx?raw';
+import cssCode from './index.css?raw';
+import htmlCode from '../index.html?raw';
+import pkgCode from '../package.json?raw';
+import sitemapCode from '../public/sitemap.xml?raw';
+import robotsCode from '../public/robots.txt?raw';
 import { 
   Globe, 
   Mail, 
@@ -59,108 +67,12 @@ export default function App() {
   const [copiedCode, setCopiedCode] = useState(false);
 
   const codeFiles = {
-    'App.jsx': `// Chai Fong Portfolio 2026 - Main Application Logic & React Components
-import React, { useState, useEffect } from 'react';
-import confetti from 'canvas-confetti';
-import { Mail, Phone, Compass, GraduationCap, Award, Code, Sparkles } from 'lucide-react';
-
-export default function App() {
-  const [lang, setLang] = useState('km');
-  const [activeTab, setActiveTab] = useState('all');
-
-  // Portfolio items data
-  const artworks = [
-    { title: 'Loctroi Cambodia Website', category: 'Web Dev', demoUrl: 'https://loctroi.online/kh' },
-    { title: 'SabayFlix Movie Website', category: 'Web Dev', demoUrl: 'https://sabayflix-4.vercel.app/' },
-    { title: 'Fong KH Portfolio Website', category: 'Web Dev', demoUrl: 'https://fongkh.vercel.app/' },
-    { title: '3D MeCom Digital Card', category: 'Web Dev', demoUrl: 'https://card-mecom.vercel.app/' },
-    { title: 'Kimchi Shop E-Commerce', category: 'Web Dev', demoUrl: 'https://kimchi-shop-new.vercel.app/' },
-    { title: 'Kimchi Com Apparel Store', category: 'Web Dev', demoUrl: 'https://kimchicom.vercel.app/' },
-    { title: 'iFong KH Video Portfolio', category: 'Web Dev', demoUrl: 'https://ifongkhcom.vercel.app/' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-khmer">
-      {/* Glassmorphism Header */}
-      <header className="glass-card p-6 rounded-3xl border border-white/80">
-        <h1 className="text-2xl font-extrabold text-brand-navy">PHO CHAIFONG</h1>
-        <p className="text-sm text-gray-600">Graphic Designer & Video Editor Portfolio 2026</p>
-      </header>
-    </div>
-  );
-}`,
-    'index.css': `/* Custom Glassmorphism, Khmer Typography & Micro-Animations */
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Kantumruy+Pro:wght@400;600;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 10px 30px 0 rgba(31, 38, 135, 0.06);
-}
-
-.glass-pill {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-}
-
-.glass-dark {
-  background: rgba(29, 27, 75, 0.82);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}`,
-    'sitemap.xml': `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://chaifong.website/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://chaifong.website/images/IMG_8039.webp</image:loc>
-      <image:title>PHO CHAIFONG Graphic Design and Video Edit Portfolio</image:title>
-    </image:image>
-  </url>
-</urlset>`,
-    'index.html': `<!DOCTYPE html>
-<html lang="km">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PHO CHAIFONG Graphic Design & Video Edit Portfolio</title>
-  <meta name="description" content="PHO CHAIFONG Graphic Design and Video Edit Portfolio 2026" />
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-</html>`,
-    'package.json': `{
-  "name": "leticia-valdez-portfolio",
-  "private": true,
-  "version": "2.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@vercel/analytics": "^2.0.1",
-    "@vercel/speed-insights": "^2.0.0",
-    "canvas-confetti": "^1.9.2",
-    "framer-motion": "^11.0.8",
-    "lucide-react": "^0.344.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
-}`
+    'App.jsx': appCode,
+    'index.css': cssCode,
+    'sitemap.xml': sitemapCode,
+    'index.html': htmlCode,
+    'package.json': pkgCode,
+    'robots.txt': robotsCode
   };
 
   const handleCopyCode = () => {
@@ -1964,17 +1876,26 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               ))}
             </div>
 
-            {/* Code Display Area */}
-            <div className="flex-1 overflow-auto p-4 bg-[#11111b] font-mono text-xs leading-relaxed text-slate-300">
-              <pre className="whitespace-pre overflow-x-auto">
-                <code>{codeFiles[activeCodeFile]}</code>
-              </pre>
+            {/* Code Display Area with Line Numbers */}
+            <div className="flex-1 overflow-auto bg-[#11111b] font-mono text-xs leading-relaxed text-slate-300 flex">
+              {/* Line numbers column */}
+              <div className="py-4 px-3 bg-[#181825]/40 text-slate-600 select-none text-right border-r border-slate-800/80 font-mono text-[11px] leading-relaxed">
+                {(codeFiles[activeCodeFile] || '').split('\n').map((_, index) => (
+                  <div key={index}>{index + 1}</div>
+                ))}
+              </div>
+              {/* Actual Code content */}
+              <div className="flex-1 p-4 overflow-x-auto">
+                <pre className="whitespace-pre">
+                  <code>{codeFiles[activeCodeFile]}</code>
+                </pre>
+              </div>
             </div>
 
             {/* Footer bar */}
             <div className="px-4 py-2 bg-[#11111b] border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-              <span className="font-mono">File: {activeCodeFile}</span>
-              <span className="font-sans text-slate-400 font-medium">{lang === 'km' ? 'បង្ហាញកូដផ្ទាល់ក្នុងវេបសាយ' : 'In-App Live Source Code'}</span>
+              <span className="font-mono">File: {activeCodeFile} ({ (codeFiles[activeCodeFile] || '').split('\n').length } lines)</span>
+              <span className="font-sans text-slate-400 font-medium">{lang === 'km' ? 'បង្ហាញកូដទំហំពេញ 100% ក្នុងវេបសាយ' : '100% Complete Live Source Code'}</span>
             </div>
           </div>
         </div>
