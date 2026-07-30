@@ -165,10 +165,8 @@ html.dark body {
 }
 
 /* Global Dark Mode Section and Text Overrides */
-html.dark section,
-.dark section {
-  background-image: none !important;
-  background-color: #0b0f19 !important;
+html.dark section {
+  background-color: #0f172a !important;
   color: #f1f5f9 !important;
 }
 

@@ -1100,7 +1100,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       )}
 
       <div className="w-full max-w-full sm:max-w-[440px] mx-auto flex justify-center pb-0 sm:pb-10 overflow-hidden relative">
-        <div className="w-full max-w-full bg-white/90 dark:bg-[#090d16] backdrop-blur-xl sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative flex flex-col transition-all duration-300 sm:border sm:border-white/80 dark:sm:border-slate-800/80 z-10 text-slate-900 dark:text-slate-100">
+        <div className="w-full max-w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl sm:rounded-[36px] sm:shadow-2xl overflow-hidden relative flex flex-col transition-all duration-300 sm:border sm:border-white/80 dark:sm:border-slate-800/80 z-10 text-slate-900 dark:text-slate-100">
 
         {/* FLOAT BAR: THEME TOGGLE, LANGUAGE TOGGLE & CV DOWNLOAD */}
         <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 z-30 flex items-center gap-1.5 sm:gap-2">
@@ -1134,7 +1134,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </div>
 
         {/* HERO SECTION WITH FULL UNCROPPED NATURAL DIMENSIONS */}
-        <section className="relative w-full overflow-hidden rounded-b-[24px] sm:rounded-b-[32px] bg-[#e2f0f9] dark:bg-[#090d16]">
+        <section className="relative w-full overflow-hidden rounded-b-[24px] sm:rounded-b-[32px] bg-[#e2f0f9]">
           <img 
             src="/images/Liquid-mercury_skin_finish_radiates_hyper-tactile_202607301018.webp" 
             alt="Chai Fong Portfolio Hero"
@@ -1150,7 +1150,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </section>
 
         {/* ABOUT ME SECTION */}
-        <section className="px-4 py-5 sm:p-7 sm:pb-5 bg-gradient-to-b from-white/95 to-slate-50/50 dark:from-[#090d16] dark:to-[#090d16] dark:bg-[#090d16] relative overflow-hidden">
+        <section className="px-4 py-5 sm:p-7 sm:pb-5 bg-gradient-to-b from-white/95 to-slate-50/50 dark:from-slate-900/95 dark:to-slate-950/80 relative overflow-hidden">
           <div className="flex items-center justify-between mb-4 sm:mb-5">
             <h2 className="font-cursive text-xl sm:text-2xl font-bold text-gray-500 dark:text-slate-400 italic">
               {t.aboutTitle}
@@ -1270,7 +1270,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </section>
 
         {/* EDUCATION & SKILLS SECTION WITH GLASS CARDS (ALWAYS 2 COLUMNS ON MOBILE & DESKTOP) */}
-        <section className="px-3 sm:px-7 py-4 sm:py-5 bg-slate-50/40 dark:bg-[#090d16]">
+        <section className="px-3 sm:px-7 py-4 sm:py-5 bg-slate-50/40 dark:bg-slate-950/60">
           <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
             
             {/* Education */}
@@ -1307,7 +1307,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </section>
 
         {/* SOFTWARES SECTION WITH GLASS STYLING */}
-        <section className="px-5 sm:px-7 py-6 bg-white/60 dark:bg-[#090d16] backdrop-blur-md border-b border-gray-100 dark:border-slate-800/80">
+        <section className="px-5 sm:px-7 py-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md border-b border-gray-100 dark:border-slate-800">
           <h3 className="font-display text-xl font-extrabold text-brand-navy dark:text-sky-400 tracking-tight mb-4 flex items-center gap-2">
             <Layers className="w-5 h-5 text-brand-pink" />
             <span>{t.softwaresTitle}</span>
@@ -1436,7 +1436,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </section>
 
         {/* PORTFOLIO SHOWCASE GALLERY WITH GLASS CARDS & VIBRANT HOVER */}
-        <section className="px-5 sm:px-7 py-6 bg-gradient-to-b from-slate-50/50 to-white dark:from-[#090d16] dark:to-[#090d16] dark:bg-[#090d16]">
+        <section className="px-5 sm:px-7 py-6 bg-gradient-to-b from-slate-50/50 to-white dark:from-slate-950/50 dark:to-slate-900">
           <div className="flex items-center justify-between mb-2">
             <div>
               <h3 className="font-display text-xl font-extrabold text-brand-navy dark:text-sky-400 tracking-tight flex items-center gap-2">
@@ -1526,7 +1526,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </section>
 
         {/* COMPACT SOCIAL CONTACT SECTION */}
-        <section className="px-5 py-4 bg-slate-50 dark:bg-[#090d16] border-t border-gray-100 dark:border-slate-800/80 text-center">
+        <section className="px-5 py-4 bg-slate-50 dark:bg-slate-950/80 border-t border-gray-100 dark:border-slate-800 text-center">
           <h4 className="font-display font-bold text-xs text-gray-500 dark:text-slate-400 mb-2.5">
             {lang === 'km' ? 'ទំនាក់ទំនង (Contact)' : 'Contact'}
           </h4>
