@@ -10,8 +10,8 @@ import portfolioHtmlCode from '../portfolio.html?raw';
 import khmerPortfolioCode from '../khmer_portfolio.html?raw';
 import htmlCode from '../index.html?raw';
 import pkgCode from '../package.json?raw';
-import sitemapCode from '../public/sitemap.xml?raw';
-import robotsCode from '../public/robots.txt?raw';
+import sitemapCode from './sitemap.xml?raw';
+import robotsCode from './robots.txt?raw';
 import tailwindConfigCode from '../tailwind.config.js?raw';
 import { 
   Globe, 
@@ -770,7 +770,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
 
             <div class="avatar-container">
-              <img src="${window.location.origin}/images/IMG_7733.webp" alt="Chai Fong" />
+              <img src="${window.location.origin}/images/Close-up_portrait_left_side_profile_202607300917.webp" alt="Chai Fong" />
             </div>
           </div>
 
@@ -1039,7 +1039,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               {/* Profile Avatar Centered in Ring */}
               <div className="absolute w-24 h-24 sm:w-26 sm:h-26 rounded-full overflow-hidden border-2 border-slate-700 shadow-xl p-0.5 bg-slate-900">
                 <img 
-                  src="/images/IMG_7733.webp" 
+                  src="/images/Close-up_portrait_left_side_profile_202607300917.webp" 
                   alt="Chai Fong Profile" 
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -1109,7 +1109,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         {/* HERO SECTION WITH FULL UNCROPPED NATURAL DIMENSIONS */}
         <section className="relative w-full overflow-hidden rounded-b-[24px] sm:rounded-b-[32px] bg-[#e2f0f9]">
           <img 
-            src="/images/IMG_8039.webp" 
+            src="/images/Liquid-mercury_skin_finish_radiates_hyper-tactile_202607301018.webp" 
             alt="Chai Fong Portfolio Hero"
             loading="eager"
             fetchPriority="high"
@@ -1176,7 +1176,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 title={t.interactiveHint}
               >
                 <img 
-                  src="/images/IMG_7733.webp" 
+                  src="/images/Close-up_portrait_left_side_profile_202607300917.webp" 
                   alt="Chai Fong Profile" 
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
