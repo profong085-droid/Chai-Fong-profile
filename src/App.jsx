@@ -30,7 +30,8 @@ import {
   FileText,
   Phone,
   Sparkles,
-  Code
+  Code,
+  Copy
 } from 'lucide-react';
 
 export default function App() {
@@ -51,6 +52,123 @@ export default function App() {
   const [showHireModal, setShowHireModal] = useState(false);
   const [formSent, setFormSent] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', service: 'children_book', message: '' });
+
+  // Code Viewer Modal State
+  const [showCodeModal, setShowCodeModal] = useState(false);
+  const [activeCodeFile, setActiveCodeFile] = useState('App.jsx');
+  const [copiedCode, setCopiedCode] = useState(false);
+
+  const codeFiles = {
+    'App.jsx': `// Chai Fong Portfolio 2026 - Main Application Logic & React Components
+import React, { useState, useEffect } from 'react';
+import confetti from 'canvas-confetti';
+import { Mail, Phone, Compass, GraduationCap, Award, Code, Sparkles } from 'lucide-react';
+
+export default function App() {
+  const [lang, setLang] = useState('km');
+  const [activeTab, setActiveTab] = useState('all');
+
+  // Portfolio items data
+  const artworks = [
+    { title: 'Loctroi Cambodia Website', category: 'Web Dev', demoUrl: 'https://loctroi.online/kh' },
+    { title: 'SabayFlix Movie Website', category: 'Web Dev', demoUrl: 'https://sabayflix-4.vercel.app/' },
+    { title: 'Fong KH Portfolio Website', category: 'Web Dev', demoUrl: 'https://fongkh.vercel.app/' },
+    { title: '3D MeCom Digital Card', category: 'Web Dev', demoUrl: 'https://card-mecom.vercel.app/' },
+    { title: 'Kimchi Shop E-Commerce', category: 'Web Dev', demoUrl: 'https://kimchi-shop-new.vercel.app/' },
+    { title: 'Kimchi Com Apparel Store', category: 'Web Dev', demoUrl: 'https://kimchicom.vercel.app/' },
+    { title: 'iFong KH Video Portfolio', category: 'Web Dev', demoUrl: 'https://ifongkhcom.vercel.app/' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-khmer">
+      {/* Glassmorphism Header */}
+      <header className="glass-card p-6 rounded-3xl border border-white/80">
+        <h1 className="text-2xl font-extrabold text-brand-navy">PHO CHAIFONG</h1>
+        <p className="text-sm text-gray-600">Graphic Designer & Video Editor Portfolio 2026</p>
+      </header>
+    </div>
+  );
+}`,
+    'index.css': `/* Custom Glassmorphism, Khmer Typography & Micro-Animations */
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Kantumruy+Pro:wght@400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px 0 rgba(31, 38, 135, 0.06);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.glass-dark {
+  background: rgba(29, 27, 75, 0.82);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}`,
+    'sitemap.xml': `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://chaifong.website/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://chaifong.website/images/IMG_8039.webp</image:loc>
+      <image:title>PHO CHAIFONG Graphic Design and Video Edit Portfolio</image:title>
+    </image:image>
+  </url>
+</urlset>`,
+    'index.html': `<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PHO CHAIFONG Graphic Design & Video Edit Portfolio</title>
+  <meta name="description" content="PHO CHAIFONG Graphic Design and Video Edit Portfolio 2026" />
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>`,
+    'package.json': `{
+  "name": "leticia-valdez-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "canvas-confetti": "^1.9.2",
+    "framer-motion": "^11.0.8",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}`
+  };
+
+  const handleCopyCode = () => {
+    navigator.clipboard.writeText(codeFiles[activeCodeFile]);
+    setCopiedCode(true);
+    confetti({ particleCount: 35, spread: 60, origin: { y: 0.5 } });
+    setTimeout(() => setCopiedCode(false), 2000);
+  };
 
   // Initial loading screen state (1% - 100%)
   const [loadingProgress, setLoadingProgress] = useState(1);
@@ -1166,16 +1284,14 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   <Mail className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="truncate">{copied ? t.copiedEmail : 'Profong085@...'}</span>
                 </button>
-                <a 
-                  href="https://github.com/profong085-droid/Chai-Fong-profile" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl"
+                <button 
+                  onClick={() => setShowCodeModal(true)}
+                  className="flex items-center gap-1.5 text-[11px] sm:text-xs font-semibold text-gray-700 hover:text-brand-pink transition-colors text-left group glass-pill px-2.5 py-1 rounded-xl cursor-pointer"
                   title={t.viewCode}
                 >
                   <Code className="w-3.5 h-3.5 text-brand-navy shrink-0 group-hover:scale-110 transition-transform" />
                   <span className="truncate">{t.viewCode}</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -1792,6 +1908,74 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               )}
             </div>
 
+          </div>
+        </div>
+      )}
+
+      {/* SOURCE CODE VIEWER MODAL */}
+      {showCodeModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
+          <div className="bg-[#181825] border border-slate-700/80 rounded-2xl w-full max-w-4xl max-h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-scaleUp">
+            {/* Header bar */}
+            <div className="flex items-center justify-between px-4 py-3 bg-[#11111b] border-b border-slate-800">
+              <div className="flex items-center gap-2 overflow-hidden">
+                <div className="flex items-center gap-1.5 mr-2 shrink-0">
+                  <span className="w-3 h-3 rounded-full bg-rose-500/90 inline-block" />
+                  <span className="w-3 h-3 rounded-full bg-amber-500/90 inline-block" />
+                  <span className="w-3 h-3 rounded-full bg-emerald-500/90 inline-block" />
+                </div>
+                <Code className="w-4 h-4 text-brand-pink shrink-0" />
+                <span className="text-xs sm:text-sm font-bold text-slate-200 font-mono truncate">
+                  {lang === 'km' ? 'កូដវេបសាយទាំងមូល (Source Code IDE)' : 'Full Source Code Viewer'}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  onClick={handleCopyCode}
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold transition-all border border-slate-700 cursor-pointer"
+                >
+                  {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-300" />}
+                  <span>{copiedCode ? (lang === 'km' ? 'បានចម្លងកូដ!' : 'Copied!') : (lang === 'km' ? 'ចម្លងកូដ' : 'Copy Code')}</span>
+                </button>
+                <button
+                  onClick={() => setShowCodeModal(false)}
+                  className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* File Switcher Tabs */}
+            <div className="flex items-center gap-1 px-3 py-2 bg-[#1e1e2e] border-b border-slate-800 overflow-x-auto no-scrollbar">
+              {Object.keys(codeFiles).map((fileName) => (
+                <button
+                  key={fileName}
+                  onClick={() => setActiveCodeFile(fileName)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium flex items-center gap-2 transition-all whitespace-nowrap cursor-pointer ${
+                    activeCodeFile === fileName
+                      ? 'bg-[#313244] text-brand-pink border border-slate-700 shadow-sm'
+                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                  }`}
+                >
+                  <FileText className="w-3.5 h-3.5 shrink-0" />
+                  <span>{fileName}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Code Display Area */}
+            <div className="flex-1 overflow-auto p-4 bg-[#11111b] font-mono text-xs leading-relaxed text-slate-300">
+              <pre className="whitespace-pre overflow-x-auto">
+                <code>{codeFiles[activeCodeFile]}</code>
+              </pre>
+            </div>
+
+            {/* Footer bar */}
+            <div className="px-4 py-2 bg-[#11111b] border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span className="font-mono">File: {activeCodeFile}</span>
+              <span className="font-sans text-slate-400 font-medium">{lang === 'km' ? 'បង្ហាញកូដផ្ទាល់ក្នុងវេបសាយ' : 'In-App Live Source Code'}</span>
+            </div>
           </div>
         </div>
       )}
