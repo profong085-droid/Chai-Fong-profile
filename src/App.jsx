@@ -70,8 +70,8 @@ export default function App() {
   const [showCodeModal, setShowCodeModal] = useState(false);
   const [activeCodeFile, setActiveCodeFile] = useState('App.jsx');
   const [copiedCode, setCopiedCode] = useState(false);
-  const [codeFontSize, setCodeFontSize] = useState(13); // Default font size in px
-  const [wrapLines, setWrapLines] = useState(false); // Toggle line wrap for easy mobile viewing
+  const [codeFontSize, setCodeFontSize] = useState(10); // Ultra-small 10px default for mobile viewing
+  const [wrapLines, setWrapLines] = useState(true); // Auto line wrap ON by default for mobile screens
 
   const codeFiles = {
     'App.jsx': appCode,
@@ -85,8 +85,8 @@ export default function App() {
     'robots.txt': robotsCode
   };
 
-  const zoomInCode = () => setCodeFontSize(prev => Math.min(prev + 2, 24));
-  const zoomOutCode = () => setCodeFontSize(prev => Math.max(prev - 2, 10));
+  const zoomInCode = () => setCodeFontSize(prev => Math.min(prev + 1, 24));
+  const zoomOutCode = () => setCodeFontSize(prev => Math.max(prev - 1, 7));
 
   const handleCopyCode = () => {
     navigator.clipboard.writeText(codeFiles[activeCodeFile]);
@@ -1931,21 +1931,21 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
 
             {/* Code Display Area with Line Numbers & Adjustable Font Size */}
-            <div className="flex-1 overflow-auto bg-[#11111b] font-mono leading-relaxed text-slate-200 flex">
+            <div className="flex-1 overflow-auto bg-[#11111b] font-mono text-slate-200 flex">
               {/* Line numbers column */}
               <div 
-                className="py-4 px-2.5 sm:px-3 bg-[#181825]/50 text-slate-500 select-none text-right border-r border-slate-800/80 font-mono shrink-0"
-                style={{ fontSize: `${Math.max(codeFontSize - 1, 10)}px`, lineHeight: 1.6 }}
+                className="py-2.5 px-1.5 sm:px-2 bg-[#181825]/60 text-slate-500 select-none text-right border-r border-slate-800/80 font-mono shrink-0"
+                style={{ fontSize: `${Math.max(codeFontSize - 1, 7)}px`, lineHeight: 1.45 }}
               >
                 {(codeFiles[activeCodeFile] || '').split('\n').map((_, index) => (
                   <div key={index}>{index + 1}</div>
                 ))}
               </div>
               {/* Actual Code content */}
-              <div className="flex-1 p-3 sm:p-4 overflow-x-auto">
+              <div className="flex-1 p-2 sm:p-3 overflow-x-auto">
                 <pre 
                   className={wrapLines ? "whitespace-pre-wrap break-words" : "whitespace-pre"}
-                  style={{ fontSize: `${codeFontSize}px`, lineHeight: 1.6 }}
+                  style={{ fontSize: `${codeFontSize}px`, lineHeight: 1.45 }}
                 >
                   <code>{codeFiles[activeCodeFile]}</code>
                 </pre>
