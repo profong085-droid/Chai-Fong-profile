@@ -6,10 +6,13 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 // Raw source imports for full live code viewer
 import appCode from './App.jsx?raw';
 import cssCode from './index.css?raw';
+import portfolioHtmlCode from '../portfolio.html?raw';
+import khmerPortfolioCode from '../khmer_portfolio.html?raw';
 import htmlCode from '../index.html?raw';
 import pkgCode from '../package.json?raw';
 import sitemapCode from '../public/sitemap.xml?raw';
 import robotsCode from '../public/robots.txt?raw';
+import tailwindConfigCode from '../tailwind.config.js?raw';
 import { 
   Globe, 
   Mail, 
@@ -39,7 +42,9 @@ import {
   Phone,
   Sparkles,
   Code,
-  Copy
+  Copy,
+  ZoomIn,
+  ZoomOut
 } from 'lucide-react';
 
 export default function App() {
@@ -65,15 +70,23 @@ export default function App() {
   const [showCodeModal, setShowCodeModal] = useState(false);
   const [activeCodeFile, setActiveCodeFile] = useState('App.jsx');
   const [copiedCode, setCopiedCode] = useState(false);
+  const [codeFontSize, setCodeFontSize] = useState(13); // Default font size in px
+  const [wrapLines, setWrapLines] = useState(false); // Toggle line wrap for easy mobile viewing
 
   const codeFiles = {
     'App.jsx': appCode,
     'index.css': cssCode,
+    'portfolio.html': portfolioHtmlCode,
+    'khmer_portfolio.html': khmerPortfolioCode,
     'sitemap.xml': sitemapCode,
     'index.html': htmlCode,
     'package.json': pkgCode,
+    'tailwind.config.js': tailwindConfigCode,
     'robots.txt': robotsCode
   };
+
+  const zoomInCode = () => setCodeFontSize(prev => Math.min(prev + 2, 24));
+  const zoomOutCode = () => setCodeFontSize(prev => Math.max(prev - 2, 10));
 
   const handleCopyCode = () => {
     navigator.clipboard.writeText(codeFiles[activeCodeFile]);
@@ -1824,31 +1837,72 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         </div>
       )}
 
-      {/* SOURCE CODE VIEWER MODAL */}
+      {/* SOURCE CODE VIEWER MODAL - MOBILE OPTIMIZED */}
       {showCodeModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-fadeIn">
-          <div className="bg-[#181825] border border-slate-700/80 rounded-2xl w-full max-w-4xl max-h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-scaleUp">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-5 bg-slate-950/85 backdrop-blur-md animate-fadeIn">
+          <div className="bg-[#181825] border border-slate-700/80 rounded-2xl w-[96vw] sm:w-full max-w-5xl h-[92vh] sm:h-[88vh] flex flex-col shadow-2xl overflow-hidden animate-scaleUp">
             {/* Header bar */}
-            <div className="flex items-center justify-between px-4 py-3 bg-[#11111b] border-b border-slate-800">
+            <div className="flex items-center justify-between px-3 sm:px-4 py-2.5 bg-[#11111b] border-b border-slate-800 shrink-0">
               <div className="flex items-center gap-2 overflow-hidden">
-                <div className="flex items-center gap-1.5 mr-2 shrink-0">
+                <div className="hidden sm:flex items-center gap-1.5 mr-1 shrink-0">
                   <span className="w-3 h-3 rounded-full bg-rose-500/90 inline-block" />
                   <span className="w-3 h-3 rounded-full bg-amber-500/90 inline-block" />
                   <span className="w-3 h-3 rounded-full bg-emerald-500/90 inline-block" />
                 </div>
                 <Code className="w-4 h-4 text-brand-pink shrink-0" />
                 <span className="text-xs sm:text-sm font-bold text-slate-200 font-mono truncate">
-                  {lang === 'km' ? 'កូដវេបសាយទាំងមូល (Source Code IDE)' : 'Full Source Code Viewer'}
+                  {lang === 'km' ? 'កូដវេបសាយទាំងមូល' : 'Source Code Viewer'}
                 </span>
               </div>
-              <div className="flex items-center gap-2 shrink-0">
+
+              {/* Mobile controls & Actions */}
+              <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                {/* Text Zoom Controls */}
+                <div className="flex items-center bg-slate-800/90 rounded-xl p-0.5 border border-slate-700">
+                  <button
+                    onClick={zoomOutCode}
+                    title="ពង្រួមអក្សរ"
+                    className="p-1 sm:px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer"
+                  >
+                    <ZoomOut className="w-3.5 h-3.5" />
+                    <span className="hidden sm:inline text-[11px]">-</span>
+                  </button>
+                  <span className="text-[11px] font-mono font-bold text-brand-pink px-1 sm:px-1.5 min-w-[28px] text-center">
+                    {codeFontSize}px
+                  </span>
+                  <button
+                    onClick={zoomInCode}
+                    title="ពង្រីកអក្សរ"
+                    className="p-1 sm:px-2 text-slate-300 hover:text-white hover:bg-slate-700 rounded-lg text-xs font-bold transition-all flex items-center gap-1 cursor-pointer"
+                  >
+                    <ZoomIn className="w-3.5 h-3.5" />
+                    <span className="hidden sm:inline text-[11px]">+</span>
+                  </button>
+                </div>
+
+                {/* Line Wrap Toggle for Mobile */}
+                <button
+                  onClick={() => setWrapLines(!wrapLines)}
+                  className={`px-2 sm:px-2.5 py-1 rounded-xl text-[11px] font-bold transition-all border cursor-pointer hidden sm:flex items-center gap-1 ${
+                    wrapLines 
+                      ? 'bg-brand-pink/20 text-brand-pink border-brand-pink/50' 
+                      : 'bg-slate-800 text-slate-400 border-slate-700 hover:text-slate-200'
+                  }`}
+                  title="បត់បន្ទាត់កូដកុំឲ្យហៀរចេញ"
+                >
+                  <span>{wrapLines ? 'Wrap: On' : 'Wrap: Off'}</span>
+                </button>
+
+                {/* Copy Button */}
                 <button
                   onClick={handleCopyCode}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold transition-all border border-slate-700 cursor-pointer"
+                  className="flex items-center gap-1 px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl text-xs font-semibold transition-all border border-slate-700 cursor-pointer"
                 >
-                  {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-slate-300" />}
-                  <span>{copiedCode ? (lang === 'km' ? 'បានចម្លងកូដ!' : 'Copied!') : (lang === 'km' ? 'ចម្លងកូដ' : 'Copy Code')}</span>
+                  {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0" /> : <Copy className="w-3.5 h-3.5 text-slate-300 shrink-0" />}
+                  <span className="hidden sm:inline">{copiedCode ? (lang === 'km' ? 'បានចម្លង!' : 'Copied!') : (lang === 'km' ? 'ចម្លង' : 'Copy')}</span>
                 </button>
+
+                {/* Close Button */}
                 <button
                   onClick={() => setShowCodeModal(false)}
                   className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-colors cursor-pointer"
@@ -1859,15 +1913,15 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
 
             {/* File Switcher Tabs */}
-            <div className="flex items-center gap-1 px-3 py-2 bg-[#1e1e2e] border-b border-slate-800 overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-1.5 px-3 py-2 bg-[#1e1e2e] border-b border-slate-800 overflow-x-auto no-scrollbar shrink-0">
               {Object.keys(codeFiles).map((fileName) => (
                 <button
                   key={fileName}
                   onClick={() => setActiveCodeFile(fileName)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium flex items-center gap-2 transition-all whitespace-nowrap cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all whitespace-nowrap cursor-pointer ${
                     activeCodeFile === fileName
-                      ? 'bg-[#313244] text-brand-pink border border-slate-700 shadow-sm'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                      ? 'bg-[#313244] text-brand-pink border border-slate-600 shadow-sm scale-[1.02]'
+                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/60'
                   }`}
                 >
                   <FileText className="w-3.5 h-3.5 shrink-0" />
@@ -1876,26 +1930,39 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               ))}
             </div>
 
-            {/* Code Display Area with Line Numbers */}
-            <div className="flex-1 overflow-auto bg-[#11111b] font-mono text-xs leading-relaxed text-slate-300 flex">
+            {/* Code Display Area with Line Numbers & Adjustable Font Size */}
+            <div className="flex-1 overflow-auto bg-[#11111b] font-mono leading-relaxed text-slate-200 flex">
               {/* Line numbers column */}
-              <div className="py-4 px-3 bg-[#181825]/40 text-slate-600 select-none text-right border-r border-slate-800/80 font-mono text-[11px] leading-relaxed">
+              <div 
+                className="py-4 px-2.5 sm:px-3 bg-[#181825]/50 text-slate-500 select-none text-right border-r border-slate-800/80 font-mono shrink-0"
+                style={{ fontSize: `${Math.max(codeFontSize - 1, 10)}px`, lineHeight: 1.6 }}
+              >
                 {(codeFiles[activeCodeFile] || '').split('\n').map((_, index) => (
                   <div key={index}>{index + 1}</div>
                 ))}
               </div>
               {/* Actual Code content */}
-              <div className="flex-1 p-4 overflow-x-auto">
-                <pre className="whitespace-pre">
+              <div className="flex-1 p-3 sm:p-4 overflow-x-auto">
+                <pre 
+                  className={wrapLines ? "whitespace-pre-wrap break-words" : "whitespace-pre"}
+                  style={{ fontSize: `${codeFontSize}px`, lineHeight: 1.6 }}
+                >
                   <code>{codeFiles[activeCodeFile]}</code>
                 </pre>
               </div>
             </div>
 
-            {/* Footer bar */}
-            <div className="px-4 py-2 bg-[#11111b] border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-              <span className="font-mono">File: {activeCodeFile} ({ (codeFiles[activeCodeFile] || '').split('\n').length } lines)</span>
-              <span className="font-sans text-slate-400 font-medium">{lang === 'km' ? 'បង្ហាញកូដទំហំពេញ 100% ក្នុងវេបសាយ' : '100% Complete Live Source Code'}</span>
+            {/* Mobile-Friendly Footer bar */}
+            <div className="px-3 sm:px-4 py-2 bg-[#11111b] border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between shrink-0">
+              <span className="font-mono text-brand-pink font-semibold truncate">
+                📄 {activeCodeFile} ({ (codeFiles[activeCodeFile] || '').split('\n').length } lines)
+              </span>
+              <button 
+                onClick={() => setWrapLines(!wrapLines)}
+                className="text-[10.5px] text-slate-400 hover:text-white underline cursor-pointer"
+              >
+                {wrapLines ? 'Unwrap Lines' : 'Wrap Lines'}
+              </button>
             </div>
           </div>
         </div>
