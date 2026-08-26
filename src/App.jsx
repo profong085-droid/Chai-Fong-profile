@@ -1199,7 +1199,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             {/* Right Profile Avatar replaced with 3D Lanyard Card */}
             <div className="flex flex-col items-center shrink-0 w-[120px] sm:w-[160px] relative">
               <div 
-                className="absolute top-[-280px] sm:top-[-320px] right-[-50px] sm:right-[-40px] w-[200px] sm:w-[280px] h-[700px] sm:h-[800px] flex justify-center cursor-pointer pointer-events-auto z-40 translate-x-4 sm:translate-x-2"
+                className="absolute top-[-280px] sm:top-[-320px] right-[-30px] sm:right-[-20px] w-[200px] sm:w-[280px] h-[700px] sm:h-[800px] flex justify-center cursor-pointer pointer-events-auto z-40"
                 title="Interact with my 3D Card!"
               >
                 <Lanyard />
