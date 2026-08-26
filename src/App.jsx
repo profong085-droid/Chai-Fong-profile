@@ -1152,11 +1152,17 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
         {/* ABOUT ME SECTION */}
         <section className="px-4 py-5 sm:p-7 sm:pb-5 bg-gradient-to-b from-white/95 to-slate-50/50 dark:from-slate-900/95 dark:to-slate-950/80 relative overflow-hidden">
-          <div className="flex items-center justify-between mb-4 sm:mb-5">
+          <div className="flex items-center justify-between mb-4 sm:mb-5 relative">
             <h2 className="font-cursive text-xl sm:text-2xl font-bold text-gray-500 dark:text-slate-400 italic">
               {t.aboutTitle}
             </h2>
             
+            {/* Hand-drawn arrow pointing right to Lanyard string */}
+            <svg className="absolute left-[80px] sm:left-[100px] top-[5px] sm:top-[10px] w-[90px] sm:w-[120px] h-[40px] sm:h-[50px] text-gray-400 dark:text-slate-500 pointer-events-none" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 5 15 Q 50 5 90 35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path d="M 75 22 L 92 37 L 72 45" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+
             <button 
               onClick={handleLike}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all shadow-md active:scale-95 glass-shine ${
@@ -1182,12 +1188,6 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 <p className="text-[11px] sm:text-xs text-gray-500 dark:text-slate-400 mt-1 font-medium">
                   {t.aka}
                 </p>
-
-                {/* SVG Curved Arrow */}
-                <svg className="absolute -top-1 -right-[35px] sm:-right-[52px] w-[45px] sm:w-[55px] h-[35px] sm:h-[40px] pointer-events-none hidden sm:block" viewBox="0 0 100 60" fill="none">
-                  <path d="M10 45 Q 50 5 90 25" stroke="currentColor" className="text-brand-navy dark:text-sky-400" strokeWidth="2.5" strokeLinecap="round"/>
-                  <path d="M80 15 L 92 26 L 78 32" stroke="currentColor" className="text-brand-navy dark:text-sky-400" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
               </div>
 
               <div className="mt-3 sm:mt-4 text-[11px] sm:text-[11.5px] leading-relaxed text-gray-700 dark:text-slate-300 glass-card p-3 sm:p-4 rounded-2xl">
