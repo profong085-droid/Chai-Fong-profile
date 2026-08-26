@@ -197,7 +197,7 @@ export default function App() {
     en: {
       author: "Chai Fong",
       portfolio: "PORTFOLIO",
-      year: "2025",
+      year: "2026",
       aboutTitle: "About Me!",
       aka: "A.K.A Fong",
       greeting: "Hi!",
@@ -277,7 +277,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយផ្លូវការរបស់ក្រុមហ៊ុនថ្នាំកសិកម្ម Loctroi Cambodia សម្រាប់ផ្សព្វផ្សាយផលិតផល និងព័ត៌មានក្រុមហ៊ុន (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
         : 'Official website design and development project for Loctroi Cambodia agricultural chemical company (Auto 3s image slideshow).',
       client: 'Loctroi Cambodia',
-      year: '2025',
+      year: '2026',
       tools: ['VS Code', 'Photoshop', 'CapCut'],
       demoUrl: 'https://loctroi.online/kh',
       likes: 320
@@ -301,7 +301,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         ? 'គម្រោងអភិវឌ្ឍន៍វេបសាយកម្សាន្តមើលរឿង SabayFlix ដែលមាន UI/UX ទំនើប ស្រស់ស្អាត អាចទស្សនារឿងភាគ និងភាពយន្តចម្រុះបានយ៉ាងលឿន (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
         : 'SabayFlix movie streaming platform web application with modern responsive UI/UX and seamless video playback (Auto 3s image slideshow).',
       client: 'SabayFlix',
-      year: '2025',
+      year: '2026',
       tools: ['VS Code', 'React', 'Tailwind'],
       demoUrl: 'https://sabayflix-4.vercel.app/',
       likes: 412
@@ -317,7 +317,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយផ្ទាល់ខ្លួន Fong KH សម្រាប់បង្ហាញស្នាដៃកាត់តវីដេអូផ្សព្វផ្សាយថ្នាំកសិកម្ម ឌីហ្សាញ Poster និងព័ត៌មានទំនាក់ទំនង។' 
         : 'Personal portfolio web application showcasing agricultural promo video editing, graphic designs, and developer contact details.',
       client: 'Fong KH',
-      year: '2025',
+      year: '2026',
       tools: ['VS Code', 'React', 'Tailwind'],
       demoUrl: 'https://fongkh.vercel.app/',
       likes: 368
@@ -333,7 +333,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយកាត 3D MeCom សម្រាប់ផ្សព្វផ្សាយលើ Facebook & TikTok ដែលមាន Interaction បង្វិលកាត 3D យ៉ាងស្អាតទាក់ទាញ។' 
         : 'Interactive 3D MeCom Digital Card web application with full 3D card tilt and social media marketing integration.',
       client: 'MeCom Card',
-      year: '2025',
+      year: '2026',
       tools: ['VS Code', 'Three.js', 'Tailwind'],
       demoUrl: 'https://card-mecom.vercel.app/',
       likes: 295
@@ -353,7 +353,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយហាងលក់អាវសម្លៀកបំពាក់ Kimchi Shop សម្រាប់កម៉្មង់ទិញទំនិញ និងមើលម៉ូដសម្លៀកបំពាក់ទាន់សម័យ (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
         : 'Kimchi Shop fashion e-commerce web application designed for browsing stylish apparel and online ordering (Auto 3s image slideshow).',
       client: 'Kimchi Shop',
-      year: '2025',
+      year: '2026',
       tools: ['VS Code', 'React', 'Tailwind'],
       demoUrl: 'https://kimchi-shop-new.vercel.app/',
       likes: 380
@@ -374,7 +374,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         ? 'គម្រោងឌីហ្សាញ និងអភិវឌ្ឍន៍វេបសាយហាងលក់អាវសម្លៀកបំពាក់ Kimchi Com សម្រាប់បង្ហាញផលិតផល និងព័ត៌មានលម្អិតពីសម្លៀកបំពាក់ (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
         : 'Kimchi Com apparel store web application showcasing fashion collections and detailed clothing specifications (Auto 3s image slideshow).',
       client: 'Kimchi Com',
-      year: '2025',
+      year: '2026',
       tools: ['VS Code', 'React', 'Tailwind'],
       demoUrl: 'https://kimchicom.vercel.app/',
       likes: 315
@@ -395,7 +395,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         ? 'គម្រោងអភិវឌ្ឍន៍វេបសាយសម្រាប់ដាក់ និងចាក់ផ្សាយវីដេអូកាត់ត iFong KH ដែលមាន UI/UX ទំនើប និងអាចទស្សនាវីដេអូបានយ៉ាងលឿនរលូន (ផ្លាស់ប្តូររូបភាព ៣វិនាទីម្តងអូតូ)។' 
         : 'iFong KH Video Showcase web application with responsive media player layout and video stream portfolio (Auto 3s image slideshow).',
       client: 'iFong KH',
-      year: '2025',
+      year: '2026',
       tools: ['VS Code', 'CapCut', 'React'],
       demoUrl: 'https://ifongkhcom.vercel.app/',
       likes: 425
@@ -785,7 +785,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
 
             <div class="avatar-container">
-              <img src="${window.location.origin}/images/Close-up_portrait_left_side_profile_202607300917.webp" alt="Chai Fong" />
+              <img src="${window.location.origin}/images/fong profie 1.png" alt="Chai Fong" />
             </div>
           </div>
 
@@ -977,7 +977,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
           <!-- FOOTER -->
           <div class="footer-note">
-            © 2025 Chai Fong Studio | Official Resume generated from https://chaifong.website
+            © 2026 Chai Fong Studio | Official Resume generated from https://chaifong.website
           </div>
 
         <script>
@@ -1054,7 +1054,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               {/* Profile Avatar Centered in Ring */}
               <div className="absolute w-24 h-24 sm:w-26 sm:h-26 rounded-full overflow-hidden border-2 border-slate-700 shadow-xl p-0.5 bg-slate-900">
                 <img 
-                  src="/images/Close-up_portrait_left_side_profile_202607300917.webp" 
+                  src="/images/fong profie 1.png" 
                   alt="Chai Fong Profile" 
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -1136,7 +1136,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
         {/* HERO SECTION WITH FULL UNCROPPED NATURAL DIMENSIONS */}
         <section className="relative w-full overflow-hidden rounded-b-[24px] sm:rounded-b-[32px] bg-[#e2f0f9]">
           <img 
-            src="/images/Liquid-mercury_skin_finish_radiates_hyper-tactile_202607301018.webp" 
+            src="/images/IMG_9361 តូច.jpg" 
             alt="Chai Fong Portfolio Hero"
             loading="eager"
             fetchPriority="high"
@@ -1203,7 +1203,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                 title={t.interactiveHint}
               >
                 <img 
-                  src="/images/Close-up_portrait_left_side_profile_202607300917.webp" 
+                  src="/images/fong profie 1.png" 
                   alt="Chai Fong Profile" 
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1614,7 +1614,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
         {/* FOOTER BAR */}
         <footer className="bg-[#12112e] py-4 px-4 text-center text-[10.5px] text-white/70 font-medium flex flex-col items-center gap-1">
-          <div>© 2025 ឆៃហ្វុង • រក្សាសិទ្ធិគ្រប់យ៉ាង</div>
+          <div>© 2026 ឆៃហ្វុង • រក្សាសិទ្ធិគ្រប់យ៉ាង</div>
           <div className="flex items-center gap-3 text-white/50 text-[10px] mt-0.5">
             <span>Facebook</span>
             <span>•</span>
