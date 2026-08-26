@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import Lanyard from './components/Lanyard/Lanyard';
 
 // Raw source imports for full live code viewer
 import appCode from './App.jsx?raw';
@@ -1195,29 +1196,17 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               </div>
             </div>
 
-            {/* Right Profile Avatar with Interactive Hearts */}
-            <div className="flex flex-col items-center shrink-0 w-[110px] sm:w-[135px]">
+            {/* Right Profile Avatar replaced with 3D Lanyard Card */}
+            <div className="flex flex-col items-center shrink-0 w-[120px] sm:w-[160px] relative">
               <div 
-                onClick={triggerHearts}
-                className="w-[105px] h-[105px] sm:w-[135px] sm:h-[135px] rounded-full overflow-hidden relative shadow-xl mb-3 cursor-pointer hover:scale-105 transition-all duration-300 group border-4 border-white ring-4 ring-rose-200/80 bg-white glass-shine animate-float-slow"
-                title={t.interactiveHint}
+                className="absolute top-[-280px] sm:top-[-320px] right-[-20px] sm:right-[-30px] w-[200px] sm:w-[280px] h-[700px] sm:h-[800px] flex justify-center cursor-pointer pointer-events-auto z-40"
+                title="Interact with my 3D Card!"
               >
-                <img 
-                  src="/images/fong profie 1.png" 
-                  alt="Chai Fong Profile" 
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all" />
-                {showHearts.map(h => (
-                  <span 
-                    key={h.id} 
-                    className="absolute text-lg animate-bounce pointer-events-none drop-shadow"
-                    style={{ left: h.x, top: h.y }}
-                  >
-                    💖
-                  </span>
-                ))}
+                <Lanyard />
               </div>
+
+              {/* Spacer to push social links below the dangling card */}
+              <div className="h-[240px] sm:h-[300px] w-full shrink-0 pointer-events-none"></div>
 
               {/* Social Links */}
               <div className="flex flex-col gap-1.5 w-full text-left">
