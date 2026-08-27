@@ -9,7 +9,7 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 import * as THREE from 'three';
 
 // replace with your own imports, see the usage snippet for details
-const cardGLB = '/assets/lanyard/cardfong.glb';
+const cardGLB = '/assets/lanyard/fong2.glb';
 const lanyard = '/assets/lanyard/lanyard.png';
 
 extend({ MeshLineGeometry, MeshLineMaterial });
