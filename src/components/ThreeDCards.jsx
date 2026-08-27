@@ -46,7 +46,7 @@ export default function ThreeDCards() {
                 polar={[-Math.PI / 2, Math.PI / 2]}
                 azimuth={[-Infinity, Infinity]}
               >
-                <Float rotationIntensity={1.5} floatIntensity={2} speed={2}>
+                <Float rotationIntensity={0.5} floatIntensity={0.6} speed={1.5}>
                   <Bounds fit clip margin={0.85}>
                     <Model url="/assets/card/card k1.glb" />
                   </Bounds>
@@ -77,7 +77,7 @@ export default function ThreeDCards() {
                 polar={[-Math.PI / 2, Math.PI / 2]}
                 azimuth={[-Infinity, Infinity]}
               >
-                <Float rotationIntensity={1.5} floatIntensity={2} speed={2.5}>
+                <Float rotationIntensity={0.6} floatIntensity={0.7} speed={1.8}>
                   <Bounds fit clip margin={0.85}>
                     <Model url="/assets/card/card k2.glb" />
                   </Bounds>
@@ -108,7 +108,7 @@ export default function ThreeDCards() {
                 polar={[-Math.PI / 2, Math.PI / 2]}
                 azimuth={[-Infinity, Infinity]}
               >
-                <Float rotationIntensity={1.5} floatIntensity={2} speed={1.8}>
+                <Float rotationIntensity={0.4} floatIntensity={0.5} speed={1.2}>
                   <Bounds fit clip margin={0.85}>
                     <Model url="/assets/card/card k3.glb" />
                   </Bounds>
