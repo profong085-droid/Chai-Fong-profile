@@ -24,10 +24,10 @@ export default function ThreeDCards() {
       
 
 
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 w-full relative z-20">
+      <div className="flex flex-row overflow-x-auto sm:overflow-visible no-scrollbar snap-x snap-mandatory justify-start sm:justify-center items-center gap-6 sm:gap-8 w-full relative z-20 pb-4 px-4 sm:px-0">
         
         {/* Card 1 */}
-        <div className="w-full sm:w-1/3 h-[180px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing">
+        <div className="flex-none w-[240px] sm:w-1/3 h-[280px] sm:h-[240px] snap-center relative overflow-visible group cursor-grab active:cursor-grabbing">
           <div className="absolute -bottom-4 left-0 right-0 z-10 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="bg-black/70 text-white text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-md shadow-lg border border-white/20">360° Rotate</span>
           </div>
@@ -39,7 +39,7 @@ export default function ThreeDCards() {
               <PresentationControls
                 global={false}
                 cursor={true}
-                snap={true}
+                snap={false}
                 speed={1.5}
                 zoom={1}
                 rotation={[0.1, 0.2, 0]}
@@ -58,7 +58,7 @@ export default function ThreeDCards() {
         </div>
 
         {/* Card 2 */}
-        <div className="w-full sm:w-1/3 h-[180px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing">
+        <div className="flex-none w-[240px] sm:w-1/3 h-[280px] sm:h-[240px] snap-center relative overflow-visible group cursor-grab active:cursor-grabbing">
           <div className="absolute -bottom-4 left-0 right-0 z-10 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="bg-black/70 text-white text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-md shadow-lg border border-white/20">360° Rotate</span>
           </div>
@@ -70,7 +70,7 @@ export default function ThreeDCards() {
               <PresentationControls
                 global={false}
                 cursor={true}
-                snap={true}
+                snap={false}
                 speed={1.5}
                 zoom={1}
                 rotation={[0.1, 0, 0]}
@@ -89,7 +89,7 @@ export default function ThreeDCards() {
         </div>
 
         {/* Card 3 */}
-        <div className="w-full sm:w-1/3 h-[180px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing">
+        <div className="flex-none w-[240px] sm:w-1/3 h-[280px] sm:h-[240px] snap-center relative overflow-visible group cursor-grab active:cursor-grabbing">
           <div className="absolute -bottom-4 left-0 right-0 z-10 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="bg-black/70 text-white text-[11px] font-bold px-3 py-1.5 rounded-full backdrop-blur-md shadow-lg border border-white/20">360° Rotate</span>
           </div>
@@ -101,7 +101,7 @@ export default function ThreeDCards() {
               <PresentationControls
                 global={false}
                 cursor={true}
-                snap={true}
+                snap={false}
                 speed={1.5}
                 zoom={1}
                 rotation={[0.1, -0.2, 0]}
