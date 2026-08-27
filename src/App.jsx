@@ -3,6 +3,7 @@ import confetti from 'canvas-confetti';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Lanyard from './components/Lanyard/Lanyard';
+import ThreeDCards from './components/ThreeDCards';
 
 // Raw source imports for full live code viewer
 import appCode from './App.jsx?raw';
@@ -786,7 +787,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
 
             <div class="avatar-container">
-              <img src="${window.location.origin}/images/fong profie 1.png" alt="Chai Fong" />
+              <img src="${window.location.origin}/images/fong1.webp" alt="Chai Fong" />
             </div>
           </div>
 
@@ -1055,7 +1056,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               {/* Profile Avatar Centered in Ring */}
               <div className="absolute w-24 h-24 sm:w-26 sm:h-26 rounded-full overflow-hidden border-2 border-slate-700 shadow-xl p-0.5 bg-slate-900">
                 <img 
-                  src="/images/fong profie 1.png" 
+                  src="/images/fong1.webp" 
                   alt="Chai Fong Profile" 
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -1257,6 +1258,9 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
             </div>
           </div>
         </section>
+
+        {/* 3D ROTATING CARDS */}
+        <ThreeDCards />
 
         {/* EDUCATION & SKILLS SECTION WITH GLASS CARDS (ALWAYS 2 COLUMNS ON MOBILE & DESKTOP) */}
         <section className="px-3 sm:px-7 py-4 sm:py-5 bg-slate-50/40 dark:bg-slate-950/60">
