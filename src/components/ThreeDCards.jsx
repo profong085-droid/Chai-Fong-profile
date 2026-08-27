@@ -27,7 +27,7 @@ export default function ThreeDCards() {
       <div className="flex flex-row justify-center items-center gap-2 sm:gap-8 w-full relative z-20 px-2 sm:px-0">
         
         {/* Card 1 */}
-        <div className="flex-1 w-1/3 h-[150px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing">
+        <div className="flex-1 w-1/3 h-[150px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing touch-none">
           <div className="absolute -bottom-4 left-0 right-0 z-10 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="bg-black/70 text-white text-[9px] sm:text-[11px] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full backdrop-blur-md shadow-lg border border-white/20">360° Rotate</span>
           </div>
@@ -58,7 +58,7 @@ export default function ThreeDCards() {
         </div>
 
         {/* Card 2 */}
-        <div className="flex-1 w-1/3 h-[150px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing">
+        <div className="flex-1 w-1/3 h-[150px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing touch-none">
           <div className="absolute -bottom-4 left-0 right-0 z-10 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="bg-black/70 text-white text-[9px] sm:text-[11px] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full backdrop-blur-md shadow-lg border border-white/20">360° Rotate</span>
           </div>
@@ -89,7 +89,7 @@ export default function ThreeDCards() {
         </div>
 
         {/* Card 3 */}
-        <div className="flex-1 w-1/3 h-[150px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing">
+        <div className="flex-1 w-1/3 h-[150px] sm:h-[240px] relative overflow-visible group cursor-grab active:cursor-grabbing touch-none">
           <div className="absolute -bottom-4 left-0 right-0 z-10 pointer-events-none flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <span className="bg-black/70 text-white text-[9px] sm:text-[11px] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full backdrop-blur-md shadow-lg border border-white/20">360° Rotate</span>
           </div>
