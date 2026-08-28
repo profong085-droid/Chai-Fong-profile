@@ -1016,15 +1016,15 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
       {/* INITIAL LOADING SPLASH SCREEN (1% - 100%) - CLEAN MINIMALIST MONOCHROME STYLE */}
       {!isLoaded && (
         <div 
-          className={`fixed inset-0 z-[100] bg-slate-950 flex flex-col justify-center items-center p-4 select-none overflow-hidden transition-all duration-700 ease-out ${
+          className={`fixed inset-0 z-[100] bg-slate-50 flex flex-col justify-center items-center p-4 select-none overflow-hidden transition-all duration-700 ease-out ${
             fadeOutLoader ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
           }`}
         >
           {/* Subtle Dim Ambient Backdrop */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black opacity-80 pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-slate-50 to-slate-100 opacity-80 pointer-events-none" />
 
           {/* Clean Minimalist Glass Card Container */}
-          <div className="w-full max-w-[350px] sm:max-w-[380px] bg-slate-900/90 backdrop-blur-2xl border border-slate-800 rounded-[36px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] p-8 flex flex-col items-center text-center relative z-10">
+          <div className="w-full max-w-[350px] sm:max-w-[380px] bg-white/90 backdrop-blur-2xl border border-gray-200 rounded-[36px] shadow-2xl p-8 flex flex-col items-center text-center relative z-10">
             
             {/* Circular SVG Progress Ring around Avatar */}
             <div className="relative mb-5 flex items-center justify-center">
@@ -1034,7 +1034,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   cx="60" 
                   cy="60" 
                   r="52" 
-                  stroke="#1e293b" 
+                  stroke="#e2e8f0" 
                   strokeWidth="5" 
                   fill="transparent" 
                 />
@@ -1043,7 +1043,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
                   cx="60" 
                   cy="60" 
                   r="52" 
-                  stroke="#ffffff" 
+                  stroke="#3b82f6" 
                   strokeWidth="5.5" 
                   strokeLinecap="round" 
                   fill="transparent" 
@@ -1054,7 +1054,7 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               </svg>
 
               {/* Profile Avatar Centered in Ring */}
-              <div className="absolute w-24 h-24 sm:w-26 sm:h-26 rounded-full overflow-hidden border-2 border-slate-700 shadow-xl p-0.5 bg-slate-900">
+              <div className="absolute w-24 h-24 sm:w-26 sm:h-26 rounded-full overflow-hidden border-4 border-white shadow-md p-0.5 bg-white">
                 <img 
                   src="/images/fong1.webp" 
                   alt="Chai Fong Profile" 
@@ -1063,18 +1063,18 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
               </div>
 
               {/* Floating Percentage Badge on Ring */}
-              <div className="absolute -bottom-2 px-3.5 py-0.5 rounded-full bg-white text-slate-950 text-xs font-black font-display shadow-lg border border-white tracking-wider">
+              <div className="absolute -bottom-2 px-3.5 py-0.5 rounded-full bg-blue-500 text-white text-xs font-black font-display shadow-md border border-blue-500 tracking-wider">
                 {loadingProgress}%
               </div>
             </div>
 
             {/* Author Title & Subtitle */}
             <div className="flex flex-col items-center">
-              <h1 className="font-koulen text-3xl sm:text-4xl tracking-wider text-white font-extrabold leading-snug py-1">
+              <h1 className="font-koulen text-3xl sm:text-4xl tracking-wider text-slate-900 font-extrabold leading-snug py-1">
                 {lang === 'km' ? 'ផូ ឆៃហ្វុង' : 'PHO CHAIFONG'}
               </h1>
-              <div className="mt-1 flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-slate-800/80 border border-slate-700/80">
-                <span className="text-[10px] sm:text-[10.5px] font-outfit font-extrabold tracking-[0.2em] text-slate-300 uppercase">
+              <div className="mt-1 flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-slate-100 border border-slate-200">
+                <span className="text-[10px] sm:text-[10.5px] font-outfit font-extrabold tracking-[0.2em] text-slate-600 uppercase">
                   GRAPHIC DESIGNER & VIDEO EDITOR
                 </span>
               </div>
@@ -1082,13 +1082,13 @@ Additionally, I have a solid foundation in Motion Graphics using Adobe After Eff
 
             {/* Linear Progress Bar */}
             <div className="w-full mt-6">
-              <div className="w-full h-2.5 bg-slate-800 rounded-full p-0.5 border border-slate-700/60 shadow-inner overflow-hidden">
+              <div className="w-full h-2.5 bg-slate-200 rounded-full p-0.5 border border-slate-300 shadow-inner overflow-hidden">
                 <div 
-                  className="h-full bg-white rounded-full transition-all duration-75 ease-out"
+                  className="h-full bg-blue-500 rounded-full transition-all duration-75 ease-out"
                   style={{ width: `${loadingProgress}%` }}
                 />
               </div>
-              <p className="mt-3 text-[11.5px] font-medium text-slate-400 tracking-wide">
+              <p className="mt-3 text-[11.5px] font-medium text-slate-500 tracking-wide">
                 {loadingProgress < 40 
                   ? (lang === 'km' ? 'កំពុងរៀបចំទិន្នន័យ...' : 'Loading assets...') 
                   : loadingProgress < 85 
